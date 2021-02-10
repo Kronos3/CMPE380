@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
    strncpy(p, "word 1", 19);
    printf("%s\n", p);
 
-   free(p);
+   //free(p);
    p = (char *) malloc(12); /* Allocation #2 */
    strncpy(p, "word 2", 12);
    printf("%s\n", p);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
    strncpy(p, "word 3", 16);
    printf("%s\n", p);
 
-   free(p);
+   //free(p);
    p = NULL;
    return 0;
 }
