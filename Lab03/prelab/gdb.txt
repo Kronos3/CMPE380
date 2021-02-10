@@ -1,0 +1,26 @@
+Starting program: /home/atuser/git/CMPE380/cmake-build-debug/Lab03/prelab3 
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff7e3b7c1 in raise () from /lib64/libc.so.6
+Breakpoint 1 at 0x1165: file /home/atuser/git/CMPE380/Lab03/prelab/lab_a.c, line 8.
+Starting program: /home/atuser/git/CMPE380/cmake-build-debug/Lab03/prelab3 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffdfa8) at /home/atuser/git/CMPE380/Lab03/prelab/lab_a.c:8
+8	int main(int argc, char *argv[]) {
+12	   printf("I am %d years old.\n", age);
+13	   printf("I am %d inches tall.\n\n", height);
+17	   text_p = calloc( 12, sizeof(char) );  
+18	   if(NULL == text_p) {
+24	   strncpy( text_p, "This string is way to long and will corrupt memory", 11);
+$1 = 0x5555555596b0 ""
+25	   printf("The string contains '%s'\n", text_p);
+Breakpoint 2 at 0x5555555551e3: file /home/atuser/git/CMPE380/Lab03/prelab/lab_a.c, line 27.
+Continuing.
+
+Breakpoint 2, main (argc=<optimized out>, argv=<optimized out>) at /home/atuser/git/CMPE380/Lab03/prelab/lab_a.c:27
+27	   free(text_p);
+$2 = 0x5555555596b0 "This string"
+29	   return 0; 
+$3 = 0x0
+Continuing.
+[Inferior 1 (process 111449) exited normally]

@@ -1,0 +1,62 @@
+Andrei Tumbar
+Lab2
+
+Output of `lab_a`:
+
+short int              value: 1,  Size: 2 bytes
+unsigned short int     value: 2,  Size: 2 bytes
+unsigned int           value: 3,  Size: 4 bytes
+int                    value: 4,  Size: 4 bytes
+long int               value: 5,  Size: 8 bytes
+unsigned long int      value: 6,  Size: 8 bytes
+long long int          value: 7,  Size: 8 bytes
+unsigned long long int value: 8,  Size: 8 bytes
+signed char            value: 8,  Size: 1 bytes
+unsigned char          value: 9,  Size: 1 bytes
+float                  value: 11.000000,  Size: 4 bytes
+double                 value: 12.000000,  Size: 8 bytes
+long double            value: 13.000000,  Size: 16 bytes
+Different data '123.456789'  '123.457'  ' 123.4568'
+
+The "incorrect" size here (when comparing to the slides) is
+the `long int` and `unsigned long int`. On my current platform
+x86_64 (amd64) gcc allocates 8 bytes for this data type however
+on other platforms such as 32-bit x86, gcc will only allocate
+4 bytes.
+
+
+Output of `./lab_b`:
+Integer: 1086324736
+Floating: 6.000000
+
+The memory holding the integer/float union was originally
+initialized to the integer value '5' and later the memory was
+overwritten with the floating point value 6.0. When printing out
+both data types the integer has 'garbage' data because it is print
+the integer representation of the floating point '6.0'. Floating
+point integers are represented with a different format when compared
+to standard integers meaning they are not compatible without a
+cast.
+
+Output of `./lab_b` with sizeof():
+Integer: 1086324736
+Floating: 6.000000
+sizeof(union anumber) == 4
+sizeof(struct bandMember) == 516
+
+The 'struct' is larger than the union because it has two char
+arrays each allocating 256 bytes and a 4 byte integer.
+
+Output of `./lab_b` with band information
+Integer: 1086324736
+Floating: 6.000000
+sizeof(union anumber) == 4
+sizeof(struct bandMember) == 516
+Beatle John Lennon 1940
+Beatle Paul McCartney 1942
+Beatle George Harrison 1943
+Beatle Ringo Starr 1940
+JohnPaulGeorgeRingo
+The Ringo index is 3
+
+
