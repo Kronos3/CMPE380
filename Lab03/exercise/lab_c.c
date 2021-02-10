@@ -17,5 +17,6 @@ int main(int argc, char *argv[]) {
       arr[i] = r;
    }
   printf("Last two random numbers are %d %d\n", arr[98], arr[99]);
+  free(arr);
   return(0);
 }
