@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
       exit(99);
    }
    
-   for (int i = 1; i <= 100; i++) {
+   for (int i = 0; i < 100; i++) {
       /* random int between 0 and 99 */
       int r = rand() % 100;
       arr[i] = r;

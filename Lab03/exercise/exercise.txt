@@ -5,20 +5,37 @@ When running lab_b there are no issues when run without any leak checks.
 This is because the leak does not cause any issues in this cause.
 
 2)
-When running with AddressSanitizer, a valgrind alternative
-(my CE machine won't turn on and I don't have valgrind on my laptop)
-=================================================================
-==171620==ERROR: LeakSanitizer: detected memory leaks
+==21525== Memcheck, a memory error detector
+==21525== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21525== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==21525== Command: ./lab_b
+==21525==
+word 1
+word 2
+word 3
+==21525==
+==21525== HEAP SUMMARY:
+==21525==     in use at exit: 35 bytes in 2 blocks
+==21525==   total heap usage: 3 allocs, 1 frees, 47 bytes allocated
+==21525==
+==21525== 16 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==21525==    at 0x4C29F73: malloc (vg_replace_malloc.c:309)
+==21525==    by 0x400691: main (in /home/at1777/git/CMPE380/Lab03/exercise/lab_b)
+==21525==
+==21525== 19 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==21525==    at 0x4C29F73: malloc (vg_replace_malloc.c:309)
+==21525==    by 0x400625: main (in /home/at1777/git/CMPE380/Lab03/exercise/lab_b)
+==21525==
+==21525== LEAK SUMMARY:
+==21525==    definitely lost: 35 bytes in 2 blocks
+==21525==    indirectly lost: 0 bytes in 0 blocks
+==21525==      possibly lost: 0 bytes in 0 blocks
+==21525==    still reachable: 0 bytes in 0 blocks
+==21525==         suppressed: 0 bytes in 0 blocks
+==21525==
+==21525== For lists of detected and suppressed errors, rerun with: -s
+==21525== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 
-Direct leak of 19 byte(s) in 1 object(s) allocated from:
-    #0 0x7f954a1b2d48 in __interceptor_malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/libasan.so.5+0x10bd48)
-    #1 0x5614d20f51af in main /home/atuser/git/CMPE380/Lab03/exercise/lab_b.c:10
-
-Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f954a1b2d48 in __interceptor_malloc (/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/libasan.so.5+0x10bd48)
-    #1 0x5614d20f5209 in main /home/atuser/git/CMPE380/Lab03/exercise/lab_b.c:19
-
-SUMMARY: AddressSanitizer: 35 byte(s) leaked in 2 allocation(s).
 
 We see there are two leaks in this binary at line 10 and line 19.
 
@@ -26,3 +43,10 @@ We see there are two leaks in this binary at line 10 and line 19.
 Three blocks were allocated and two blocks were lost (35 bytes lost).
 
 Example 2 - more leaks
+1) When running lab_c there are no issues identified
+
+2) When running with valgrind there are issues identified.
+    There is a memory leak as well as a buffer write-overflow.
+    There are 400 bytes lost in one allocation.
+
+3)
