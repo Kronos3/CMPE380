@@ -53,10 +53,10 @@ int main(int argc, char *argv[]) {
 
     // Using function pointers
     function_p = fun2x;
-    printf("passing fun2x 2: got %d", function_p(2));
+    printf("passing fun2x 2: got %d\n", function_p(2));
 
     function_p = fun3x;
-    printf("passing fun3x 2: got %d", function_p(2));
+    printf("passing fun3x 2: got %d\n", function_p(2));
 
     // Initialize the stack data
     stackData.entry = 1;
