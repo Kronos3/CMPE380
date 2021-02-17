@@ -73,6 +73,8 @@ void ListAppend(Wrapper* wrapper_p, const char* string)
     {
         last->next = node_init(i, string);
     }
+
+    wrapper_p->nterms++;
 }
 
 void node_free(Node* self)
@@ -90,6 +92,7 @@ void wrapper_free(Wrapper* self)
         Node* next = iter->next;
         node_free(iter);
         iter = next;
+        i++;
     }
 
     free(self);
@@ -104,12 +107,12 @@ int main(int argc, char* argv[])
     wrapper_p = wrapper_init();
 
     // Wire the first node in
-    printf("Printing 1 node linked list");
+    printf("Printing 1 node linked list\n");
     ListAppend(wrapper_p, "one");
     printList(wrapper_p);
 
     // Wire the second node in
-    printf("Printing 2 node linked list");
+    printf("Printing 2 node linked list\n");
     ListAppend(wrapper_p, "two");
     printList(wrapper_p);
 
@@ -127,7 +130,7 @@ void printList(Wrapper* wrapper_p)
     for (; iter && i < wrapper_p->nterms; iter = iter->next, i++)
     {
         assert(iter->index == i);
-        printf("node %d contains the string %s\n", iter->index, iter->string);
+        printf("node %d contains the string %s\n", iter->index + 1, iter->string);
     }
 
     assert(i == wrapper_p->nterms);
