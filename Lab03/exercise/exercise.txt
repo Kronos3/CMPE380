@@ -49,4 +49,10 @@ Example 2 - more leaks
     There is a memory leak as well as a buffer write-overflow.
     There are 400 bytes lost in one allocation.
 
-3)
+3) With the code fixed there is a single allocation and free.
+    No memory was leaked
+
+Example 3 - get_opt
+(None)
+
+Example 4 - get_opt_long

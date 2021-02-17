@@ -12,35 +12,39 @@ int main (int argc, char **argv) {
   int rc;
 
   /*-------------------------------------------------------------------------
-    These variables are used to control the getOpt_long_only command line 
-    parsing utility.  
+    These variables are used to control the getOpt_long_only command line
+    parsing utility.
   --------------------------------------------------------------------------*/
   /* getopt_long stores the option index here and keep valgrind happy */
   int option_index = 0;
 
   /* Flag set by -verbose & -brief, note initialized to -1 to track usage */
   int verbose_flag = -1;
-  
-  /* This contains the short command line parameters list   In general 
-     they SHOULD match the long parameter but DONT HAVE TO  
+
+  /* This contains the short command line parameters list   In general
+     they SHOULD match the long parameter but DONT HAVE TO
      e.g:  verbose  AND  g    */
   char *getoptOptions = "abc:d:f:";
-  
-  /* This contains the long command line parameter list, it should mostly 
+
+  /* This contains the long command line parameter list, it should mostly
      match the short list                                                  */
   struct option long_options[] = {
     /* These options set the same flag. */
     {"verbose", no_argument,       &verbose_flag, 1},
     {"brief",   no_argument,       &verbose_flag, 0},
-    
+    {"verb",   no_argument,       &verbose_flag, 0},
+    {"append",   no_argument,       &verbose_flag, 0},
+
     /* These options don’t set a flag.
        We distinguish them by their indices. */
     {"add",     no_argument,       0, 'a'},
     {"del",     required_argument, 0, 'd'},
     {"create",  required_argument, 0, 'c'},
+    {"delete",  required_argument, 0, 'd'},
+    {"file",  required_argument, 0, 'f'},
     {0, 0, 0, 0} /* Terminate */
   };
-  
+
   while ((rc = getopt_long_only(argc, argv, getoptOptions, long_options, &option_index)) != -1)  {
        printf("getopt_long_only() returned ='%c' index = '%d'\n",  rc, option_index);
       switch (rc) {
@@ -73,7 +77,7 @@ int main (int argc, char **argv) {
         case 'f':
           printf ("option -f with value `%s'\n", optarg);
           break;
-          
+
         case '?':
           /* getopt_long already printed an error message.
              because  opterr was NOT set to  0;*/

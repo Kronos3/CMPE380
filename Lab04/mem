@@ -1,0 +1,9 @@
+#############################################################################
+# simple valgrind script
+#############################################################################
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./simpleTest 0   > mem.txt 2>&1
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./simpleTest 1  >> mem.txt 2>&1
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./simpleTest 2  >> mem.txt 2>&1
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./simpleTest 3  >> mem.txt 2>&1
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./simpleTest 4  >> mem.txt 2>&1
+cat mem.txt

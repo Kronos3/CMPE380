@@ -13,3 +13,4 @@ add_compile_options(-O1 -g -Wall -std=c99 -pedantic)
 
 add_subdirectory(Lab02)
 add_subdirectory(Lab03)
+add_subdirectory(Lab04)

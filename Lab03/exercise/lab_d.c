@@ -7,8 +7,8 @@
 #include <getopt.h>
 
 int main(int argc, char *argv[]) {
-   int aflag = 0;          /* My boolean variables */
-   char *cvalue = NULL;    /* Pointer to a parameter */
+   int aflag = 0, bflag = 0;          /* My boolean variables */
+   char *cvalue = NULL, *dvalue = NULL;    /* Pointer to a parameter */
    int index;
    int rc;                 /* Result from getopt() */
    opterr = 0;             /* Disable automatic error reporting */
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
    printf("\n");
    
    /* Parse until all parameters have been processed. “c” has an required parameter */
-   while ((rc = getopt (argc, argv, "ac:")) != -1) {
+   while ((rc = getopt (argc, argv, "abc:d:")) != -1) {
       printf("getopt() returned ='%c'\n",  rc);
       switch (rc)   {
       case 'a':                  /* Boolean variable */
@@ -32,11 +32,20 @@ int main(int argc, char *argv[]) {
 
       case 'c':                  /* Copy the required C parameter */
          cvalue = optarg;        /* Safe to copy just the pointer because it  */ 
+         break;
+      case 'b':                  /* Boolean variable */
+         bflag = 1;
+         break;
+
+      case 'd':                  /* Copy the required C parameter */
+         dvalue = optarg;        /* Safe to copy just the pointer because it  */
          break;                  /* really points to argv[]  */
 
       case '?':         /* Handle the error cases */
-         if (optopt == 'c') {
-            fprintf (stderr, "Option -%c requires an argument.\n", optopt);}
+         if (optopt == 'c'
+            || optopt == 'd') {
+            fprintf (stderr, "Option -%c requires an argument.\n", optopt);
+         }
 
          else if (isprint (optopt)) {  /* character is printable */
          fprintf (stderr, "Unknown option `-%c'.\n", optopt);}
@@ -52,7 +61,8 @@ int main(int argc, char *argv[]) {
    } // End while
    
    /* Print out the final results */
-   printf ("aflag = %d, cvalue = %s\n", aflag, cvalue);
+   printf ("aflag = %d, cvalue = %s, bflag = %d, dvalue = %s\n",
+           aflag, cvalue, bflag, dvalue);
 
    /* account for any extra arguments */
    for (index = optind; index < argc; index++) {
