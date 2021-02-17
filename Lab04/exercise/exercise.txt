@@ -1,0 +1,7 @@
+main: 0x4006ed
+staticData: 0x601080
+ramData: 0x6010c0
+heapData_p: 0x1ffefff598
+stackData: 0x1ffefff5a0
+passing fun2x 2: got 4passing fun3x 2: got 6Stack data values before free: 1 'Stack'
+Heap data values before free: 2 'Pointer'
