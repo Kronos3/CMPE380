@@ -34,3 +34,10 @@ Heap data values before free: 2 'Pointer'
 ==26895== 
 ==26895== For lists of detected and suppressed errors, rerun with: -s
 ==26895== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+
+There was an expected read size of 4 error when attempting to print the data
+a freed/nulled pointer.
+This is because the address that the pointer is pointing to is invalid.
+
+
