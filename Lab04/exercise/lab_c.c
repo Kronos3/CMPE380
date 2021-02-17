@@ -48,6 +48,7 @@ Node* node_init(int idx, const char* string)
     Node* self = malloc(sizeof(Node));
     strncpy(self->string, string, sizeof(self->string) - 1);
     self->index = idx;
+    self->next = NULL;
 
     return self;
 }
@@ -101,8 +102,6 @@ void wrapper_free(Wrapper* self)
 int main(int argc, char* argv[])
 {
     Wrapper* wrapper_p;
-    Node* node_p;
-    Node* temp_p;
 
     wrapper_p = wrapper_init();
 
@@ -118,6 +117,7 @@ int main(int argc, char* argv[])
 
     // Clean up memory
     wrapper_free(wrapper_p);
+    wrapper_p = NULL;
 
     return 0;
 }

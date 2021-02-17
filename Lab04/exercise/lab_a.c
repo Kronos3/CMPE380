@@ -41,14 +41,14 @@ int main(int argc, char *argv[]) {
    }
  
    // Print out the addresses of items
-   printf("main: %p\n"
-          "staticData: %p\n"
-          "ramData: %p\n"
-          "heapData_p: %p\n"
-          "stackData: %p\n",
+   printf("main: %8p\n"
+          "staticData: %8p\n"
+          "ramData: %8p\n"
+          "heapData_p: %8p\n"
+          "stackData: %8p\n",
           (void*)&main, (void*)&staticData,
           (void*)&ramData,
-          (void*)&heapData_p,
+          (void*)heapData_p,
           (void*)&stackData);
 
     // Using function pointers

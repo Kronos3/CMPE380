@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 
 /*---------------------------------------------------------------------------
@@ -66,6 +67,12 @@ void createPoly(Poly* p, int n)
 {
     p->nterms = n;
     p->polyCoef = malloc(sizeof(double) * n);
+    if (!p->polyCoef)
+    {
+        fprintf(stderr, "malloc() error %s\n", strerror(errno));
+        exit(1);
+    }
+
     for (int i = 0; i < n; i++)
     {
         p->polyCoef[i] = 2.0 * i;
