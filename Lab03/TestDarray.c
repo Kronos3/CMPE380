@@ -20,8 +20,7 @@
 #define INITIAL_SIZE (1000)
 
 
-
-void ReadData(FILE *InputFile, DArray *DynamicArrayPtr);
+void ReadData(FILE* InputFile, DArray* DynamicArrayPtr);
 
 /******************************************************************************
  This program to test the Data structure by reading the Data file provided on
@@ -36,91 +35,136 @@ void ReadData(FILE *InputFile, DArray *DynamicArrayPtr);
                       code 
 ******************************************************************************/
 int main(int argc, char* argv[])
-  {
-  /* declare local variables */
-   int ErrorCode = 0;               /* Application error code - 0 is OK */
-   DArray TestDynamicArray = { 0, 0, NULL}; /* Dynamic Array for Data */
-   FILE *DataFile = NULL;           /* Pointer to Data file name (from cmd line) */
-   int lcv;                         /* Loop Control Variable */
+{
+    /* declare local variables */
+    int ErrorCode = 0;               /* Application error code - 0 is OK */
+    DArray TestDynamicArray = {0, 0, NULL}; /* Dynamic Array for Data */
+    FILE* DataFile = NULL;           /* Pointer to Data file name (from cmd line) */
+    int lcv;                         /* Loop Control Variable */
 
+    // Print the command invocation
+    for (int i = 0; i < argc; i++)
+    {
+        printf("%s ", argv[i]);
+    }
+    printf("\n");
+    fflush(stdout);
 
-   /*-------------------------------------------------------------------------
-     These variables are used to control the getOpt_long_only command line 
-     parsing utility.  
-   --------------------------------------------------------------------------*/
-   /* getopt_long stores the option index here. */
-   int option_index = 0;
-   int rc;
- 
-   /* Command line parameters */
-   int words = 6;
-   int help = 0;
-   char *inFile = NULL;
-   
-   /*-------------------------------------------------------------------------
-     add get_opt_long parsing code here
-   --------------------------------------------------------------------------*/
-   
-   
-   
+    /*-------------------------------------------------------------------------
+      These variables are used to control the getOpt_long_only command line
+      parsing utility.
+    --------------------------------------------------------------------------*/
+    /* getopt_long stores the option index here. */
+    int option_index = 0;
+    int rc;
 
-   /* One command line argument is required: the file name     */
-   if ((1 != help) && (NULL != inFile)) {
-      /* Try to open the Data file for input (read mode)     */
-      DataFile = fopen(inFile, "r"); 
+    /* Command line parameters */
+    int words = 6;
+    int help = 0;
+    char* inFile = NULL;
 
-      /* Verify that file was opened correctly */
-      if (NULL != DataFile) {
-         /* Initialize the dynamic array */
-         CreateDArray(&TestDynamicArray, INITIAL_SIZE);
+    /*-------------------------------------------------------------------------
+      add get_opt_long parsing code here
+    --------------------------------------------------------------------------*/
 
-         /* Read all Data from text file */
-         ReadData(DataFile, &TestDynamicArray);
+    char* getoptOptions = "hw:i:";
+    const struct option long_options[] = {
+            {"help",  no_argument, &help, 'h'},
+            {"input", required_argument, 0, 'i'},
+            {"in",    required_argument, 0, 'i'},
+            {"word",  required_argument, 0, 'w'},
+            {0, 0, 0, 0} /* Terminate */
+    };
 
-         /* Close the Data file */
-         fclose(DataFile);
-
-         /* Print the first and last 5 entries */
-         printf("First %d elements:\n", words);
-         for (lcv=0; lcv<words; lcv++) {
-            printf(" %s\n", TestDynamicArray.Payload[lcv].String);
-         } /* for() */
-
-         /* Print the last and first 5 entries */
-         printf("Last %d elements:\n", words);
-         for (lcv=TestDynamicArray.EntriesUsed-words; lcv<TestDynamicArray.EntriesUsed; lcv++) {
-            printf(" %s\n", TestDynamicArray.Payload[lcv].String);
-         } /* for() */
-
-         /* Print array size */
-         printf("Number of Words Read = %d\n", TestDynamicArray.EntriesUsed);
-
-         /* De-allocate the dynamic array */
-         DestroyDArray(&TestDynamicArray);
-        } /* if() */
-      else
+    while ((rc = getopt_long_only(argc, argv, getoptOptions, long_options, &option_index)) != -1)
+    {
+        switch (rc)
         {
-         /* Print error message */
-         fprintf(stderr, "Error! File [%s] could not be opened.\n", inFile);
-         ErrorCode = 2;
-        } /* if...else() */
-     } /* if() */
-   else
-     {
-      /* Print usage information */
-      fprintf(stderr, "This program reads a text file and prints out the first and last\n");
-      fprintf(stderr, "N lines.\n");
-      fprintf(stderr, "Usage: %s -i[n[put]] filename [-w|ord] num] [-h[elp]]\n", argv[0]);
-      fprintf(stderr, " -i filename - the name of the file to read\n");
-      fprintf(stderr, " -word num   - prints the number of words, default is 6\n");
-      fprintf(stderr, " -help       - this help, no other action taken\n");
-      ErrorCode = 1;
-     } /* if...else() */
+            case 0:
+                if (long_options[option_index].flag != 0)
+                {
+                    *long_options[option_index].flag = long_options[option_index].val;
+                    break;
+                }
+                break;
 
-   return ErrorCode;
-  } /* main() */
-  
-  
+            case 'i':
+                inFile = optarg;
+                break;
+            case 'w':
+                words = strtol(optarg, NULL, 10);
+                break;
+            case 'h':
+                break;
+            default:
+                printf("error: undefined option '%c' (0x%x)\n", rc, rc);
+        }
+    } // End switch
+
+    /* One command line argument is required: the file name     */
+    if ((1 != help) && (NULL != inFile))
+    {
+        /* Try to open the Data file for input (read mode)     */
+        DataFile = fopen(inFile, "r");
+
+        /* Verify that file was opened correctly */
+        if (NULL != DataFile)
+        {
+            /* Initialize the dynamic array */
+            CreateDArray(&TestDynamicArray, INITIAL_SIZE);
+
+            /* Read all Data from text file */
+            ReadData(DataFile, &TestDynamicArray);
+
+            /* Close the Data file */
+            fclose(DataFile);
+
+            /* Print the first 5 entries */
+            printf("First %d elements:\n", words);
+            for (lcv = 0; lcv < words; lcv++)
+            {
+                printf(" %s\n", TestDynamicArray.Payload[lcv].String);
+            } /* for() */
+
+            /* Print the last 5 entries */
+            printf("Last %d elements:\n", words);
+            for (lcv = TestDynamicArray.EntriesUsed - words; lcv < TestDynamicArray.EntriesUsed; lcv++)
+            {
+                printf(" %s\n", TestDynamicArray.Payload[lcv].String);
+            } /* for() */
+
+            /* Print array size */
+            printf("Number of Words Read = %d\n", TestDynamicArray.EntriesUsed);
+
+            /* De-allocate the dynamic array */
+            DestroyDArray(&TestDynamicArray);
+        } /* if() */
+        else
+        {
+            /* Print error message */
+            fprintf(stderr, "Error! File [%s] could not be opened.\n", inFile);
+            ErrorCode = 2;
+        } /* if...else() */
+    } /* if() */
+    else
+    {
+        /* Print usage information */
+        fprintf(stderr, "This program reads a text file and prints out the first and last\n");
+        fprintf(stderr, "N lines.\n");
+        fprintf(stderr, "Usage: %s -i[n[put]] filename [-w|ord] num] [-h[elp]]\n", argv[0]);
+        fprintf(stderr, " -i filename - the name of the file to read\n");
+        fprintf(stderr, " -word num   - prints the number of words, default is 6\n");
+        fprintf(stderr, " -help       - this help, no other action taken\n");
+        ErrorCode = 1;
+    } /* if...else() */
+
+    fflush(stdout);
+    fflush(stderr);
+    printf("=======\n");
+    return ErrorCode;
+} /* main() */
+
+
 /******************************************************************************
  Read the data file (assumed to be open) one word at a time placing each
  word into the data structure.  This routine will verify that the input string
@@ -135,27 +179,26 @@ int main(int argc, char* argv[])
     errors:                 - This routine will print an error message to 
                               stderror and exit with an error code
 ******************************************************************************/
-void ReadData(FILE *InputFile, DArray *DynamicArrayPtr)
-  {
-   Data TempData;             /* temp variable to hold data   */
-   char String[MAX_STR_LEN+2];  /* temp variable to hold string */
-   char formatStr [32];       /* Used to build the dynamic length */
-   
-   /* Build a dynamic format string */
-   sprintf(formatStr, "%c%d%c", '%', MAX_STR_LEN+1, 's');
+void ReadData(FILE* InputFile, DArray* DynamicArrayPtr)
+{
+    Data TempData;             /* temp variable to hold data   */
+    char String[MAX_STR_LEN + 2];  /* temp variable to hold string */
+    char formatStr[32];       /* Used to build the dynamic length */
 
-   /* Read the data in from the file into the String buffer */
-   while (EOF != fscanf(InputFile, formatStr, String))
-     {
-      /* Make sure the data is not too long */
-      if (strlen(String) >= MAX_STR_LEN)
-      { 
-       fprintf(stderr, "Warning: ignoring invalid input\n");
-       continue;
-      }    
-      
-      strncpy(TempData.String, String, MAX_STR_LEN);
-      PushToDArray(DynamicArrayPtr, &TempData);
-     } /* while() */
-  } /* ReadData() */
+    /* Build a dynamic format string */
+    sprintf(formatStr, "%c%d%c", '%', MAX_STR_LEN + 1, 's');
 
+    /* Read the data in from the file into the String buffer */
+    while (EOF != fscanf(InputFile, formatStr, String))
+    {
+        /* Make sure the data is not too long */
+        if (strlen(String) >= MAX_STR_LEN)
+        {
+            fprintf(stderr, "Warning: ignoring invalid input\n");
+            continue;
+        }
+
+        strncpy(TempData.String, String, MAX_STR_LEN);
+        PushToDArray(DynamicArrayPtr, &TempData);
+    } /* while() */
+} /* ReadData() */

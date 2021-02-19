@@ -1,0 +1,103 @@
+Should print program help
+./TestDarray 
+This program reads a text file and prints out the first and last
+N lines.
+Usage: ./TestDarray -i[n[put]] filename [-w|ord] num] [-h[elp]]
+ -i filename - the name of the file to read
+ -word num   - prints the number of words, default is 6
+ -help       - this help, no other action taken
+=======
+./TestDarray -w 5 
+This program reads a text file and prints out the first and last
+N lines.
+Usage: ./TestDarray -i[n[put]] filename [-w|ord] num] [-h[elp]]
+ -i filename - the name of the file to read
+ -word num   - prints the number of words, default is 6
+ -help       - this help, no other action taken
+=======
+./TestDarray -i engWords -w 5 -h 
+Error! File [engWords] could not be opened.
+=======
+./TestDarray -i 
+./TestDarray: option requires an argument -- 'i'
+This program reads a text file and prints out the first and last
+N lines.
+Usage: ./TestDarray -i[n[put]] filename [-w|ord] num] [-h[elp]]
+ -i filename - the name of the file to read
+ -word num   - prints the number of words, default is 6
+ -help       - this help, no other action taken
+error: undefined option '?' (0x3f)
+=======
+./TestDarray -h 
+This program reads a text file and prints out the first and last
+N lines.
+Usage: ./TestDarray -i[n[put]] filename [-w|ord] num] [-h[elp]]
+ -i filename - the name of the file to read
+ -word num   - prints the number of words, default is 6
+ -help       - this help, no other action taken
+=======
+./TestDarray -help 
+This program reads a text file and prints out the first and last
+N lines.
+Usage: ./TestDarray -i[n[put]] filename [-w|ord] num] [-h[elp]]
+ -i filename - the name of the file to read
+ -word num   - prints the number of words, default is 6
+ -help       - this help, no other action taken
+=======
+Should print words
+./TestDarray -i engWords.txt 
+First 6 elements:
+ dermatitis
+ toxins
+ wisted
+ benedictions
+ Tera
+ petrochemistry's
+Last 6 elements:
+ harken
+ Pict's
+ Sidman's
+ intercohort
+ pressurize
+ besotting
+Number of Words Read = 206590
+=======
+./TestDarray -i engWords.txt -w 5 
+First 5 elements:
+ dermatitis
+ toxins
+ wisted
+ benedictions
+ Tera
+Last 5 elements:
+ Pict's
+ Sidman's
+ intercohort
+ pressurize
+ besotting
+Number of Words Read = 206590
+=======
+./TestDarray -in engWords -word 5 
+Error! File [engWords] could not be opened.
+=======
+./TestDarray -input engWords.txt 
+First 6 elements:
+ dermatitis
+ toxins
+ wisted
+ benedictions
+ Tera
+ petrochemistry's
+Last 6 elements:
+ harken
+ Pict's
+ Sidman's
+ intercohort
+ pressurize
+ besotting
+Number of Words Read = 206590
+=======
+Should print 8 lines help
+./TestDarray -in engWords -word 8 
+Error! File [engWords] could not be opened.
+=======

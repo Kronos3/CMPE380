@@ -1,0 +1,27 @@
+# Lab 3
+
+In this exercise we created a script that took commandline arguments to
+get the path to a file as well as an integer argument. The integer argument
+would control how many words to print from the start and end of the file
+specified by the path argument.
+
+All words in the file were read and added into a dynamic array. The
+dynamic array had constant growth meaning that as the number of used
+elements filled to the buffer capacity, the buffer capacity increased
+by a constant size.
+
+Once this was implemented, the program was tested under valgrind.
+As there were no memory leaks, valgrind reported no errors. The valgrind
+process took a long time because the constant growth of the dynamic array
+required many reallocs which are on of the intercepted operations in valgrind
+and therefore extremely slow (around 5 mins). A better method would be to
+double the array capacity instead of increment its size. That way large
+amounts of data would not require numerous reallocs.
+
+Looking at valgrind, there were 2060 allocations performed using the
+constant growth method. I tested the doubling buffer capacity and
+ran it under valgrind. The program took 2-3 seconds to complete and
+only used 12 allocations. The program actually ended up using only
+130,824,664 bytes as opposed to 54,660,258,264 bytes because there
+were far fewer reallocs to perform.
+Results from that valgrind run are stored in mem_doubling_capacity.txt

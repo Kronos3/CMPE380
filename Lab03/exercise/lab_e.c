@@ -32,7 +32,7 @@ int main (int argc, char **argv) {
     /* These options set the same flag. */
     {"verbose", no_argument,       &verbose_flag, 1},
     {"brief",   no_argument,       &verbose_flag, 0},
-    {"verb",   no_argument,       &verbose_flag, 0},
+    {"verb",   no_argument,       &verbose_flag, 1},
     {"append",   no_argument,       &verbose_flag, 0},
 
     /* These options don’t set a flag.
