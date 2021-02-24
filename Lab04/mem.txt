@@ -1,0 +1,142 @@
+==268164== Memcheck, a memory error detector
+==268164== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==268164== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==268164== Command: ./simpleTest 0
+==268164== 
+The list has 0 elements
+From the front:
+
+From the back:
+
+Removing one element from the front
+Attempted to remove front of list, list was empty. 
+
+Destroying the linked list
+==268164== 
+==268164== HEAP SUMMARY:
+==268164==     in use at exit: 0 bytes in 0 blocks
+==268164==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==268164== 
+==268164== All heap blocks were freed -- no leaks are possible
+==268164== 
+==268164== For lists of detected and suppressed errors, rerun with: -s
+==268164== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==268165== Memcheck, a memory error detector
+==268165== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==268165== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==268165== Command: ./simpleTest 1
+==268165== 
+The list has 1 elements
+From the front:
+Node 0 has value 'First Line'
+
+From the back:
+Node 0 has value 'First Line'
+
+Removing one element from the front
+Nothing left in the list, no front
+Removed value is: First Line 
+
+Destroying the linked list
+==268165== 
+==268165== HEAP SUMMARY:
+==268165==     in use at exit: 0 bytes in 0 blocks
+==268165==   total heap usage: 3 allocs, 3 frees, 4,379 bytes allocated
+==268165== 
+==268165== All heap blocks were freed -- no leaks are possible
+==268165== 
+==268165== For lists of detected and suppressed errors, rerun with: -s
+==268165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==268166== Memcheck, a memory error detector
+==268166== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==268166== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==268166== Command: ./simpleTest 2
+==268166== 
+The list has 2 elements
+From the front:
+Node 0 has value 'First Line'
+Node 1 has value 'Second Line'
+
+From the back:
+Node 0 has value 'Second Line'
+Node 1 has value 'First Line'
+
+Removing one element from the front
+
+Remove from front of list, new front is: 'Second Line' 
+Removed value is: First Line 
+
+Destroying the linked list
+==268166== 
+==268166== HEAP SUMMARY:
+==268166==     in use at exit: 0 bytes in 0 blocks
+==268166==   total heap usage: 4 allocs, 4 frees, 4,651 bytes allocated
+==268166== 
+==268166== All heap blocks were freed -- no leaks are possible
+==268166== 
+==268166== For lists of detected and suppressed errors, rerun with: -s
+==268166== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==268167== Memcheck, a memory error detector
+==268167== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==268167== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==268167== Command: ./simpleTest 3
+==268167== 
+The list has 3 elements
+From the front:
+Node 0 has value 'First Line'
+Node 1 has value 'Second Line'
+Node 2 has value 'Third Line'
+
+From the back:
+Node 0 has value 'Third Line'
+Node 1 has value 'Second Line'
+Node 2 has value 'First Line'
+
+Removing one element from the front
+
+Remove from front of list, new front is: 'Second Line' 
+Removed value is: First Line 
+
+Destroying the linked list
+==268167== 
+==268167== HEAP SUMMARY:
+==268167==     in use at exit: 0 bytes in 0 blocks
+==268167==   total heap usage: 5 allocs, 5 frees, 4,923 bytes allocated
+==268167== 
+==268167== All heap blocks were freed -- no leaks are possible
+==268167== 
+==268167== For lists of detected and suppressed errors, rerun with: -s
+==268167== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==268168== Memcheck, a memory error detector
+==268168== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==268168== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==268168== Command: ./simpleTest 4
+==268168== 
+The list has 4 elements
+From the front:
+Node 0 has value 'First Line'
+Node 1 has value 'Second Line'
+Node 2 has value 'Third Line'
+Node 3 has value 'Fourth Line'
+
+From the back:
+Node 0 has value 'Fourth Line'
+Node 1 has value 'Third Line'
+Node 2 has value 'Second Line'
+Node 3 has value 'First Line'
+
+Removing one element from the front
+
+Remove from front of list, new front is: 'Second Line' 
+Removed value is: First Line 
+
+Destroying the linked list
+==268168== 
+==268168== HEAP SUMMARY:
+==268168==     in use at exit: 0 bytes in 0 blocks
+==268168==   total heap usage: 6 allocs, 6 frees, 5,195 bytes allocated
+==268168== 
+==268168== All heap blocks were freed -- no leaks are possible
+==268168== 
+==268168== For lists of detected and suppressed errors, rerun with: -s
+==268168== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

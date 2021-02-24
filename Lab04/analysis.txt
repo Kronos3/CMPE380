@@ -1,0 +1,18 @@
+# Lab 4
+
+In this exercise a doubly linked list was implemented. A doubly linked list
+is a list which has a reference to both the next item as well as the
+previous. A wrapper structure holds a reference to the first and last item
+in the list. This way list traversal is not required to add an item to the
+end of the list.
+
+Each node in this linked list has a string buffer to hold that data for the
+given string. A number of assertions were peppered throughout the implemented
+functions to verify their fidelity.
+
+The init/add_to_end/remove_from_start functions had an extremely
+straightforward implementations. The free function did not use the
+remove_from_start function as this function would allocate memory
+for the string data only to free it immediately.
+
+This implementation was tested under Valgrind and found no issues.

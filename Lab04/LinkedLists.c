@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 #include "ClassErrors.h"
 #include "LinkedLists.h"
 
@@ -51,7 +52,10 @@
 ******************************************************************************/
 void InitLinkedList(LinkedLists *ListPtr)
 {
+    ListPtr->BackPtr = NULL;
+    ListPtr->FrontPtr = NULL;
 
+    ListPtr->NumElements = 0;
 } /* InitLinkedList() */
 
 
@@ -65,7 +69,29 @@ void InitLinkedList(LinkedLists *ListPtr)
 ******************************************************************************/
 void AddToBackOfLinkedList(LinkedLists *ListPtr, char *DataPtr)
 {
+    LinkedListNodes* node = malloc(sizeof(LinkedListNodes));
+    if (!node)
+    {
+        perror("malloc()");
+        exit(1);
+    }
 
+    strncpy(node->String, DataPtr, sizeof(node->String));
+    node->Next = NULL;
+    node->Previous = ListPtr->BackPtr;
+
+    ListPtr->NumElements++;
+    if (ListPtr->BackPtr)
+    {
+        ListPtr->BackPtr->Next = node;
+    }
+
+    if (!ListPtr->FrontPtr)
+    {
+        ListPtr->FrontPtr = node;
+    }
+
+    ListPtr->BackPtr = node;
 } /* AddToBackOfLinkedList */
 
 /******************************************************************************
@@ -84,7 +110,36 @@ void AddToBackOfLinkedList(LinkedLists *ListPtr, char *DataPtr)
 ******************************************************************************/
 char *RemoveFromFrontOfLinkedList(LinkedLists *ListPtr)
 {
+    if (!ListPtr->FrontPtr)
+    {
+        assert(!ListPtr->NumElements);
+        return NULL;
+    }
 
+    size_t len = strlen(ListPtr->FrontPtr->String);
+    char* str = malloc(len + 1);
+
+    if (!str)
+    {
+        perror("malloc()");
+        exit(1);
+    }
+
+    strcpy(str, ListPtr->FrontPtr->String);
+
+    LinkedListNodes* front_node = ListPtr->FrontPtr;
+    ListPtr->FrontPtr = front_node->Next;
+
+    if (!ListPtr->FrontPtr)
+    {
+        ListPtr->BackPtr = NULL;
+    }
+
+    ListPtr->NumElements--;
+    free(front_node);
+    front_node = NULL;
+
+    return str;
 } /* RemoveFromFrontOfLinkedList() */
 
 
@@ -101,7 +156,20 @@ char *RemoveFromFrontOfLinkedList(LinkedLists *ListPtr)
 ******************************************************************************/
 void DestroyLinkedList(LinkedLists *ListPtr)
 {
+    while (ListPtr->FrontPtr)
+    {
+        LinkedListNodes* node = ListPtr->FrontPtr->Next;
 
+        free(ListPtr->FrontPtr);
+        ListPtr->FrontPtr = node;
+        ListPtr->NumElements--;
+    }
+
+    ListPtr->BackPtr = NULL;
+
+    assert(!ListPtr->FrontPtr);
+    assert(!ListPtr->BackPtr);
+    assert(!ListPtr->NumElements);
 } /* DestroyLinkedList() */
 
 
@@ -115,6 +183,8 @@ void DestroyLinkedList(LinkedLists *ListPtr)
  * ***************************************************************************/
 int SearchList(LinkedLists *ListPtr, char *String)
 {
+    (void) ListPtr;
+    (void) String;
 /*-----  Don't implement this until instructed in a future lab ----*/
 return 0;
 } /* SearchList() */
