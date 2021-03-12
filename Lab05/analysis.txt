@@ -1,0 +1,26 @@
+CMPE380 - Lab 05
+Andrei Tumbar
+
+To implement the linear search algorithm for the linked list,
+an node iterator was used. This simply means that a pointer
+was held at the current search location and was incremented
+by setting the node equal to the next item on every iteration.
+The search is halted when a string match is found by simply
+returning '1' to indicate success.
+
+To implement the search algorithm for the dynamic array,
+a similar method was employed, however, instead of using
+an pointer iterator, I simply used an index to keep trace
+of the position of the current item.
+
+The makefile was implemented by by making generic targets
+for building object files. A target was then written
+with the dependency objects required to link into the executable.
+
+test and mem targets simply ran the executable with different
+parameters. The mem target ran the search under valgrind to
+verify no memory errors or leaks were detected.
+
+Looking at mem.txt and out.txt, the results look correct as the
+"space" word was found in both cases and the invalid word was
+marked as not found.

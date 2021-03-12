@@ -1,0 +1,115 @@
+Target name is target1
+Target name is target2
+
+The target name is printed in the place of '$@'.
+
+
+Dependency change for bin1 is 'a.c b.c c.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -o bin1 a.c b.c c.c
+make: 'bin1' is up to date.
+Dependency change for bin1 is 'b.c c.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -o bin1 a.c b.c c.c
+
+The '$?' variable is a list of all of the dependencies that
+have a newer timestamp than the target.
+
+
+gcc -O1 -g -Wall -std=c99 -pedantic   -c -o a.o a.c
+gcc -O1 -g -Wall -std=c99 -pedantic   -c -o b.o b.c
+gcc -O1 -g -Wall -std=c99 -pedantic   -c -o c.o c.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc a.o b.o c.o -o bin2
+
+The .o files are being compiled by a builtin target in make
+The CC variable and the CFLAGS variable are automatically applied.
+
+
+gcc -O1 -g -Wall -std=c99 -pedantic   -c -o b.o b.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc a.o b.o c.o -o bin2
+
+The 'b.c' file was touched and therefore only the 'b.c' object
+was recompiled. All objects files are linked into the executable.
+
+
+Compiling 'a'
+Compiling 'b'
+Compiling 'c'
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc a.o b.o c.o -o bin2
+gcc: error: a.o: No such file or directory
+gcc: error: b.o: No such file or directory
+gcc: error: c.o: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+make: *** [Makefile2:28: bin2] Error 1
+
+The link failed because the intrinsic rule was overridden and no
+.o file was generated in the rule.
+
+
+Compiling 'a'
+gcc -c -O1 -g -Wall -std=c99 -pedantic a.c
+Compiling 'b'
+gcc -c -O1 -g -Wall -std=c99 -pedantic b.c
+Compiling 'c'
+gcc -c -O1 -g -Wall -std=c99 -pedantic c.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc  a.o b.o c.o -o bin2
+
+The sources were compiled this time because the compile command was
+provided this time.
+
+
+rm -f *.o bin1 bin2
+Dependency change is 'a'
+gcc -c -O1 -g -Wall -std=c99 -pedantic a.c
+Dependency change is 'b'
+gcc -c -O1 -g -Wall -std=c99 -pedantic b.c
+Dependency change is 'c'
+gcc -c -O1 -g -Wall -std=c99 -pedantic c.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc  a.o b.o c.o -o bin2
+Dependency change is 'b'
+gcc -c -O1 -g -Wall -std=c99 -pedantic b.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc  a.o b.o c.o -o bin2
+
+We see a similar output to the previous rule however more control is
+given to file extensions that are supported.
+
+
+rm -f *.o bin1 bin2
+Compiling 'a.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c a.c
+Compiling 'b.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c b.c
+Compiling 'c.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c c.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc  a.o b.o c.o -o bin2
+
+All files were compiled as expected as a make clean operation was
+performed.
+
+
+Compiling 'a.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c a.c
+Compiling 'b.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c b.c
+Compiling 'c.c'
+gcc -O1 -g -Wall -std=c99 -pedantic -c c.c
+Linking 'a.o b.o c.o' to 'bin2'
+The first dependency of 'a.o b.o c.o' is 'a.o'
+gcc  a.o b.o c.o -o bin2
+
+All files were recompiled because they were all globbed into the same
+rule so when a single dependency changes, all rules were rerun.
+

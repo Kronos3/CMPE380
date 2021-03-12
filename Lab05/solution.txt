@@ -1,0 +1,8 @@
+------- Running Search Program valid input ------
+Searching for: space 
+Found space in the Linked List 
+Found space in the Dynamic Array 
+------- Additional test, invalid input ------
+Searching for: xyzzy 
+Could not find word in Linked List. 
+Could not find word in DynamicArray. 

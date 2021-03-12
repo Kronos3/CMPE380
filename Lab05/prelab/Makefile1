@@ -1,0 +1,56 @@
+# Defaults params
+ifndef CC
+CC:=gcc
+endif
+
+ifndef CFLAGS
+CFLAGS:=-O1 -g -Wall -std=c99 -pedantic
+endif
+
+ifndef LDFLAGS
+LDFLAGS:=
+endif
+
+# Only print everything if VERBOSE is enable
+ifndef VERBOSE
+.SILENT:
+endif
+
+ifndef VALGRIND
+VALGRIND:=valgrind --tool=memcheck --leak-check=yes --track-origins=yes
+endif
+
+# Compile all c files into object files
+%.o : %.c
+ifndef VERBOSE
+	echo -n "Building $<..."
+endif
+	$(CC) -c $(CFLAGS) $< -o $@
+ifndef VERBOSE
+	echo "ok"
+endif
+
+
+fib: fib.o
+	$(CC) -o $@ $(LDFLAGS) $<
+
+
+.PHONY: clean all
+
+all: fib
+
+clean:
+	-rm -f *.o
+	-rm -f fib
+
+mem: fib
+	$(VALGRIND) ./fib
+
+help:
+	echo "Valid targets:"
+	echo "  all: build all executables"
+	echo "  clean: remove all executables and object files"
+	echo "  mem: run executables with valgrind"
+	echo "  help: print this help message"
+
+
