@@ -1,0 +1,80 @@
+CMPE380 Lab06
+Andrei Tumbar
+
+===== Implementation notes ======
+The iteration timing macros were implemented by
+creating a for loop inside the BEGIN macro and
+closing via the END macro. The timer was also started
+in the begin macro.
+
+The timer started in the BEGIN macro was ended when the
+PRINT macro occurred. This macro was placed directly after
+the END macro. The same print format was used as shown in the
+matrix.txt example file. The print timer printed the name of the
+timer as a string by using the '#A' format for 'stringifying' a macro
+parameter.
+
+Loop count parameters were also implemented as macros with
+default values who could be overwritten by definitions from
+the commandline. This made it easier to build the various test
+cases as definitions could simply be passed to the makefile to
+test different iteration counts.
+
+To test the different parameters efficiently,
+a `run_all.sh` bash script was written that would
+compile the different test cases and run the relevant
+executable. All outputs were redirected to the out.txt
+file along with a description line above each output to
+distinguish each testcase.
+
+===== Analysis of C test outputs =====
+Analysing each of the ELAPSED_TIME / ITERATIONS, all answers
+have their expected values meaning the CPU time per iteration
+be an average time per iteration over the course of all of the
+loops.
+
+Looking at the CPU time per iteration for the first set of
+tests (no move fopen hw6c). The time per iteration for the data timer
+seems to be quite stable at around 2.75e-02 seconds. Both test cases
+read a similar value (x1=2.75302-02, x2=2.75302-02). However, after running
+multiple times, we can see variations in output. This is because the
+IO operations are limited by the kernel which can provide variable amounts
+of CPU time to our process as well as I/O variations on the disk. The total
+time between the two cases about doubles which is expected as the
+time per iteration is about the same.
+
+The calc timer varies more with (x1=6.90010e-06, x2=7.33088e-06).
+Running this test multiple times shows that most test cases will
+output similar times between the two tests. In this test however,
+the second iteration must have been slowed down by another process
+meaning it had took longer per iteration to complete.
+
+Looking at the second set (move fopen hw6c), the times are far
+lower by a factor of 100. This is because the fopen()/fclose()
+operations are slow as they require the kernel to perform various
+tasks to open a file. Looking between the two cases, the x2 case
+was slightly faster than the x1 case (total time was doubled).
+
+The CPU time goes far down because only 5000 data lines are processed
+in both tests 4 and 5. This is because the loop is stopped short when
+a NAN value is reached.
+
+==== Analysis of C++ test outputs ====
+Comparing the results of the DATA for the C++ program and the C
+program, we see that the C++ program is actually faster by a
+factor of 10. This is because, even the the FILE* struct is cached,
+we are performing many fscanf operations which are inherently slow.
+The C++ program is able to optimize its streams more. To speed up
+the C program we could instead try the strtof() function which is
+has less overhead than the fscanf function.
+
+Comparing the results of the CPU time, the C program is faster as
+expected (C=7.33088e-06 s/iter, C++=1.70546e-05 s/iter). This is because
+C programs have far less instruction overhead and therefore generate
+faster/more optimized loops whereas this C++ program must use its STL
+library for looping therefore slowing it down.
+
+Comparing test 5 and 6, the time total CPU time and DATA time doubles
+as expected because there are 2x more iterations performed. The time
+per iteration stays mostly constant as the iteration count is high
+enough to produce stable timing.

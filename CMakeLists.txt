@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
 project(CMPE380 C)
+enable_language(CXX)
 set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 98)
 
 option(SANITIZER_BUILD "Build with ASan" OFF)
 
@@ -15,3 +17,4 @@ add_subdirectory(Lab02)
 add_subdirectory(Lab03)
 add_subdirectory(Lab04)
 add_subdirectory(Lab06)
+add_subdirectory(Lab07)

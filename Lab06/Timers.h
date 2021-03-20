@@ -38,7 +38,7 @@
     }; /* Elapsed Time and State must be initialized to zero */
 
   #define DECLARE_TIMER(A)                                                    \
-    struct timerDetails                                                      \
+    struct timerDetails                                                       \
      A = /* Elapsed Time and State must be initialized to zero */             \
       {                                                                       \
       /* Start   = */ 0,                                                      \
@@ -97,20 +97,28 @@
   /****************************************************************************
   * Declare the timer separately from the repeat loop.  
   ****************************************************************************/
-  #define DECLARE_REPEAT_VAR(V) 
+  #define DECLARE_REPEAT_VAR(V) DECLARE_TIMER(V)
 
-  /* R - repeat value, V - variable */  
-  #define BEGIN_REPEAT_TIMING(R,V)  
+  /* R - repeat value, V - variable */
+  #define BEGIN_REPEAT_TIMING(R,V) START_TIMER(V) for (unsigned int _i__ = 0; _i__ < (R); _i__++) {
 
-  #define END_REPEAT_TIMING
+  #define END_REPEAT_TIMING }
 
   /****************************************************************************
   * Print the timer.  Check the timer state and stop it if necessary, print
   * the elapsed time (in seconds).
   ****************************************************************************/
-  #define PRINT_TIMER(A)   
+  #define PRINT_TIMER(A) { \
+        if ((A).State) { STOP_TIMER(A) } \
+        printf("Elapsed CPU Time (" #A ") = %.5f\n", (A).Elapsed / (double)CLOCKS_PER_SEC); \
+    }
 
-  #define PRINT_RTIMER(A,R)
+  #define PRINT_RTIMER(A,R) { \
+        PRINT_TIMER(A) \
+        printf("Elapsed CPU Time per Iteration (" #A ", %d) = %.5e\n", \
+            (R), \
+            ((A).Elapsed / (double)CLOCKS_PER_SEC) / (R)); \
+    }
 
   
 #else /* not defined(TIMING) */
@@ -119,10 +127,13 @@
   #define START_TIMER(A)            /* Null Macro */
   #define RESET_TIMER(A)            /* Null Macro */
   #define STOP_TIMER(A)             /* Null Macro */
-  
-  
-/************** Write your dummy macros here **************/
 
-  
+/************** Write your dummy macros here **************/
+  #define DECLARE_REPEAT_VAR(A)     /* Null Macro */
+  #define BEGIN_REPEAT_TIMING(A,R)  /* Null Macro */
+  #define END_REPEAT_TIMING         /* Null Macro */
+  #define PRINT_TIMER(A)            /* Null Macro */
+  #define PRINT_RTIMER(A,R)         /* Null Macro */
+
 #endif /* defined(TIMING) */
 #endif /* _TIMERS_H_ */

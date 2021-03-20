@@ -15,8 +15,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Timers.h"
 /* add other include files and macro variables as necessary */
- 
+#ifndef IO_REPEAT
+#define IO_REPEAT 200
+#endif
+
+#ifndef CALC_REPEAT
+#define CALC_REPEAT 20000
+#endif
+
+// Make sure we don't leak streams
+#ifndef MOVE_FOPEN
+#define MOVE_IO_CLOSE
+#endif
+
 #define INITIAL_SIZE (1)
 /* structure to hold header of dynamic array */
 typedef struct {
@@ -25,27 +38,30 @@ typedef struct {
    int Size;            /* Current Size of dynamic arrays */
    int NextElement;     /* Index of element next to last used entry in the arrays */
   } LinearFit;
- 
-/* Function prototypes */ 
+
+/* Function prototypes */
 void CalculateCoefficients(LinearFit *DataSet, double *A, double *B);
 void AddPoint(LinearFit *DataSet, double X, double Y);
-  
-  
+
+
 /**************************************************************************
 * Main program to fit a line to a data set using "batch" least squares
 **************************************************************************/
 int main(int argc, char *argv[])
   {
     /* Declare your data and calculation variables here */
+   DECLARE_REPEAT_VAR(DataTimer)
+   DECLARE_REPEAT_VAR(CalcTimer)
+
    /* Declare a LinearFit data structure */
-   LinearFit DataSet = {0,0,0,0}; 
-  
+   LinearFit DataSet = {0,0,0,0};
+
    double A, B; /* Variables for coefficients of least-square line       */
-   double X, Y; /* Temporary variables to hold data point read from file */ 
+   double X, Y; /* Temporary variables to hold data point read from file */
    int Done;    /* "Boolean" variable to indicate all data has been read */
    int lines = 0; /* Line counter */
    FILE *InputFile = NULL; /* Input file pointer for data file                  */
-  
+
 #ifdef EN_TIME
    #ifdef MOVE_FOPEN
       printf("move fopen to top enabled \n");
@@ -57,10 +73,10 @@ int main(int argc, char *argv[])
    if (1 != argc)
     {
     // This MUST BE THE FIRST line of code in this IF statement *****
-    // Open input file for reading -- it should be a valid filename 
-    // Note: Opening a file that is already open has unpredictable 
-    // results, it seems to just reset the file pointer to the start  
-    // and doesn't really re-open the file 
+    // Open input file for reading -- it should be a valid filename
+    // Note: Opening a file that is already open has unpredictable
+    // results, it seems to just reset the file pointer to the start
+    // and doesn't really re-open the file
 #ifdef MOVE_FOPEN
     InputFile = fopen(argv[1], "r");
     if (NULL == InputFile)
@@ -69,16 +85,15 @@ int main(int argc, char *argv[])
        return(-1);
        }
 #endif
-       
-       
-    /* Time data I/O operation */  
-    
-    
-    
-    // Open input file for reading -- it should be a valid filename 
-    // Note: Opening a file that is already open has unpredictable 
-    // results, it seems to just reset the file pointer to the start  
-    // and doesn't really re-open the file 
+
+
+    /* Time data I/O operation */
+    BEGIN_REPEAT_TIMING(IO_REPEAT, DataTimer)
+
+    // Open input file for reading -- it should be a valid filename
+    // Note: Opening a file that is already open has unpredictable
+    // results, it seems to just reset the file pointer to the start
+    // and doesn't really re-open the file
 #ifndef MOVE_FOPEN
     InputFile = fopen(argv[1], "r");
     if (NULL == InputFile)
@@ -87,26 +102,26 @@ int main(int argc, char *argv[])
        return(-1);
        }
 #endif
-                          
+
     /* Start with minimally sized arrays */
     DataSet.Size = INITIAL_SIZE;
- 
+
     /* Allocate the arrays */
     DataSet.Data_X = (double *)malloc(sizeof(double) * DataSet.Size);
     DataSet.Data_Y = (double *)malloc(sizeof(double) * DataSet.Size);
-    
-    if ((NULL == DataSet.Data_X) || (NULL == DataSet.Data_Y)) 
+
+    if ((NULL == DataSet.Data_X) || (NULL == DataSet.Data_Y))
        {
         fprintf(stderr, "Error: Could not allocate memory at line %d\n", __LINE__);
         exit(-99);
        }
-     
+
     /* Initialize the index where the next data point will go */
     DataSet.NextElement = 0;
- 
+
     /* Read all of the data from the file */
     do {
-       /* Read X,Y data point and if read did not go beyond end-of-file, 
+       /* Read X,Y data point and if read did not go beyond end-of-file,
           add it to the data set */
        if (fscanf(InputFile, "%lf %lf", &X, &Y) != EOF)
          {
@@ -121,34 +136,40 @@ int main(int argc, char *argv[])
           Done = 1;
          } /* if...else() */
       } while (!Done);
-     
+
     /* Disconnect the input file from the stream */
 #ifdef MOVE_IO_CLOSE
     fclose(InputFile);
-#endif  	
+#endif
     /* Insert end data timing */
+    END_REPEAT_TIMING
+    PRINT_RTIMER(DataTimer, IO_REPEAT)
+
    /* Insert start calc timing */
+    BEGIN_REPEAT_TIMING(CALC_REPEAT, CalcTimer)
+
     /* Compute the coefficients of the least squares line */
     CalculateCoefficients(&DataSet, &A, &B);
-    
-   /* Insert end calc timing */
-    
-                                                            
+
+    /* Insert end calc timing */
+    END_REPEAT_TIMING
+    PRINT_RTIMER(CalcTimer, CALC_REPEAT)
+
     /* Return dynamic memory for data to the heap */
     free(DataSet.Data_X);
     free(DataSet.Data_Y);
     DataSet.Data_X = NULL;
-    DataSet.Data_Y = NULL;                          
- 
+    DataSet.Data_Y = NULL;
+
     /* Insert the data and calculation timer print code before the fclose() */
-	
+
     /* Disconnect the input file from the stream */
 #ifndef MOVE_IO_CLOSE
     fclose(InputFile);
 #endif
     /* Print out the line that fits the data set. */
     printf("%d data lines processed, the least square line is : Y = %g * X + %g\n", lines, A, B);
- 
+
     } /* if() */
   else
     {
@@ -156,7 +177,7 @@ int main(int argc, char *argv[])
       printf("Fits a line to data points\n");
       printf("(C Version) Usage: %s Filename\n", argv[0]);
     } /* if...else() */
- 
+
    return 0;
   } /* main() */
 
@@ -173,7 +194,7 @@ void AddPoint(LinearFit *DataSet, double X, double Y)
    /* Store the data point (X,Y) into the arrays */
    DataSet->Data_X[DataSet->NextElement] = X;
    DataSet->Data_Y[DataSet->NextElement] = Y;
- 
+
    /* Increment index for the next point and see if that point will be */
    /* beyond the size of the arrays */
    if (++DataSet->NextElement >= DataSet->Size)
@@ -181,35 +202,35 @@ void AddPoint(LinearFit *DataSet, double X, double Y)
       /* Increase the size of the arrays by 1 */
       tmp_old_size = DataSet->Size;
       DataSet->Size += 1;
- 
+
       /* Declare AND allocate new arrays for the new (larger) size */
       NewData_X = (double *)malloc(sizeof(double) * DataSet->Size);
       NewData_Y = (double *)malloc(sizeof(double) * DataSet->Size);
-      
+
       /* Check for any errors */
-      if ((NULL == NewData_X) || (NULL == NewData_Y)) 
+      if ((NULL == NewData_X) || (NULL == NewData_Y))
          {
           fprintf(stderr, "Error: Could not allocate memory at line %d\n", __LINE__);
           exit(-99);
          }
-      
+
       /* Copy the existing data points to the new arrays */
       for (lcv = 0; lcv < tmp_old_size ; lcv++)
         {
          NewData_X[lcv] = DataSet->Data_X[lcv];
          NewData_Y[lcv] = DataSet->Data_Y[lcv];
         } /* for() */
- 
+
       /* De-allocate (return to heap) the old (smaller) arrays */
       free(DataSet->Data_X);
       free(DataSet->Data_Y);
- 
+
       /* Point to the new arrays to be used from now on */
       DataSet->Data_X = NewData_X;
       DataSet->Data_Y = NewData_Y;
      } /* if() */
   } /* AddPoint() */
-  
+
 
 /**************************************************************************
 *  CalculateConstant() - Calculate coefficients A and B best linear fit 
@@ -223,7 +244,7 @@ void CalculateCoefficients(LinearFit *DataSet, double *A, double *B)
    double S_X  = 0.0;
    double S_Y  = 0.0;
    int lcv;
- 
+
    /* Compute the sums */
    for (lcv=0; lcv < DataSet->NextElement; lcv++)
     {
@@ -232,7 +253,7 @@ void CalculateCoefficients(LinearFit *DataSet, double *A, double *B)
       S_X  += DataSet->Data_X[lcv];
       S_Y  += DataSet->Data_Y[lcv];
     } /* for() */
- 
+
    /* Compute the parameters of the line Y = A*X + B */
    (*A) = (((DataSet->NextElement * S_XY) - (S_X * S_Y)) / ((DataSet->NextElement * S_XX) - (S_X * S_X)));
    (*B) = (((S_XX * S_Y) - (S_XY * S_X)) / ((DataSet->NextElement * S_XX) - (S_X * S_X)));

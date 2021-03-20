@@ -1,0 +1,57 @@
+1) The bracketed method will only work for odd-roots
+    even roots will not change sign when the reach zero.
+
+2) When the y value is less that the minimum delta away from 0.
+
+3) Usually the root found is close but not exactly 0.
+
+4)
+    1. Choose and interval with a root in range (a,b)
+    2. Evaluate the sign of each enpoint
+        Is one negative and one positive  => (no: error)
+    3. Calculate midpoint
+    4. Get sign at midpoint
+    5. If root is found => done
+       else goto step 6
+    6. Find which subinterval brackets the root
+    7. Update the new interval and goto step 3.
+
+5. You need to find which subinterval the root lies in.
+    If the root lies in the upper interval, the lower endpoint
+    should be replaced by the midpoint.
+
+6. Newton and Secant use the tangent line to traverse the
+   function and find the root.
+
+7. Newton and Secant can run forever therefore an escape
+    condition is required.
+
+8. Newton's method requires the guess to be close to the
+    root so that it may converge.
+
+9.
+    Newton update equation: xn1 = xn - f(xn) / dxn
+        where xn1 = next x value in iteration
+               xn = current x value
+            f(xn) = current y value (at xn)
+              dxn = current derivative (at xn)
+
+    Secant update equation: xn1 = xn - f(xn) (xn - xnm1) / ( f(xn) - f(xnm1) )
+        where all values are the same
+             xnm1 = the previous x value in iteration
+
+10. The 2nd guess of Secant does not require the interval
+      to be bracketed unlike bisection.
+
+11. Newton doesn't require a second guess because it
+      soley relies on the slope at a single point
+      to tell it how to reach its next x value.
+
+12. fabs() is the floating point version of abs() which is meant
+      for signed integers.
+
+13. We must check for zero slope by doing fabs(dx0) < atol because
+      to slope will most likely never appear to be zero but will
+      be very close. We can check how close it is to zero by using
+      the floating point absolute value.
+

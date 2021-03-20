@@ -1,0 +1,45 @@
+-------------- hw6c_1  x1, no move fopen
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.75302
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.75302e-02
+Elapsed CPU Time (CalcTimer) = 0.13800
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.90010e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+
+-------------- hw6c_2  x2, no move fopen
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.62517
+Elapsed CPU Time per Iteration (DataTimer, 200) = 2.81258e-02
+Elapsed CPU Time (CalcTimer) = 0.29324
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 7.33088e-06
+1000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+
+-------------- hw6c_f1  x1, yes move fopen
+move fopen to top enabled 
+Elapsed CPU Time (DataTimer) = 0.02685
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.68450e-04
+Elapsed CPU Time (CalcTimer) = 0.00008
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.90000e-09
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+
+-------------- hw6c_f2  x2, yes move fopen
+move fopen to top enabled 
+Elapsed CPU Time (DataTimer) = 0.02735
+Elapsed CPU Time per Iteration (DataTimer, 200) = 1.36765e-04
+Elapsed CPU Time (CalcTimer) = 0.00016
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 3.90000e-09
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+
+-------------- hw6cpp_1 x1
+Elapsed CPU Time (DataTimer) = 0.32234
+Elapsed CPU Time per Iteration (DataTimer, 100) = 3.22336e-03
+Elapsed CPU Time (CalcTimer) = 0.34109
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 1.70546e-05
+500100 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+
+-------------- hw6cpp_2 x2
+Elapsed CPU Time (DataTimer) = 0.62314
+Elapsed CPU Time per Iteration (DataTimer, 200) = 3.11569e-03
+Elapsed CPU Time (CalcTimer) = 0.72210
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.80525e-05
+1000200 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035

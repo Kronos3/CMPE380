@@ -16,8 +16,13 @@ using namespace std;
 #include "Timers.h"         
 
 // add IO and calculation repeat value constant definition macros here
+#ifndef IO_REPEAT
+#define IO_REPEAT 200
+#endif
 
-
+#ifndef CALC_REPEAT
+#define CALC_REPEAT 20000
+#endif
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -176,11 +181,9 @@ double LinearFit::GetLinearCoefficient(void)
 int main(int argc, char *argv[])
   {
    // Insert your data and calc timing macro definitions here
-   
-   
-   
-   
-   
+   DECLARE_REPEAT_VAR(DataTimer)
+   DECLARE_REPEAT_VAR(CalcTimer)
+
    // Declare a pointer to the LinearFit object
    LinearFit *DataSet = NULL;
    
@@ -200,8 +203,7 @@ int main(int argc, char *argv[])
       double A, B;
 
      // Insert your data timer start loops here
-
-     
+     BEGIN_REPEAT_TIMING(IO_REPEAT, DataTimer)
 
             
       // Attach the input stream to the command line argument (it should be a
@@ -239,18 +241,21 @@ int main(int argc, char *argv[])
          InputFile.clear();
          
       // Insert your closing data timing loop here and 
-      // print the results 
+      // print the results
+      END_REPEAT_TIMING
+      PRINT_RTIMER(DataTimer, IO_REPEAT)
+
      // Insert your starting cal timing loop here
       // Calculate the coefficients of the best linear fit
+      BEGIN_REPEAT_TIMING(CALC_REPEAT, CalcTimer)
       A = DataSet->GetLinearCoefficient();
       B = DataSet->GetConstant();
       DataSet->Reset();
                                 
       // Insert your closing calc timing loop here and 
       // print the results 
- 
- 
-      
+      END_REPEAT_TIMING
+      PRINT_RTIMER(CalcTimer, CALC_REPEAT)
       
       // Destroy the data set object
       delete DataSet;
