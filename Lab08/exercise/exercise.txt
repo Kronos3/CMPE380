@@ -1,0 +1,93 @@
+Elapsed CPU Time (AllocTimer) = 0.43995
+Elapsed CPU Time per Iteration (AllocTimer, 1000) = 4.39954e-04
+
+real    0m0.442s
+user    0m0.438s
+sys     0m0.005s
+
+
+Elapsed CPU Time (AllocTimer) = 2.62100
+Elapsed CPU Time per Iteration (AllocTimer, 1000) = 2.62100e-03
+
+real    0m2.626s
+user    0m0.904s
+sys     0m1.720s
+
+The first implementation (lab_a) is faster than the second
+implementation (lab_c). There is 594 % speedup. The data
+returned from `time` correlate with the data returned from the
+timers. The time returned from `time` is slightly longer because
+it takes time for the process to launch and exit.
+
+Output of ./lab_a2 with valgrind
+==240329== Memcheck, a memory error detector
+==240329== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==240329== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==240329== Command: ../../cmake-build-debug/Lab08/exercise/lab8a2
+==240329== 
+Elapsed CPU Time (AllocTimer) = 0.03516
+Elapsed CPU Time per Iteration (AllocTimer, 2) = 1.75805e-02
+==240329== 
+==240329== HEAP SUMMARY:
+==240329==     in use at exit: 0 bytes in 0 blocks
+==240329==   total heap usage: 5 allocs, 5 frees, 16,164,096 bytes allocated
+==240329== 
+==240329== All heap blocks were freed -- no leaks are possible
+==240329== 
+==240329== For lists of detected and suppressed errors, rerun with: -s
+==240329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Output of ./lab_c2 with valgrind
+==240410== Memcheck, a memory error detector
+==240410== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==240410== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==240410== Command: ../../cmake-build-debug/Lab08/exercise/lab8c2
+==240410== 
+Elapsed CPU Time (AllocTimer) = 0.07558
+Elapsed CPU Time per Iteration (AllocTimer, 2) = 3.77900e-02
+==240410== 
+==240410== HEAP SUMMARY:
+==240410==     in use at exit: 0 bytes in 0 blocks
+==240410==   total heap usage: 20,003 allocs, 20,003 frees, 16,164,096 bytes allocated
+==240410== 
+==240410== All heap blocks were freed -- no leaks are possible
+==240410== 
+==240410== For lists of detected and suppressed errors, rerun with: -s
+==240410== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+size lab_a
+   text	   data	    bss	    dec	    hex	filename
+   2114	    616	      8	   2738	    ab2	lab_a
+size lab_c
+   text	   data	    bss	    dec	    hex	filename
+   2144	    656	      8	   2808	    af8	lab_c
+
+They are both of similar size.
+
+
+The 3x3 2D dynamic matrix
+ 0.0	 0.1	 0.2	
+ 1.0	 1.1	 1.2	
+ 2.0	 2.1	 2.2
+The 3x3 2D dynamic matrix
+ 0.0	 0.1	 0.2	
+ 1.0	 1.1	 1.2	
+ 2.0	 2.1	 2.2	
+
+Both outputs are exactly the same. Initialization and printing routines
+ran.
+
+Horner's performance, ans 20.437500
+Elapsed CPU Time (time) = 0.34249
+Elapsed CPU Time per Iteration (time, 100000000) = 3.42493e-09
+
+Mult performance, ans 20.437500
+Elapsed CPU Time (time) = 0.42768
+Elapsed CPU Time per Iteration (time, 100000000) = 4.27682e-09
+
+Pow performance, ans 20.437500
+Elapsed CPU Time (time) = 6.61741
+Elapsed CPU Time per Iteration (time, 100000000) = 6.61741e-08
+
+The horner implementation is th fastest closely followed by mult.
+The pow() implementation is FAR slower than the other two (factor of 10).
