@@ -24,8 +24,9 @@
 #define QN 2                        /* place holder value, see above */
 
 /* Macros */
-#define SIGN(x) ((x) < 0 ? -1 :1)
+#define SIGN(x) ((x) < 0 ? -1 : 1)
 #define HW_EPSILON 0.00000000001
+#define BI_LIMIT (1000)
 
 /* Typemarks **********************************************************
  * The data structure to hold all coefficients of a polynomial.

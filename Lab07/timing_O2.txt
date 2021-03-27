@@ -1,0 +1,26 @@
+Running Bisection test
+Elapsed CPU Time (Timer) = 0.16174
+Elapsed CPU Time per Iteration (Timer, 100000) = 1.61740e-06
+Found the root 1.991137 using Bisection.
+
+Running Newton test #1
+Elapsed CPU Time (Timer) = 0.17693
+Elapsed CPU Time per Iteration (Timer, 100000) = 1.76931e-06
+Found the root -88.630548 using Newton.
+
+Running Newton test #2
+Elapsed CPU Time (Timer) = 0.09699
+Elapsed CPU Time per Iteration (Timer, 100000) = 9.69890e-07
+Found the root 1.991137 using Newton.
+
+Running Secant test #1
+Elapsed CPU Time (Timer) = 0.63549
+Elapsed CPU Time per Iteration (Timer, 100000) = 6.35489e-06
+No root found using Secant.
+
+Running Secant test #2
+Elapsed CPU Time (Timer) = 0.13207
+Elapsed CPU Time per Iteration (Timer, 100000) = 1.32073e-06
+Found the root 98.046372 using Secant.
+
+All tests finished

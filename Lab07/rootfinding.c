@@ -8,6 +8,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include "ClassErrors.h"
 #include "rootfinding.h"
 
@@ -30,53 +31,77 @@ double bisection(func1arg f, double a, double b, double atol, int verb)
 {
     double c; /* midpoint */
     double fc; /* the value at the midpoint */
-    int i=0; /* iterator */
-    
-    if ((fabs(a-b) < atol) ||  SIGN(f(a))==SIGN(f(b))){
-        fprintf(stdout, "A and B do not center a root\n");
-        return(NAN);
+    int i = 0; /* iterator */
+
+    // Swap the two values to have b > a always
+    if (a > b)
+    {
+        // Swap them
+        double k = b;
+        b = a;
+        a = k;
+    }
+
+    // Check to be sure the selected starting points bracket a root
+    // Use the following error "A and B do not center a root"
+    int sa = SIGN(f(a)), sc;
+    int sb = SIGN(f(b));
+    if ((fabs(a-b) < atol) || sa == sb)
+    {
+        fprintf(stderr, "A and B do not center a root\n");
+        return NAN;
     }
 
     /* Limit the number of attempts */
-    while(i < BI_LIMIT)
+    while (i < BI_LIMIT)
     {
-        /* Calculate the mid point, evaluate it */
-        c = (a+b)/2.0;
+        /* Calculate the mid point, evaluate it.  Be sure to divide by 2.0 not 2*/
+        c  = (a + b) / 2.0;
         fc = f(c);
-        
+        sc = SIGN(fc);
+
         /* Did we find a root? - check the function */
-         // not working if ((fabs(fc) <= atol) || ((fabs(a-b)/2.0) <= atol)) 
-        if (fabs(fc) <= atol)
+        if (fabs(fc) < atol)
         {
             return c;
         }
-        
+
         /* Did we find a root? - check the range */
-        if (fabs(a-b)/2.0 <= atol) 
+        if (fabs(a - b) < atol)
         {
-           return(c);
+            return c;
         }
-        
-        if(verb)
+
+        /* Print out verbose status */
+        if (verb)
         {
-            fprintf(stdout, "iter:%d	a:%f	b:%f	x:%f	err:%f\n",
-                    i, a, b, c, fabs(b-c));
+            fprintf(stdout, "iter:%d    a:%f    b:%f    x:%f    err:%f    y:%f\n",
+                    i, a, b, c, fabs(b - c), fc);
         }
-        
+
         /* Pick the next bracket */
-        if (SIGN(f(a))==SIGN(fc))
+        if (sc == sa)
         {
+            // Pick the right range
             a = c;
         }
         else
         {
+            // Pick the left range
             b = c;
         }
+
+        // Track the iterations
         i++;
     }
-    fprintf(stdout, "Bisection could not find a root with %d iterations\n", BI_LIMIT);
-    return(NAN);
+
+    if (verb)
+    {
+        fprintf(stdout, "Bisection could not find a root with %d iterations\n", BI_LIMIT);
+    }
+    return (NAN);
 }
+
 
 
 /******************************************************************************
@@ -100,36 +125,37 @@ Errors:  prints a message and returns with NAN
 ******************************************************************************/
 double newton(func1arg f, func1arg df, double x0, int Nmax, double atol, int verb)
 {
-   double fx0;		/* Value of f(x0) */
-    double dx0;		/* Derivative of f(x0) */
-    double x1;		/* New x0 value */
-    int i=0;		/* Iteration */
+    double fx0;        /* Value of f(x0) */
+    double dx0;        /* Derivative of f(x0) */
+    double x1;        /* New x0 value */
+    int i = 0;        /* Iteration */
 
-    if(fabs(f(x0))< atol){
+    if (fabs(f(x0)) < atol)
+    {
         return x0;
     }
 
-    while(i < Nmax)
+    while (i < Nmax)
     {
         /* Evaluate the function at the initial point */
         fx0 = f(x0);
         dx0 = df(x0);
 
-        /* If the slope or derivative is close to zero then Newton won't converge */ 
-        if(fabs(dx0) < atol) 
+        /* If the slope or derivative is close to zero then Newton won't converge */
+        if (fabs(dx0) < atol)
         {
             fprintf(stdout, "Newton could NOT converge on a root.\n");
-			return(NAN);
+            return (NAN);
         }
-        
+
         /* Calculate the updated point */
-        x1 = x0 - fx0/dx0;
-        if(fabs(x1-x0) < atol)  /* was if(fabs(x1-x0)/fabs(x1) < atol) which I think is wrong */
+        x1 = x0 - (fx0 / dx0);
+        if (fabs(x1 - x0) < atol)
         {
             return x1;
         }
-        
-        if(verb)
+
+        if (verb)
         {
             fprintf(stdout, "iter:%d	x0:%f	x1:%f	err:%f\n",
                     i, x0, x1, fabs(x1 - x0));
@@ -137,8 +163,12 @@ double newton(func1arg f, func1arg df, double x0, int Nmax, double atol, int ver
         x0 = x1;
         i++;
     }
-    fprintf(stdout, "Newton could not find a root with %d iterations\n", Nmax);
-    return(NAN);
+
+    if (verb)
+    {
+        fprintf(stdout, "Newton could not find a root with %d iterations\n", Nmax);
+    }
+    return (NAN);
 }
 
 
@@ -158,7 +188,48 @@ double newton(func1arg f, func1arg df, double x0, int Nmax, double atol, int ver
 Returns: double - the root refined to the desired tolerance or NAN
 Errors:  prints a message and returns with NAN        
 ******************************************************************************/
-double secant(func1arg f, double x0, double x1, int Nmax, double atol, int verb)
+double
+secant(func1arg f, double x0, double x1, int Nmax, double atol, int verb)
 {
+    /**
+     * let xn1 = next x value in iteration
+               xn = current x value
+             xnm1 = previous x value
+            f(xn) = current y value (at xn)
 
+        Secant update equation:
+            xn1 = xn - (f(xn) (xn - xnm1) / ( f(xn) - f(xnm1) ))
+
+        Secant will iterate until a answer close to zero is found
+        We have a maximum iteration so that we can break out of
+        an infinite iteration.
+     */
+
+    double fxnm1 = f(x0);
+    for (uint32_t n = 0; n < Nmax; n++)
+    {
+        double fxn = f(x1);
+        if (fabs(fxn) < atol)
+        {
+            return x1;
+        }
+
+        if (verb)
+        {
+            fprintf(stdout,"iter:%d	x0:%.6f	x1:%.6f	err:%.6f\n",
+                   n, x0, x1, fabs(fxn));
+        }
+
+        // Perform next step calculation
+        double xn1 = x1 - (fxn * (x1 - x0) / (fxn - fxnm1));
+        fxnm1 = fxn;
+        x0 = x1;
+        x1 = xn1;
+    }
+
+    if (verb)
+    {
+        fprintf(stdout, "Secant could not find a root with %d iterations\n", Nmax);
+    }
+    return NAN;
 }

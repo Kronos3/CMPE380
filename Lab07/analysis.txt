@@ -1,0 +1,75 @@
+Andrei Tumbar
+CMPE 380
+
+The program was optimized as much as possible by saving
+reused variables (this is done by compiler optimization
+automatically). In the next section I will discuss how these
+changes meant that the different compiler optimization levels
+led to little changes in performance.
+
+A timing test was running with a high iteration count of
+100,000 to eliminate any noise seen from runtime variation.
+A separate run was done for -O1, -O2, and -O3 optimization
+levels. Their outputs are saved in timing_*.txt. Looking at
+the outputs we the following results
+
+    Time/iteration
+    Bisection:
+        -O1: 1.61638e-06
+        -O2: 1.61740e-06
+        -O3: 1.62625e-06
+
+    Newton #1
+        -O1: 1.76644e-06
+        -O2: 1.76931e-06
+        -O3: 1.77104e-06
+
+    Newton #2
+        -O1: 1.02061e-06
+        -O2: 9.69890e-07
+        -O3: 9.70900e-07
+
+    Secant #1
+        -O1: 6.34075e-06
+        -O2: 6.35489e-06
+        -O3: 6.39966e-06
+
+    Secant #1
+        -O1: 1.33324e-06
+        -O2: 1.32073e-06
+        -O3: 1.32556e-06
+
+Looking at these results, very little performance difference
+was seen across all different optimization levels. In the case
+of -O3, these tests were always slower than the -O2 tests. This
+is not completely unexpected as the O3 optimization will perform
+aggressive inlining and loop unrolling which is not always a
+benefit to perform. The fact that the results were fairly even
+across the board indicate that the program does not have a lot
+of optimization available past -O1. In terms of the method used,
+for the most part secant and newton were faster than bisection
+given that a root was close to the guess. Secant was slowest when it
+failed to find a root in test #4.
+
+Manual optimization was performed by saving commonly used values
+(mainly in the function's derivative) to temporary variables.
+In the secant test, the function had to be evaluated a single
+time and its value could be passed to the next iteration. This
+meant a better performance during the timing tests.
+
+Comparing the different algorithms, bisection finds a root at 1.991
+that is bounded by the two guesses. It find a root in 21 iterations.
+Using a start point of -1.5 on newton, this algorithm find a root at
+-88.63 in 7 iterations. This is because the slope is too steep at some
+of the earlier zeroes to converge on a root.
+
+Looking at the second newton test, the same zero was found as with
+bisection.
+
+Secant will fail to find a root when given a starting guess -2.5 because
+there is a peak just before a zero at -1.08. This means that secant will
+oscillate around this peak until it reaches the maximum iteration.
+
+For the final secant test, I chose a value near the root at 98.046. This
+was chosen because it has a very steep slope and therefore the iterations
+had to be higher to find the correct root within the tolerance.
