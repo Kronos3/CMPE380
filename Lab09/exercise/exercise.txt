@@ -90,10 +90,27 @@ Actual Machine Epsilon:     2.22045e-16
 
 
 -O0 run
-Program had to be run in GDB because stdout is not
-flushed before segfault occurs. addSSP() is not reliable
-because it is returning an address that will be invalidated
-after the stack exits.
+
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+Are these results right? length is 25 bytes
+   Result(addSSP) is:0.000000+0.000000i
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+   Result(addSSS) is:4.000000+6.000000i
+
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+   Result(addSPI) is:4.000000+6.000000i
+
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+   Result(addPPP) is:4.000000+6.000000i
+
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+Are these results right? length is 25 bytes
+   Result(addSSP) is:6.000000+0.000000i
+
+Adding 1.000000+2.000000i and 3.000000+4.000000i
+Are these results right? length is 25 bytes
+   Result(addSSP) is:0.000000+0.000000i
+
 
 Adding 1.000000+2.000000i and 3.000000+4.000000i
    Result(addSSS) is:4.000000+6.000000i
@@ -106,20 +123,8 @@ Adding 1.000000+2.000000i and 3.000000+4.000000i
 
 Adding 1.000000+2.000000i and 3.000000+4.000000i
 Are these results right? length is 25 bytes
-
-Program received signal SIGSEGV, Segmentation fault.
-
-Adding 1.000000+2.000000i and 3.000000+4.000000i
-   Result(addSSS) is:4.000000+6.000000i
-
-Adding 1.000000+2.000000i and 3.000000+4.000000i
-   Result(addSPI) is:4.000000+6.000000i
-
-Adding 1.000000+2.000000i and 3.000000+4.000000i
-   Result(addPPP) is:4.000000+6.000000i
+   Result(addSSP) is:0.000000+0.000000i
 
 Adding 1.000000+2.000000i and 3.000000+4.000000i
 Are these results right? length is 25 bytes
-
-Program received signal SIGSEGV, Segmentation fault.
-
+   Result(addSSP) is:0.000000+0.000000i
