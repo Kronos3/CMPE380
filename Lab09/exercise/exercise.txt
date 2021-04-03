@@ -1,9 +1,9 @@
 Number 0.000000 => Bin sign:0 Dec exponent:-127  Hex significand .0
 Number 1.000000 => Bin sign:0 Dec exponent:0  Hex significand .0
 Number -1.000000 => Bin sign:1 Dec exponent:0  Hex significand .0
-Number 1.500000 => Bin sign:0 Dec exponent:0  Hex significand .400000
-Number 1.250000 => Bin sign:0 Dec exponent:0  Hex significand .200000
-Number 1.125000 => Bin sign:0 Dec exponent:0  Hex significand .100000
+Number 1.500000 => Bin sign:0 Dec exponent:0  Hex significand .800000
+Number 1.250000 => Bin sign:0 Dec exponent:0  Hex significand .400000
+Number 1.125000 => Bin sign:0 Dec exponent:0  Hex significand .200000
 
 Part b
          1	2.00000000000000000000
@@ -90,7 +90,6 @@ Actual Machine Epsilon:     2.22045e-16
 
 
 -O0 run
-
 Adding 1.000000+2.000000i and 3.000000+4.000000i
 Are these results right? length is 25 bytes
    Result(addSSP) is:0.000000+0.000000i
@@ -111,7 +110,7 @@ Adding 1.000000+2.000000i and 3.000000+4.000000i
 Are these results right? length is 25 bytes
    Result(addSSP) is:0.000000+0.000000i
 
-
+-O1 run
 Adding 1.000000+2.000000i and 3.000000+4.000000i
    Result(addSSS) is:4.000000+6.000000i
 
@@ -128,3 +127,7 @@ Are these results right? length is 25 bytes
 Adding 1.000000+2.000000i and 3.000000+4.000000i
 Are these results right? length is 25 bytes
    Result(addSSP) is:0.000000+0.000000i
+
+
+addSSP is not reliable because it is returning
+an address from the stack.

@@ -1,0 +1,53 @@
+
+------------- hw8 -O0 optimized
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 9.41277
+Elapsed CPU Time per Iteration (DataTimer, 200) = 4.70638e-02
+Elapsed CPU Time (CalcTimer) = 0.65691
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.28457e-05
+1000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8
+-rwxr-xr-x 1 atuser atuser 21048 Apr  2 20:12 hw8
+size hw8
+   text	   data	    bss	    dec	    hex	filename
+   5218	    688	     16	   5922	   1722	hw8
+
+------------- hw8 -O1 optimized
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.59361
+Elapsed CPU Time per Iteration (DataTimer, 200) = 2.79680e-02
+Elapsed CPU Time (CalcTimer) = 0.13002
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.50110e-06
+1000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8
+-rwxr-xr-x 1 atuser atuser 27584 Apr  2 20:12 hw8
+size hw8
+   text	   data	    bss	    dec	    hex	filename
+   4089	    672	     16	   4777	   12a9	hw8
+
+------------- hw8 -O2 optimized
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.50633
+Elapsed CPU Time per Iteration (DataTimer, 200) = 2.75317e-02
+Elapsed CPU Time (CalcTimer) = 0.13049
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.52440e-06
+1000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8
+-rwxr-xr-x 1 atuser atuser 27984 Apr  2 20:12 hw8
+size hw8
+   text	   data	    bss	    dec	    hex	filename
+   4161	    672	     16	   4849	   12f1	hw8
+
+------------- hw8 -O3 optimized
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 4.09265
+Elapsed CPU Time per Iteration (DataTimer, 200) = 2.04633e-02
+Elapsed CPU Time (CalcTimer) = 0.12978
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.48885e-06
+1000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8
+-rwxr-xr-x 1 atuser atuser 32184 Apr  2 20:13 hw8
+size hw8
+   text	   data	    bss	    dec	    hex	filename
+   5161	    672	     16	   5849	   16d9	hw8
+

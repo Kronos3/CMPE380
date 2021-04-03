@@ -1,0 +1,222 @@
+Running all optimization tests
+
+./hw8c_0 data.txt
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.04304
+Elapsed CPU Time per Iteration (DataTimer, 100) = 5.04304e-02
+Elapsed CPU Time (CalcTimer) = 0.67761
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.38804e-05
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_0
+-rwxr-xr-x 1 atuser atuser 21056 Apr  2 21:29 hw8c_0
+size hw8c_0
+   text	   data	    bss	    dec	    hex	filename
+   5208	    672	     16	   5896	   1708	hw8c_0
+
+./hw8c data.txt
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.94808
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.94808e-02
+Elapsed CPU Time (CalcTimer) = 0.13341
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.67045e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c
+-rwxr-xr-x 1 atuser atuser 27576 Apr  2 21:29 hw8c
+size hw8c
+   text	   data	    bss	    dec	    hex	filename
+   4079	    656	     16	   4751	   128f	hw8c
+
+./hw8c_2 data.txt
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.76048
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.76048e-02
+Elapsed CPU Time (CalcTimer) = 0.12979
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.48925e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_2
+-rwxr-xr-x 1 atuser atuser 27976 Apr  2 21:29 hw8c_2
+size hw8c_2
+   text	   data	    bss	    dec	    hex	filename
+   4151	    656	     16	   4823	   12d7	hw8c_2
+
+./hw8c_3 data.txt
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.04096
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.04096e-02
+Elapsed CPU Time (CalcTimer) = 0.13082
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.54105e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_3
+-rwxr-xr-x 1 atuser atuser 32184 Apr  2 21:29 hw8c_3
+size hw8c_3
+   text	   data	    bss	    dec	    hex	filename
+   5151	    656	     16	   5823	   16bf	hw8c_3
+
+./hw8c_opt1_0 data.txt
+Running with realloc() optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 0.22671
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.26708e-03
+Elapsed CPU Time (CalcTimer) = 0.65374
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.26871e-05
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt1_0
+-rwxr-xr-x 1 atuser atuser 20984 Apr  2 21:29 hw8c_opt1_0
+size hw8c_opt1_0
+   text	   data	    bss	    dec	    hex	filename
+   5250	    680	     16	   5946	   173a	hw8c_opt1_0
+
+./hw8c_opt1 data.txt
+Running with realloc() optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 0.23656
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.36564e-03
+Elapsed CPU Time (CalcTimer) = 0.13416
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.70800e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt1
+-rwxr-xr-x 1 atuser atuser 27360 Apr  2 21:29 hw8c_opt1
+size hw8c_opt1
+   text	   data	    bss	    dec	    hex	filename
+   4177	    664	     16	   4857	   12f9	hw8c_opt1
+
+./hw8c_opt1_2 data.txt
+Running with realloc() optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 0.23561
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.35614e-03
+Elapsed CPU Time (CalcTimer) = 0.13835
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.91755e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt1_2
+-rwxr-xr-x 1 atuser atuser 28200 Apr  2 21:29 hw8c_opt1_2
+size hw8c_opt1_2
+   text	   data	    bss	    dec	    hex	filename
+   4177	    664	     16	   4857	   12f9	hw8c_opt1_2
+
+./hw8c_opt1_3 data.txt
+Running with realloc() optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 0.26728
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.67285e-03
+Elapsed CPU Time (CalcTimer) = 0.13473
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.73650e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt1_3
+-rwxr-xr-x 1 atuser atuser 31488 Apr  2 21:29 hw8c_opt1_3
+size hw8c_opt1_3
+   text	   data	    bss	    dec	    hex	filename
+   4785	    664	     16	   5465	   1559	hw8c_opt1_3
+
+./hw8c_opt2_0 data.txt
+Running with simple loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.06779
+Elapsed CPU Time per Iteration (DataTimer, 100) = 5.06779e-02
+Elapsed CPU Time (CalcTimer) = 0.68754
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.43772e-05
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt2_0
+-rwxr-xr-x 1 atuser atuser 21200 Apr  2 21:29 hw8c_opt2_0
+size hw8c_opt2_0
+   text	   data	    bss	    dec	    hex	filename
+   5512	    672	     16	   6200	   1838	hw8c_opt2_0
+
+./hw8c_opt2 data.txt
+Running with simple loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.82585
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.82585e-02
+Elapsed CPU Time (CalcTimer) = 0.25856
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 1.29278e-05
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt2
+-rwxr-xr-x 1 atuser atuser 27968 Apr  2 21:29 hw8c_opt2
+size hw8c_opt2
+   text	   data	    bss	    dec	    hex	filename
+   4215	    656	     16	   4887	   1317	hw8c_opt2
+
+./hw8c_opt2_2 data.txt
+Running with simple loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 3.17214
+Elapsed CPU Time per Iteration (DataTimer, 100) = 3.17214e-02
+Elapsed CPU Time (CalcTimer) = 0.13964
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.98210e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt2_2
+-rwxr-xr-x 1 atuser atuser 28448 Apr  2 21:29 hw8c_opt2_2
+size hw8c_opt2_2
+   text	   data	    bss	    dec	    hex	filename
+   4271	    656	     16	   4943	   134f	hw8c_opt2_2
+
+./hw8c_opt2_3 data.txt
+Running with simple loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.27779
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.27779e-02
+Elapsed CPU Time (CalcTimer) = 0.13391
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 6.69555e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt2_3
+-rwxr-xr-x 1 atuser atuser 29656 Apr  2 21:29 hw8c_opt2_3
+size hw8c_opt2_3
+   text	   data	    bss	    dec	    hex	filename
+   4863	    656	     16	   5535	   159f	hw8c_opt2_3
+
+./hw8c_opt3_0 data.txt
+Running with complex loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 5.49118
+Elapsed CPU Time per Iteration (DataTimer, 100) = 5.49118e-02
+Elapsed CPU Time (CalcTimer) = 0.65706
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 3.28528e-05
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt3_0
+-rwxr-xr-x 1 atuser atuser 21320 Apr  2 21:29 hw8c_opt3_0
+size hw8c_opt3_0
+   text	   data	    bss	    dec	    hex	filename
+   5608	    672	     16	   6296	   1898	hw8c_opt3_0
+
+./hw8c_opt3 data.txt
+Running with complex loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.80929
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.80929e-02
+Elapsed CPU Time (CalcTimer) = 0.14096
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 7.04820e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt3
+-rwxr-xr-x 1 atuser atuser 28488 Apr  2 21:29 hw8c_opt3
+size hw8c_opt3
+   text	   data	    bss	    dec	    hex	filename
+   4279	    656	     16	   4951	   1357	hw8c_opt3
+
+./hw8c_opt3_2 data.txt
+Running with complex loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.83552
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.83552e-02
+Elapsed CPU Time (CalcTimer) = 0.15157
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 7.57865e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt3_2
+-rwxr-xr-x 1 atuser atuser 28848 Apr  2 21:29 hw8c_opt3_2
+size hw8c_opt3_2
+   text	   data	    bss	    dec	    hex	filename
+   4319	    656	     16	   4991	   137f	hw8c_opt3_2
+
+./hw8c_opt3_3 data.txt
+Running with complex loop-unrolling optimization
+move fopen to top disabled 
+Elapsed CPU Time (DataTimer) = 2.23722
+Elapsed CPU Time per Iteration (DataTimer, 100) = 2.23722e-02
+Elapsed CPU Time (CalcTimer) = 0.15053
+Elapsed CPU Time per Iteration (CalcTimer, 20000) = 7.52645e-06
+500000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+ls -l hw8c_opt3_3
+-rwxr-xr-x 1 atuser atuser 30456 Apr  2 21:29 hw8c_opt3_3
+size hw8c_opt3_3
+   text	   data	    bss	    dec	    hex	filename
+   5231	    656	     16	   5903	   170f	hw8c_opt3_3
+

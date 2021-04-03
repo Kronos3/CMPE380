@@ -1,0 +1,97 @@
+Homework 8
+Andrei Tumbar
+
+Data Matrix
+
+                                hw8c_0      hw8c        hw8c_2      hw8c_3
+Data per iteration              5.043e-02   2.948e-02   2.760e-02   2.041e-02
+Calculations per iteration      3.388e-05   6.670e-06   6.489e-06   6.541e-06
+ls -l                           21056       27576       27976       32184
+text (code) size                5208        4079        4151        5151
+data size                       672         656         656         656
+
+                                hw8c_opt1_0 hw8c_opt1   hw8c_opt1_2 hw8c_opt1_3
+Data per iteration              2.267e-03   2.366e-03   2.356e-03   2.673e-03
+Calculations per iteration      3.269e-05   6.708e-06   6.918e-06   6.737e-06
+ls -l                           20984       27360       28200       31488
+text (code) size                5250        4177        4177        4785
+data size                       680         664         664         664
+
+                                hw8c_opt2_0 hw8c_opt2   hw8c_opt2_2 hw8c_opt2_3
+Data per iteration              5.068e-02   2.826e-02   3.172e-02   2.278e-02
+Calculations per iteration      3.438e-05   1.293e-05   6.982e-06   6.696e-06
+ls -l                           21200       27968       28448       29656
+text (code) size                5512        4215        4271        4863
+data size                       672         656         656         656
+
+                                hw8c_opt3_0 hw8c_opt3   hw8c_opt3_2 hw8c_opt3_3
+Data per iteration              5.491e-02   2.809e-02   2.836e-02   2.237e-02
+Calculations per iteration      3.285e-05   7.048e-06   7.579e-06   7.526e-06
+ls -l                           21320       28488       28848       30456
+text (code) size                5608        4279        4319        5231
+data size                       672         656         656         656
+
+
+========================================================
+Comparison across all implementations and optimizations:
+For all implementations, the smallest code sizes were generated for
+O1 and O2 optimizations. This is because -O3 will perform vigorous
+loop unrolling and therefore extra instruction are generated.
+
+Looking at the time per iteration for data, the fastest was the
+implementation with realloc(). This is expected as realloc() is
+generally faster than malloc/copy/free when the pointer does not
+need to be moved.
+
+Looking at the time per iteration for calculations, the fastest
+implementation was was surprisingly the implementation with no
+optimization. It is possible that the opt2 and opt3 implementations
+caused to compiler to miss certain more valuable optimizations while
+transforming the generated instructions. This tells us that sometimes
+it is best to not perform vigorous optimizations by hand but instead
+allow the compiler to perform these optimizations for us.
+
+=========================================================
+Comparison between hw8c and hw8c_opt1:
+Data sizes were lower in the hw8 implementation but only
+slightly by about 8 bytes.
+Code size was generally about the same between both implementations
+with -O1 and -O2 generating the smallest files/code and -O3 generating
+the largest.
+
+Performance in for data opt1 saw a significant improvement by a factor
+of 10x across all optimization levels. This is because the relloc
+saved lots of execution time when the pointer did not need to be
+moved.
+
+Calculation times were about even which is expected because no changes were
+made to the calculation algorithm for opt1
+
+========================================================
+Comparison between hw8c and hw8c_opt2:
+File and code sizes were far larger by about 100 bytes for optimizations
+-O0 through -O2 for opt2. Interestingly the -O3 compile generated code
+that was smaller in the opt2 compile. I'd assume this is because a
+loop unrolling transformation was missed by the compiler here meaning
+that there was more unrolling in the hw8c implementation than opt2 for
+-O3 optimization.
+
+Data size was identical for opt2 and hw8c which is expected because
+no extra variables were declared.
+
+Performance was actually decreased across the board for all optimizations
+for opt2. This may be due to a similar reason explained earlier where the
+compiler may miss some optimizations if the programmer attempts to unroll
+manually.
+
+========================================================
+Comparison between hw8c_opt2 and hw8c_opt3:
+Data size was equal across all optimizations
+
+Calculation time was better in opt3 for the -O0 and -O1 builds but then fell
+short of opt2 on the other builds. This can be explained by the previous
+reasoning where the compiler missed more optimizations when the programmer
+attempts manual unrolling.
+
+Code size was about even for -O0 through -O2 but the -O3 build on opt3
+was about 400 bytes larger.

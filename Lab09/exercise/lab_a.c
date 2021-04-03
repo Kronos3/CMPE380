@@ -47,7 +47,7 @@ void ieeePrint(float fnum)
     // Break the floating point item into the proper parts
     sign = (ieee.inum & SIGN_MASK) >> SIGN_SHIFT;
     exponent = ((ieee.inum & EXPONENT_MASK) >> EXPONENT_SHIFT) + EXPONENT_BIAS;
-    significand = (ieee.inum & SIGNIFICAND_MASK);
+    significand = (ieee.inum & SIGNIFICAND_MASK) << 1;
 
     printf("Number %f => Bin sign:%d Dec exponent:%d  Hex significand .%x\n",
            ieee.fnum, sign, exponent, significand);
