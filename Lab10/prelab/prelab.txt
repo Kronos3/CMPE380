@@ -1,0 +1,25 @@
+Epsilon is the smallest representable number for floating
+point numbers. Adding it to 10 will be lost because the
+exponent for 10 is not the negative exponent required
+for DBL_EPSILON
+
+Therefore the test printf will output the expected which indicates
+the addition did not "work":
+10.0 != 10.0 + DBL_EPSILON => 0
+
+
+Conversion test
+Started with 0.000000 converted to qnx = 0 decimal then back to 0.000000
+QN 0 decimal in binary is 	[0000000000000000]
+Started with 12.250000 converted to qnx = 98 decimal then back to 12.250000
+QN 98 decimal in binary is 	[0000000001100010]
+Started with 12.062500 converted to qnx = 96 decimal then back to 12.000000
+QN 96 decimal in binary is 	[0000000001100000]
+Started with 12.062500 converted to qnx = 193 decimal then back to 12.062500
+QN 193 decimal in binary is 	[0000000011000001]
+
+
+1. No loss. This is an integer because there are no fraction bits.
+2. No loss. Enough fraction bits to represent 12.25.
+3. Loss. Not enough fraction bits.
+4. No loss.
