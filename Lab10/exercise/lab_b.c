@@ -4,10 +4,7 @@
 ---------------------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdint.h>
-#include <stdlib.h>
-#include <float.h>
 #include <time.h>
-#include <math.h>
 
 #define LOOP_DELAY (1<<27)
 
@@ -18,22 +15,22 @@
 // QN math and printing functions
 void printBinary(unsigned num, short N);
 
-int floatToFixed(double x, int n);
+int floatToFixed(double x, int qnval);
 
-float fixedToFloat(int x, int n);
+float fixedToFloat(int x, int qnval);
 
-#define F_decimal(x) (((x) * (x) * (x))*3.0 - 0.0001*(x)*(x) - 676.0*(x) + 0.0676)
-#define F_fractional(x) (((x) * (x) * (x))*3 - (x)*(x)/10000 - 676*(x) + 169/2500)
+#define F_decimal(x) (((x) * (x) * (x)) - 0.0001*(x)*(x) - 676.0*(x) + 0.0676)
+#define F_fractional(x) (((x) * (x) * (x)) - (x)*(x)/10000.0 - 676.0*(x) + 169.0/2500.0)
 
 int F_fixed(double x)
 {
     int qn = floatToFixed(x, 18);
     int x2 = Qn_MULTIPLY(qn, qn, 18);
 
-    return Qn_MULTIPLY(Qn_MULTIPLY(x2, qn, 18), floatToFixed(3, 18), 18)
-        - Qn_DIVIDE(x2, floatToFixed(10000, 18), 18)
-        - Qn_MULTIPLY(qn, floatToFixed(676, 18), 18)
-        + floatToFixed(0.0676, 18);
+    return Qn_MULTIPLY(Qn_MULTIPLY(x2, qn, 18), qn, 18)
+           - Qn_MULTIPLY(x2, floatToFixed(0.0001, 18), 18)
+           - Qn_MULTIPLY(qn, floatToFixed(676, 18), 18)
+           + floatToFixed(0.0676, 18);
 }
 
 /*---------------------------------------------------------------------------
@@ -41,6 +38,9 @@ int F_fixed(double x)
 ---------------------------------------------------------------------------*/
 int main(int argc, char *argv[])
 {
+    (void) argc;
+    (void) argv;
+
     // QN testing variables, add more as necessary
     clock_t time1, time2;
     unsigned i;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
         qn1 /= 2;
         qn2 = Qn_DIVIDE(qn2, floatToFixed(2.0, 18), 18);
         fn1 /= 2.0;
-        printf("%06f   %ld   %ld   %06f  %06f\n",
+        printf("%06f   %d   %d   %06f  %06f\n",
                fn1, qn1, qn2,
                fixedToFloat(qn1, 18), fixedToFloat(qn2, 18));
     }
@@ -109,8 +109,8 @@ int main(int argc, char *argv[])
     qn2 = floatToFixed(-674.9325, 18);
     fn1 = 3.1415;
     fn2 = -674.9325;
-    volatile double res_f;
-    volatile int res_i;
+    double res_f;
+    int res_i;
 
     // Floating point addition
     time1 = clock();
@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
     time2 = clock() - time2;
 
     // Print out the clicks and who was faster
-    printf("Floating: %d, Fixed: %d, faster: %s\n",
+    printf("Floating: %ld, Fixed: %ld, faster: %s\n",
            time1, time2, time2 < time1 ? "fixed" : "floating");
 
     // Floating multiplication
@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
     for (i = 0; i < LOOP_DELAY; i++)
     {
         // Insert your addition here
-        res_f += fn1 + fn2;
+        res_f += fn1 * fn2;
     }
     time1 = clock() - time1;
 
@@ -155,11 +155,10 @@ int main(int argc, char *argv[])
     time2 = clock() - time2;
 
     // Print out the clicks and who was faster
-    printf("Floating: %d, Fixed: %d, faster: %s\n",
+    printf("Floating: %ld, Fixed: %ld, faster: %s\n",
            time1, time2, time2 < time1 ? "fixed" : "floating");
 
-
-    return (0);
+    return 0;
 }
 
 
@@ -182,7 +181,6 @@ void printBinary(unsigned num, short N)
         (num & i) ? printf("1") : printf("0");
     }
     printf("]\n");
-    return;
 }
 
 

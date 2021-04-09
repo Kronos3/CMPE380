@@ -50,10 +50,17 @@ Result for x=1.0 = -672.932500
 (((x) * (x) * (x))*3 - (x)*(x)/10000 - 676*(x) + 169/2500)
 Result for x=1.0 = -673.000100
 
-F_1(x) = -672.932500
-F_2(x) = -673.000100
-Q(x) = -672.932495
+F_1(x) = -674.932500
+F_2(x) = -674.932500
+Q(x) = -674.932373
 
-The results are different because integer division loses some precision.
 The fixed point will lose less precision than the second implementation.
 The fixed point is very close to the floating point answer.
+
+Performance test
+Floating: 110000, Fixed: 50000, faster: fixed
+Floating: 50000, Fixed: 60000, faster: floating
+
+Floating is slightly faster with multiplication and fixed
+is slightly faster with addition. Interestingly, on my laptop
+both operations had faster fixed point.

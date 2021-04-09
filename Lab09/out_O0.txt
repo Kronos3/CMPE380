@@ -1,0 +1,37 @@
+./quadTest -a 0 -b 0 -c 1
+Performs complex root finding for quadratic equations
+usage: hw7 -a[num] REAL -b[num] REAL -c[num] REAL
+
+Coefficients (all required):
+  -a -anum REAL        Provide the coefficient for x^2
+  -b -bnum REAL        Provide the coefficient for x
+  -c -cnum REAL        Provide the constant
+
+  -h --help            Print this help and exit
+Coefficient 'A' must not be zero
+
+./quadTest -a 1 -b 0
+Performs complex root finding for quadratic equations
+usage: hw7 -a[num] REAL -b[num] REAL -c[num] REAL
+
+Coefficients (all required):
+  -a -anum REAL        Provide the coefficient for x^2
+  -b -bnum REAL        Provide the coefficient for x
+  -c -cnum REAL        Provide the constant
+
+  -h --help            Print this help and exit
+All coefficients must be provided
+
+./quadTest -a 1 -b 0 -c 1
+Elapsed CPU Time (Timer) = 0.00044
+Elapsed CPU Time per Iteration (Timer, 10000) = 4.38000e-08
+Roots of 1.000000x**2 + 0.000000x + 1.000000
+    root_1: 0.000000 + 1.000000i
+    root_2: -0.000000 + -1.000000i
+
+./quadTest -a 1.2561 -b 143.35 -c 277.881
+Elapsed CPU Time (Timer) = 0.00046
+Elapsed CPU Time per Iteration (Timer, 10000) = 4.58000e-08
+Roots of 1.256100x**2 + 143.350000x + 277.881000
+    root_1: -1.972574 + 0.000000i
+    root_2: -112.150505 + 0.000000i

@@ -6,9 +6,9 @@ CXX:=g++
 LIBS:=-lm
 
 VALGRIND:=valgrind --tool=memcheck --leak-check=yes --track-origins=yes
-
-CFLAGS:=$(CFLAGS) -Wall -std=c99 -pedantic -O1 -g
-CXXFLAGS:=$(CXXFLAGS) -Wall -std=c++98 -pedantic -O1 -g
+LIBS:=-lm
+CFLAGS:=$(CFLAGS) -Wall -std=c99 -pedantic -g
+CXXFLAGS:=$(CXXFLAGS) -Wall -std=c++98 -pedantic -g
 LDFLAGS:=$(LIBS)
 
 # Only print everything if VERBOSE is enable
