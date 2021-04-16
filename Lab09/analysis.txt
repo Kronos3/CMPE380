@@ -12,6 +12,21 @@ In terms of the test-cases, the first two are expected to fail
 as they provide invalid parameters. An extra testcase was added
 to show that floating point numbers can be input via the commandline.
 
+Computing the roots of the equation:
+    1.000000x**2 + 0.000000x + 1.000000
+We expect imaginary roots at -i and i which is
+confirmed by the result output:
+    root_1: 0.000000 + 1.000000i
+    root_2: -0.000000 + -1.000000i
+
+Looking at the second equation:
+    1.256100x**2 + 143.350000x + 277.881000
+Using a graphing calculator such as Desmos, we expect the
+roots to be real which is confirmed by the output where the
+imaginary terms are 0:
+    root_1: -1.972574 + 0.000000i
+    root_2: -112.150505 + 0.000000i
+
 All four optimization levels were run to test the timings. An iteration
 count of 10000 was set to get better accuracy.
 

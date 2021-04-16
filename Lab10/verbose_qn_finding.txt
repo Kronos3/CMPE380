@@ -1,0 +1,905 @@
+/usr/bin/python3.9 /home/atuser/git/CMPE380/Lab10/find_best_qn.py
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067596   sc: 1   fc:      8a7 -fc: fffffffffffff759  tol: 0000000000000000
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.821686   sc: -1   fc: fffffffff34f96d3 -fc: 000000000cb0692d  tol: 0000000000000000
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795349   sc: -1   fc: fffffffff8399a32 -fc: 0000000007c665ce  tol: 0000000000000000
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915710   sc: -1   fc: fffffffffbef0aca -fc: 000000000410f536  tol: 0000000000000000
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367920   sc: -1   fc: fffffffffdf1d0e8 -fc: 00000000020e2f18  tol: 0000000000000000
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580597   sc: -1   fc: fffffffffef835af -fc: 000000000107ca51  tol: 0000000000000000
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935303   sc: -1   fc: ffffffffff7c0848 -fc: 000000000083f7b8  tol: 0000000000000000
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956207   sc: -1   fc: ffffffffffbe059b -fc: 000000000041fa65  tol: 0000000000000000
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947113   sc: -1   fc: ffffffffffdf06c5 -fc: 000000000020f93b  tol: 0000000000000000
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940125   sc: -1   fc: ffffffffffef87aa -fc: 0000000000107856  tol: 0000000000000000
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436310   sc: -1   fc: fffffffffff7c827 -fc: 00000000000837d9  tol: 0000000000000000
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184357   sc: -1   fc: fffffffffffbe867 -fc: 0000000000041799  tol: 0000000000000000
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058380   sc: -1   fc: fffffffffffdf887 -fc: 0000000000020779  tol: 0000000000000000
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995392   sc: -1   fc: ffffffffffff0097 -fc: 000000000000ff69  tol: 0000000000000000
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963898   sc: -1   fc: ffffffffffff849f -fc: 0000000000007b61  tol: 0000000000000000
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448151   sc: -1   fc: ffffffffffffc6a3 -fc: 000000000000395d  tol: 0000000000000000
+iter:16    a:0.000000    b:0.000763    x:0.000366    err:0.000397    y:-0.179962   sc: -1   fc: ffffffffffffe8f7 -fc: 0000000000001709  tol: 0000000000000000
+iter:17    a:0.000000    b:0.000366    x:0.000183    err:0.000183    y:-0.056183   sc: -1   fc: fffffffffffff8cf -fc: 0000000000000731  tol: 0000000000000000
+iter:18    a:0.000000    b:0.000183    x:0.000092    err:0.000092    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:19    a:0.000092    b:0.000183    x:0.000122    err:0.000061    y:-0.014923   sc: -1   fc: fffffffffffffe17 -fc: 00000000000001e9  tol: 0000000000000000
+iter:20    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:21    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:22    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:23    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:24    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:25    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:26    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:27    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:28    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:29    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:30    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:31    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:32    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:33    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:34    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:35    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:36    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:37    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:38    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:39    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:40    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:41    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:42    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:43    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+iter:44    a:0.000092    b:0.000122    x:0.000092    err:0.000031    y:0.005707   sc: 1   fc:       bb -fc: ffffffffffffff45  tol: 0000000000000000
+Bisection could not find a root with 45 iterations
+Qn=15 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067596   sc: 1   fc:     114e -fc: ffffffffffffeeb2  tol: 0000000000000000
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.821701   sc: -1   fc: ffffffffe69f2da5 -fc: 000000001960d25b  tol: 0000000000000000
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795349   sc: -1   fc: fffffffff0733464 -fc: 000000000f8ccb9c  tol: 0000000000000000
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915710   sc: -1   fc: fffffffff7de1594 -fc: 000000000821ea6c  tol: 0000000000000000
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367920   sc: -1   fc: fffffffffbe3a1d0 -fc: 00000000041c5e30  tol: 0000000000000000
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580612   sc: -1   fc: fffffffffdf06b5d -fc: 00000000020f94a3  tol: 0000000000000000
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935303   sc: -1   fc: fffffffffef81090 -fc: 000000000107ef70  tol: 0000000000000000
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956207   sc: -1   fc: ffffffffff7c0b36 -fc: 000000000083f4ca  tol: 0000000000000000
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947098   sc: -1   fc: ffffffffffbe0d8b -fc: 000000000041f275  tol: 0000000000000000
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940109   sc: -1   fc: ffffffffffdf0f55 -fc: 000000000020f0ab  tol: 0000000000000000
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436310   sc: -1   fc: ffffffffffef904e -fc: 0000000000106fb2  tol: 0000000000000000
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184357   sc: -1   fc: fffffffffff7d0ce -fc: 0000000000082f32  tol: 0000000000000000
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058380   sc: -1   fc: fffffffffffbf10e -fc: 0000000000040ef2  tol: 0000000000000000
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995392   sc: -1   fc: fffffffffffe012e -fc: 000000000001fed2  tol: 0000000000000000
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963898   sc: -1   fc: ffffffffffff093e -fc: 000000000000f6c2  tol: 0000000000000000
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448151   sc: -1   fc: ffffffffffff8d46 -fc: 00000000000072ba  tol: 0000000000000000
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190277   sc: -1   fc: ffffffffffffcf4a -fc: 00000000000030b6  tol: 0000000000000000
+iter:17    a:0.000000    b:0.000381    x:0.000183    err:0.000198    y:-0.056183   sc: -1   fc: fffffffffffff19e -fc: 0000000000000e62  tol: 0000000000000000
+iter:18    a:0.000000    b:0.000183    x:0.000092    err:0.000092    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:19    a:0.000092    b:0.000183    x:0.000137    err:0.000046    y:-0.025238   sc: -1   fc: fffffffffffff98a -fc: 0000000000000676  tol: 0000000000000000
+iter:20    a:0.000092    b:0.000137    x:0.000107    err:0.000031    y:-0.004608   sc: -1   fc: fffffffffffffed2 -fc: 000000000000012e  tol: 0000000000000000
+iter:21    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:22    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:23    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:24    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:25    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:26    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:27    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:28    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:29    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:30    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:31    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:32    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:33    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:34    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:35    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:36    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:37    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:38    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:39    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:40    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:41    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:42    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:43    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+iter:44    a:0.000092    b:0.000107    x:0.000092    err:0.000015    y:0.005707   sc: 1   fc:      176 -fc: fffffffffffffe8a  tol: 0000000000000000
+Bisection could not find a root with 45 iterations
+Qn=16 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067596   sc: 1   fc:     229c -fc: ffffffffffffdd64  tol: 0000000000000000
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.822899   sc: -1   fc: ffffffffcd3e5aad -fc: 0000000032c1a553  tol: 0000000000000000
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795647   sc: -1   fc: ffffffffe0e668a1 -fc: 000000001f19975f  tol: 0000000000000000
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915787   sc: -1   fc: ffffffffefbc2b1e -fc: 000000001043d4e2  tol: 0000000000000000
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367943   sc: -1   fc: fffffffff7c7439d -fc: 000000000838bc63  tol: 0000000000000000
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580620   sc: -1   fc: fffffffffbe0d6b9 -fc: 00000000041f2947  tol: 0000000000000000
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935310   sc: -1   fc: fffffffffdf0211f -fc: 00000000020fdee1  tol: 0000000000000000
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956207   sc: -1   fc: fffffffffef8166c -fc: 000000000107e994  tol: 0000000000000000
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947098   sc: -1   fc: ffffffffff7c1b16 -fc: 000000000083e4ea  tol: 0000000000000000
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940102   sc: -1   fc: ffffffffffbe1eab -fc: 000000000041e155  tol: 0000000000000000
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436302   sc: -1   fc: ffffffffffdf209d -fc: 000000000020df63  tol: 0000000000000000
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184357   sc: -1   fc: ffffffffffefa19c -fc: 0000000000105e64  tol: 0000000000000000
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058380   sc: -1   fc: fffffffffff7e21c -fc: 0000000000081de4  tol: 0000000000000000
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995392   sc: -1   fc: fffffffffffc025c -fc: 000000000003fda4  tol: 0000000000000000
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963898   sc: -1   fc: fffffffffffe127c -fc: 000000000001ed84  tol: 0000000000000000
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448151   sc: -1   fc: ffffffffffff1a8c -fc: 000000000000e574  tol: 0000000000000000
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190277   sc: -1   fc: ffffffffffff9e94 -fc: 000000000000616c  tol: 0000000000000000
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061340   sc: -1   fc: ffffffffffffe098 -fc: 0000000000001f68  tol: 0000000000000000
+iter:18    a:0.000000    b:0.000191    x:0.000092    err:0.000099    y:0.005707   sc: 1   fc:      2ec -fc: fffffffffffffd14  tol: 0000000000000000
+iter:19    a:0.000092    b:0.000191    x:0.000137    err:0.000053    y:-0.025238   sc: -1   fc: fffffffffffff314 -fc: 0000000000000cec  tol: 0000000000000000
+iter:20    a:0.000092    b:0.000137    x:0.000114    err:0.000023    y:-0.009766   sc: -1   fc: fffffffffffffb00 -fc: 0000000000000500  tol: 0000000000000000
+iter:21    a:0.000092    b:0.000114    x:0.000099    err:0.000015    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:22    a:0.000099    b:0.000114    x:0.000107    err:0.000008    y:-0.004608   sc: -1   fc: fffffffffffffda4 -fc: 000000000000025c  tol: 0000000000000000
+iter:23    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:24    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:25    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:26    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:27    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:28    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:29    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:30    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:31    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:32    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:33    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:34    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:35    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:36    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:37    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:38    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:39    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:40    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:41    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:42    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:43    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+iter:44    a:0.000099    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       48 -fc: ffffffffffffffb8  tol: 0000000000000000
+Bisection could not find a root with 45 iterations
+Qn=17 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067596   sc: 1   fc:     4538 -fc: ffffffffffffbac8  tol: 0000000000000000
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.822899   sc: -1   fc: ffffffff9a7cb55a -fc: 0000000065834aa6  tol: 0000000000000000
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795650   sc: -1   fc: ffffffffc1ccd141 -fc: 000000003e332ebf  tol: 0000000000000000
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915791   sc: -1   fc: ffffffffdf78563b -fc: 000000002087a9c5  tol: 0000000000000000
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947   sc: -1   fc: ffffffffef8e8739 -fc: 00000000107178c7  tol: 0000000000000000
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: fffffffff7c1ad71 -fc: 00000000083e528f  tol: 0000000000000000
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935310   sc: -1   fc: fffffffffbe0423e -fc: 00000000041fbdc2  tol: 0000000000000000
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: fffffffffdf02cd9 -fc: 00000000020fd327  tol: 0000000000000000
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947098   sc: -1   fc: fffffffffef8362c -fc: 000000000107c9d4  tol: 0000000000000000
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940102   sc: -1   fc: ffffffffff7c3d56 -fc: 000000000083c2aa  tol: 0000000000000000
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436298   sc: -1   fc: ffffffffffbe413b -fc: 000000000041bec5  tol: 0000000000000000
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184357   sc: -1   fc: ffffffffffdf4338 -fc: 000000000020bcc8  tol: 0000000000000000
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058380   sc: -1   fc: ffffffffffefc438 -fc: 0000000000103bc8  tol: 0000000000000000
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995392   sc: -1   fc: fffffffffff804b8 -fc: 000000000007fb48  tol: 0000000000000000
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963898   sc: -1   fc: fffffffffffc24f8 -fc: 000000000003db08  tol: 0000000000000000
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448151   sc: -1   fc: fffffffffffe3518 -fc: 000000000001cae8  tol: 0000000000000000
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190277   sc: -1   fc: ffffffffffff3d28 -fc: 000000000000c2d8  tol: 0000000000000000
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061340   sc: -1   fc: ffffffffffffc130 -fc: 0000000000003ed0  tol: 0000000000000000
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003128   sc: 1   fc:      334 -fc: fffffffffffffccc  tol: 0000000000000000
+iter:19    a:0.000095    b:0.000191    x:0.000141    err:0.000050    y:-0.027817   sc: -1   fc: ffffffffffffe384 -fc: 0000000000001c7c  tol: 0000000000000000
+iter:20    a:0.000095    b:0.000141    x:0.000118    err:0.000023    y:-0.012344   sc: -1   fc: fffffffffffff35c -fc: 0000000000000ca4  tol: 0000000000000000
+iter:21    a:0.000095    b:0.000118    x:0.000107    err:0.000011    y:-0.004608   sc: -1   fc: fffffffffffffb48 -fc: 00000000000004b8  tol: 0000000000000000
+iter:22    a:0.000095    b:0.000107    x:0.000099    err:0.000008    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:23    a:0.000099    b:0.000107    x:0.000103    err:0.000004    y:-0.002029   sc: -1   fc: fffffffffffffdec -fc: 0000000000000214  tol: 0000000000000000
+iter:24    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:25    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:26    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:27    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:28    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:29    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:30    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:31    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:32    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:33    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:34    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:35    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:36    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:37    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:38    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:39    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:40    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:41    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:42    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:43    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+iter:44    a:0.000099    b:0.000103    x:0.000099    err:0.000004    y:0.000549   sc: 1   fc:       90 -fc: ffffffffffffff70  tol: 0000000000000000
+Bisection could not find a root with 45 iterations
+Qn=18 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067598   sc: 1   fc:     8a71 -fc: ffffffffffff758f  tol: 0000000000000000
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.822899   sc: -1   fc: ffffffff34f96ab4 -fc: 00000000cb06954c  tol: 0000000000000000
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795650   sc: -1   fc: ffffffff8399a282 -fc: 000000007c665d7e  tol: 0000000000000000
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915791   sc: -1   fc: ffffffffbef0ac76 -fc: 00000000410f538a  tol: 0000000000000000
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367945   sc: -1   fc: ffffffffdf1d0e73 -fc: 0000000020e2f18d  tol: 0000000000000000
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: ffffffffef835ae2 -fc: 00000000107ca51e  tol: 0000000000000000
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935310   sc: -1   fc: fffffffff7c0847c -fc: 00000000083f7b84  tol: 0000000000000000
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: fffffffffbe059b2 -fc: 00000000041fa64e  tol: 0000000000000000
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947096   sc: -1   fc: fffffffffdf06c59 -fc: 00000000020f93a7  tol: 0000000000000000
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940098   sc: -1   fc: fffffffffef87aae -fc: 0000000001078552  tol: 0000000000000000
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436295   sc: -1   fc: ffffffffff7c8278 -fc: 0000000000837d88  tol: 0000000000000000
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184355   sc: -1   fc: ffffffffffbe8671 -fc: 000000000041798f  tol: 0000000000000000
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058378   sc: -1   fc: ffffffffffdf8871 -fc: 000000000020778f  tol: 0000000000000000
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995390   sc: -1   fc: fffffffffff00971 -fc: 00000000000ff68f  tol: 0000000000000000
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963896   sc: -1   fc: fffffffffff849f1 -fc: 000000000007b60f  tol: 0000000000000000
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448149   sc: -1   fc: fffffffffffc6a31 -fc: 00000000000395cf  tol: 0000000000000000
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190275   sc: -1   fc: fffffffffffe7a51 -fc: 00000000000185af  tol: 0000000000000000
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061338   sc: -1   fc: ffffffffffff8261 -fc: 0000000000007d9f  tol: 0000000000000000
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003130   sc: 1   fc:      669 -fc: fffffffffffff997  tol: 0000000000000000
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029104   sc: -1   fc: ffffffffffffc465 -fc: 0000000000003b9b  tol: 0000000000000000
+iter:20    a:0.000095    b:0.000143    x:0.000118    err:0.000025    y:-0.012342   sc: -1   fc: ffffffffffffe6b9 -fc: 0000000000001947  tol: 0000000000000000
+iter:21    a:0.000095    b:0.000118    x:0.000107    err:0.000011    y:-0.004606   sc: -1   fc: fffffffffffff691 -fc: 000000000000096f  tol: 0000000000000000
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000738   sc: -1   fc: fffffffffffffe7d -fc: 0000000000000183  tol: 0000000000000000
+iter:23    a:0.000095    b:0.000101    x:0.000097    err:0.000004    y:0.001841   sc: 1   fc:      3c5 -fc: fffffffffffffc3b  tol: 0000000000000000
+iter:24    a:0.000097    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:25    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:26    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:27    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:28    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:29    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:30    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:31    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:32    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:33    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:34    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:35    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:36    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:37    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:38    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:39    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:40    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:41    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:42    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:43    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+iter:44    a:0.000099    b:0.000101    x:0.000099    err:0.000002    y:0.000551   sc: 1   fc:      121 -fc: fffffffffffffedf  tol: 0000000000000000
+Bisection could not find a root with 45 iterations
+Qn=19 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067599   sc: 1   fc:    114e3 -fc: fffffffffffeeb1d  tol: 0000000000000001
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.822898   sc: -1   fc: fffffffe69f2d569 -fc: 00000001960d2a97  tol: 0000000000000001
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795650   sc: -1   fc: ffffffff07334505 -fc: 00000000f8ccbafb  tol: 0000000000000001
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915791   sc: -1   fc: ffffffff7de158ec -fc: 00000000821ea714  tol: 0000000000000001
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367945   sc: -1   fc: ffffffffbe3a1ce6 -fc: 0000000041c5e31a  tol: 0000000000000001
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: ffffffffdf06b5c4 -fc: 0000000020f94a3c  tol: 0000000000000001
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935310   sc: -1   fc: ffffffffef8108f8 -fc: 00000000107ef708  tol: 0000000000000001
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: fffffffff7c0b364 -fc: 00000000083f4c9c  tol: 0000000000000001
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095   sc: -1   fc: fffffffffbe0d8b3 -fc: 00000000041f274d  tol: 0000000000000001
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940097   sc: -1   fc: fffffffffdf0f55d -fc: 00000000020f0aa3  tol: 0000000000000001
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436293   sc: -1   fc: fffffffffef904f2 -fc: 000000000106fb0e  tol: 0000000000000001
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184353   sc: -1   fc: ffffffffff7d0ce4 -fc: 000000000082f31c  tol: 0000000000000001
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058377   sc: -1   fc: ffffffffffbf10e3 -fc: 000000000040ef1d  tol: 0000000000000001
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995389   sc: -1   fc: ffffffffffe012e3 -fc: 00000000001fed1d  tol: 0000000000000001
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963895   sc: -1   fc: fffffffffff093e3 -fc: 00000000000f6c1d  tol: 0000000000000001
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448148   sc: -1   fc: fffffffffff8d463 -fc: 0000000000072b9d  tol: 0000000000000001
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274   sc: -1   fc: fffffffffffcf4a3 -fc: 0000000000030b5d  tol: 0000000000000001
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337   sc: -1   fc: ffffffffffff04c3 -fc: 000000000000fb3d  tol: 0000000000000001
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003131   sc: 1   fc:      cd3 -fc: fffffffffffff32d  tol: 0000000000000001
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103   sc: -1   fc: ffffffffffff88cb -fc: 0000000000007735  tol: 0000000000000001
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012986   sc: -1   fc: ffffffffffffcacf -fc: 0000000000003531  tol: 0000000000000001
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004605   sc: -1   fc: ffffffffffffed23 -fc: 00000000000012dd  tol: 0000000000000001
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000737   sc: -1   fc: fffffffffffffcfb -fc: 0000000000000305  tol: 0000000000000001
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001197   sc: 1   fc:      4e7 -fc: fffffffffffffb19  tol: 0000000000000001
+iter:24    a:0.000098    b:0.000101    x:0.000099    err:0.000002    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:25    a:0.000099    b:0.000101    x:0.000100    err:0.000001    y:-0.000093   sc: -1   fc: ffffffffffffff9f -fc: 0000000000000061  tol: 0000000000000001
+iter:26    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:27    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:28    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:29    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:30    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:31    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:32    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:33    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:34    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:35    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:36    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:37    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:38    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:39    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:40    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:41    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:42    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:43    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+iter:44    a:0.000099    b:0.000100    x:0.000099    err:0.000001    y:0.000552   sc: 1   fc:      243 -fc: fffffffffffffdbd  tol: 0000000000000001
+Bisection could not find a root with 45 iterations
+Qn=20 (error = 0.000000, best=-1, current = err)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:    229c7 -fc: fffffffffffdd639  tol: 0000000000000002
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.822972   sc: -1   fc: fffffffcd3e5aa37 -fc: 000000032c1a55c9  tol: 0000000000000002
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795668   sc: -1   fc: fffffffe0e6689e3 -fc: 00000001f199761d  tol: 0000000000000002
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915795   sc: -1   fc: fffffffefbc2b1ce -fc: 00000001043d4e32  tol: 0000000000000002
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367946   sc: -1   fc: ffffffff7c7439c9 -fc: 00000000838bc637  tol: 0000000000000002
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: ffffffffbe0d6b88 -fc: 0000000041f29478  tol: 0000000000000002
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935310   sc: -1   fc: ffffffffdf0211f0 -fc: 0000000020fdee10  tol: 0000000000000002
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: ffffffffef8166c9 -fc: 00000000107e9937  tol: 0000000000000002
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947094   sc: -1   fc: fffffffff7c1b167 -fc: 00000000083e4e99  tol: 0000000000000002
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096   sc: -1   fc: fffffffffbe1eabb -fc: 00000000041e1545  tol: 0000000000000002
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292   sc: -1   fc: fffffffffdf209e5 -fc: 00000000020df61b  tol: 0000000000000002
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184352   sc: -1   fc: fffffffffefa19ca -fc: 000000000105e636  tol: 0000000000000002
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058377   sc: -1   fc: ffffffffff7e21c7 -fc: 000000000081de39  tol: 0000000000000002
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995389   sc: -1   fc: ffffffffffc025c7 -fc: 00000000003fda39  tol: 0000000000000002
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894   sc: -1   fc: ffffffffffe127c7 -fc: 00000000001ed839  tol: 0000000000000002
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147   sc: -1   fc: fffffffffff1a8c7 -fc: 00000000000e5739  tol: 0000000000000002
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274   sc: -1   fc: fffffffffff9e947 -fc: 00000000000616b9  tol: 0000000000000002
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337   sc: -1   fc: fffffffffffe0987 -fc: 000000000001f679  tol: 0000000000000002
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003131   sc: 1   fc:     19a7 -fc: ffffffffffffe659  tol: 0000000000000002
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103   sc: -1   fc: ffffffffffff1197 -fc: 000000000000ee69  tol: 0000000000000002
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012986   sc: -1   fc: ffffffffffff959f -fc: 0000000000006a61  tol: 0000000000000002
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927   sc: -1   fc: ffffffffffffd7a3 -fc: 000000000000285d  tol: 0000000000000002
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000737   sc: -1   fc: fffffffffffff9f7 -fc: 0000000000000609  tol: 0000000000000002
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001197   sc: 1   fc:      9cf -fc: fffffffffffff631  tol: 0000000000000002
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000230   sc: 1   fc:      1e3 -fc: fffffffffffffe1d  tol: 0000000000000002
+iter:25    a:0.000100    b:0.000101    x:0.000100    err:0.000001    y:-0.000092   sc: -1   fc: ffffffffffffff3f -fc: 00000000000000c1  tol: 0000000000000002
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+
+Qn=21 (error = 0.000001, best=21, current = 1e-06)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:    4538e -fc: fffffffffffbac72  tol: 0000000000000004
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823009   sc: -1   fc: fffffff9a7cb53d2 -fc: 000000065834ac2e  tol: 0000000000000004
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795677   sc: -1   fc: fffffffc1ccd139f -fc: 00000003e332ec61  tol: 0000000000000004
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915797   sc: -1   fc: fffffffdf7856393 -fc: 00000002087a9c6d  tol: 0000000000000004
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947   sc: -1   fc: fffffffef8e87390 -fc: 0000000107178c70  tol: 0000000000000004
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: ffffffff7c1ad70f -fc: 0000000083e528f1  tol: 0000000000000004
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311   sc: -1   fc: ffffffffbe0423df -fc: 0000000041fbdc21  tol: 0000000000000004
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: ffffffffdf02cd91 -fc: 0000000020fd326f  tol: 0000000000000004
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095   sc: -1   fc: ffffffffef8362cd -fc: 00000000107c9d33  tol: 0000000000000004
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096   sc: -1   fc: fffffffff7c3d576 -fc: 00000000083c2a8a  tol: 0000000000000004
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292   sc: -1   fc: fffffffffbe413cb -fc: 00000000041bec35  tol: 0000000000000004
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184352   sc: -1   fc: fffffffffdf43395 -fc: 00000000020bcc6b  tol: 0000000000000004
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058377   sc: -1   fc: fffffffffefc438e -fc: 000000000103bc72  tol: 0000000000000004
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995389   sc: -1   fc: ffffffffff804b8e -fc: 00000000007fb472  tol: 0000000000000004
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894   sc: -1   fc: ffffffffffc24f8e -fc: 00000000003db072  tol: 0000000000000004
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147   sc: -1   fc: ffffffffffe3518e -fc: 00000000001cae72  tol: 0000000000000004
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274   sc: -1   fc: fffffffffff3d28e -fc: 00000000000c2d72  tol: 0000000000000004
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337   sc: -1   fc: fffffffffffc130e -fc: 000000000003ecf2  tol: 0000000000000004
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003131   sc: 1   fc:     334e -fc: ffffffffffffccb2  tol: 0000000000000004
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103   sc: -1   fc: fffffffffffe232e -fc: 000000000001dcd2  tol: 0000000000000004
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012986   sc: -1   fc: ffffffffffff2b3e -fc: 000000000000d4c2  tol: 0000000000000004
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927   sc: -1   fc: ffffffffffffaf46 -fc: 00000000000050ba  tol: 0000000000000004
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898   sc: -1   fc: fffffffffffff14a -fc: 0000000000000eb6  tol: 0000000000000004
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001197   sc: 1   fc:     139e -fc: ffffffffffffec62  tol: 0000000000000004
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000002    y:0.000230   sc: 1   fc:      3c6 -fc: fffffffffffffc3a  tol: 0000000000000004
+iter:25    a:0.000100    b:0.000101    x:0.000100    err:0.000001    y:-0.000253   sc: -1   fc: fffffffffffffbda -fc: 0000000000000426  tol: 0000000000000004
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=22 (error = 0.000000, best=22, current = 0.0)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:    8a71d -fc: fffffffffff758e3  tol: 0000000000000008
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823009   sc: -1   fc: fffffff34f96a7a4 -fc: 0000000cb069585c  tol: 0000000000000008
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795677   sc: -1   fc: fffffff8399a273f -fc: 00000007c665d8c1  tol: 0000000000000008
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915797   sc: -1   fc: fffffffbef0ac726 -fc: 0000000410f538da  tol: 0000000000000008
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947   sc: -1   fc: fffffffdf1d0e720 -fc: 000000020e2f18e0  tol: 0000000000000008
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: fffffffef835ae1e -fc: 0000000107ca51e2  tol: 0000000000000008
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311   sc: -1   fc: ffffffff7c0847be -fc: 0000000083f7b842  tol: 0000000000000008
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: ffffffffbe059b22 -fc: 0000000041fa64de  tol: 0000000000000008
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095   sc: -1   fc: ffffffffdf06c59a -fc: 0000000020f93a66  tol: 0000000000000008
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096   sc: -1   fc: ffffffffef87aaec -fc: 0000000010785514  tol: 0000000000000008
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292   sc: -1   fc: fffffffff7c82797 -fc: 000000000837d869  tol: 0000000000000008
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351   sc: -1   fc: fffffffffbe8672c -fc: 00000000041798d4  tol: 0000000000000008
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058377   sc: -1   fc: fffffffffdf8871e -fc: 00000000020778e2  tol: 0000000000000008
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388   sc: -1   fc: ffffffffff00971d -fc: 0000000000ff68e3  tol: 0000000000000008
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894   sc: -1   fc: ffffffffff849f1d -fc: 00000000007b60e3  tol: 0000000000000008
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147   sc: -1   fc: ffffffffffc6a31d -fc: 0000000000395ce3  tol: 0000000000000008
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274   sc: -1   fc: ffffffffffe7a51d -fc: 0000000000185ae3  tol: 0000000000000008
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337   sc: -1   fc: fffffffffff8261d -fc: 000000000007d9e3  tol: 0000000000000008
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132   sc: 1   fc:     669d -fc: ffffffffffff9963  tol: 0000000000000008
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103   sc: -1   fc: fffffffffffc465d -fc: 000000000003b9a3  tol: 0000000000000008
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012986   sc: -1   fc: fffffffffffe567d -fc: 000000000001a983  tol: 0000000000000008
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927   sc: -1   fc: ffffffffffff5e8d -fc: 000000000000a173  tol: 0000000000000008
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898   sc: -1   fc: ffffffffffffe295 -fc: 0000000000001d6b  tol: 0000000000000008
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117   sc: 1   fc:     2499 -fc: ffffffffffffdb67  tol: 0000000000000008
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000002    y:0.000150   sc: 1   fc:      4e9 -fc: fffffffffffffb17  tol: 0000000000000008
+iter:25    a:0.000100    b:0.000101    x:0.000100    err:0.000001    y:-0.000334   sc: -1   fc: fffffffffffff511 -fc: 0000000000000aef  tol: 0000000000000008
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=23 (error = 0.000000, best=22, current = 0.0)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:   114e3b -fc: ffffffffffeeb1c5  tol: 0000000000000010
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823018   sc: -1   fc: ffffffe69f2d4eac -fc: 0000001960d2b154  tol: 0000000000000010
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795680   sc: -1   fc: fffffff073344e58 -fc: 0000000f8ccbb1a8  tol: 0000000000000010
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798   sc: -1   fc: fffffff7de158e43 -fc: 0000000821ea71bd  tol: 0000000000000010
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947   sc: -1   fc: fffffffbe3a1ce3d -fc: 000000041c5e31c3  tol: 0000000000000010
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624   sc: -1   fc: fffffffdf06b5c3c -fc: 000000020f94a3c4  tol: 0000000000000010
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311   sc: -1   fc: fffffffef8108f7c -fc: 0000000107ef7084  tol: 0000000000000010
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203   sc: -1   fc: ffffffff7c0b3644 -fc: 0000000083f4c9bc  tol: 0000000000000010
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095   sc: -1   fc: ffffffffbe0d8b35 -fc: 0000000041f274cb  tol: 0000000000000010
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096   sc: -1   fc: ffffffffdf0f55d9 -fc: 0000000020f0aa27  tol: 0000000000000010
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292   sc: -1   fc: ffffffffef904f2f -fc: 00000000106fb0d1  tol: 0000000000000010
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351   sc: -1   fc: fffffffff7d0ce59 -fc: 00000000082f31a7  tol: 0000000000000010
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376   sc: -1   fc: fffffffffbf10e3e -fc: 00000000040ef1c2  tol: 0000000000000010
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388   sc: -1   fc: fffffffffe012e3b -fc: 0000000001fed1c5  tol: 0000000000000010
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894   sc: -1   fc: ffffffffff093e3b -fc: 0000000000f6c1c5  tol: 0000000000000010
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147   sc: -1   fc: ffffffffff8d463b -fc: 000000000072b9c5  tol: 0000000000000010
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274   sc: -1   fc: ffffffffffcf4a3b -fc: 000000000030b5c5  tol: 0000000000000010
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337   sc: -1   fc: fffffffffff04c3b -fc: 00000000000fb3c5  tol: 0000000000000010
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132   sc: 1   fc:     cd3b -fc: ffffffffffff32c5  tol: 0000000000000010
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103   sc: -1   fc: fffffffffff88cbb -fc: 0000000000077345  tol: 0000000000000010
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012986   sc: -1   fc: fffffffffffcacfb -fc: 0000000000035305  tol: 0000000000000010
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927   sc: -1   fc: fffffffffffebd1b -fc: 00000000000142e5  tol: 0000000000000010
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898   sc: -1   fc: ffffffffffffc52b -fc: 0000000000003ad5  tol: 0000000000000010
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117   sc: 1   fc:     4933 -fc: ffffffffffffb6cd  tol: 0000000000000010
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110   sc: 1   fc:      72f -fc: fffffffffffff8d1  tol: 0000000000000010
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000374   sc: -1   fc: ffffffffffffe77f -fc: 0000000000001881  tol: 0000000000000010
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=24 (error = 0.000000, best=22, current = 0.0)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:   229c77 -fc: ffffffffffdd6389  tol: 0000000000000021
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:9887.176977   sc: 1   fc: 4d3e5a9cbd -fc: ffffffb2c1a56343  tol: 0000000000000021
+iter:2    a:12.500000    b:25.000000    x:18.750000    err:6.250000    y:10300.829323   sc: 1   fc: 5079a89d13 -fc: ffffffaf865762ed  tol: 0000000000000021
+iter:3    a:18.750000    b:25.000000    x:21.875000    err:3.125000    y:-4319.950948   sc: -1   fc: ffffffde40191d4c -fc: 00000021bfe6e2b4  tol: 0000000000000021
+iter:4    a:18.750000    b:21.875000    x:20.312500    err:1.562500    y:-5350.333762   sc: -1   fc: ffffffd633551d2e -fc: 00000029ccaae2d2  tol: 0000000000000021
+iter:5    a:18.750000    b:20.312500    x:19.531250    err:0.781250    y:10631.485055   sc: 1   fc: 530ef85921 -fc: ffffffacf107a6df  tol: 0000000000000021
+iter:6    a:19.531250    b:20.312500    x:19.921875    err:0.390625    y:10823.456151   sc: 1   fc: 548ee98ca7 -fc: ffffffab71167359  tol: 0000000000000021
+iter:7    a:19.921875    b:20.312500    x:20.117188    err:0.195312    y:10926.258969   sc: 1   fc: 555c84979b -fc: ffffffaaa37b6865  tol: 0000000000000021
+iter:8    a:20.117188    b:20.312500    x:20.214844    err:0.097656    y:-5404.615747   sc: -1   fc: ffffffd5c6c4bcdb -fc: 0000002a393b4325  tol: 0000000000000021
+iter:9    a:20.117188    b:20.214844    x:20.166016    err:0.048828    y:-5431.322627   sc: -1   fc: ffffffd5915ad09f -fc: 0000002a6ea52f61  tol: 0000000000000021
+iter:10    a:20.117188    b:20.166016    x:20.141602    err:0.024414    y:10939.432155   sc: 1   fc: 5576dd436e -fc: ffffffaa8922bc92  tol: 0000000000000021
+iter:11    a:20.141602    b:20.166016    x:20.153809    err:0.012207    y:10946.045755   sc: 1   fc: 5584176d24 -fc: ffffffaa7be892dc  tol: 0000000000000021
+iter:12    a:20.153809    b:20.166016    x:20.159912    err:0.006104    y:-5434.640689   sc: -1   fc: ffffffd58ab7f792 -fc: 0000002a7548086e  tol: 0000000000000021
+iter:13    a:20.153809    b:20.159912    x:20.156860    err:0.003052    y:10947.701969   sc: 1   fc: 558767687f -fc: ffffffaa78989781  tol: 0000000000000021
+iter:14    a:20.156860    b:20.159912    x:20.158386    err:0.001526    y:10948.530499   sc: 1   fc: 55890f9d97 -fc: ffffffaa76f06269  tol: 0000000000000021
+iter:15    a:20.158386    b:20.159912    x:20.159149    err:0.000763    y:-5435.055130   sc: -1   fc: ffffffd589e3c5f8 -fc: 0000002a761c3a08  tol: 0000000000000021
+iter:16    a:20.158386    b:20.159149    x:20.158768    err:0.000381    y:-5435.262325   sc: -1   fc: ffffffd58979b093 -fc: 0000002a76864f6d  tol: 0000000000000021
+iter:17    a:20.158386    b:20.158768    x:20.158577    err:0.000191    y:10948.634085   sc: 1   fc: 558944a6c5 -fc: ffffffaa76bb593b  tol: 0000000000000021
+iter:18    a:20.158577    b:20.158768    x:20.158672    err:0.000095    y:10948.685879   sc: 1   fc: 55895f2b96 -fc: ffffffaa76a0d46a  tol: 0000000000000021
+iter:19    a:20.158672    b:20.158768    x:20.158720    err:0.000048    y:10948.711777   sc: 1   fc: 55896c6e12 -fc: ffffffaa769391ee  tol: 0000000000000021
+iter:20    a:20.158720    b:20.158768    x:20.158744    err:0.000024    y:-5435.275274   sc: -1   fc: ffffffd589730f52 -fc: 0000002a768cf0ae  tol: 0000000000000021
+iter:21    a:20.158720    b:20.158744    x:20.158732    err:0.000012    y:10948.718252   sc: 1   fc: 55896fbeb1 -fc: ffffffaa7690414f  tol: 0000000000000021
+iter:22    a:20.158732    b:20.158744    x:20.158738    err:0.000006    y:-5435.278511   sc: -1   fc: ffffffd58971670b -fc: 0000002a768e98f5  tol: 0000000000000021
+iter:23    a:20.158732    b:20.158738    x:20.158735    err:0.000003    y:10948.719871   sc: 1   fc: 55897092df -fc: ffffffaa768f6d21  tol: 0000000000000021
+iter:24    a:20.158735    b:20.158738    x:20.158736    err:0.000001    y:10948.720680   sc: 1   fc: 558970fcf5 -fc: ffffffaa768f030b  tol: 0000000000000021
+iter:25    a:20.158736    b:20.158738    x:20.158737    err:0.000001    y:-5435.278915   sc: -1   fc: ffffffd589713200 -fc: 0000002a768ece00  tol: 0000000000000021
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=25 (error = 0.000000, best=22, current = 20.158637)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:   4538ef -fc: ffffffffffbac711  tol: 0000000000000043
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:1695.176977   sc: 1   fc: 1a7cb5397a -fc: ffffffe5834ac686  tol: 0000000000000043
+iter:2    a:12.500000    b:25.000000    x:18.750000    err:6.250000    y:-1987.170677   sc: -1   fc: ffffffe0f3513a27 -fc: 0000001f0caec5d9  tol: 0000000000000043
+iter:3    a:12.500000    b:18.750000    x:15.625000    err:3.125000    y:1444.240455   sc: 1   fc: 1690f639c8 -fc: ffffffe96f09c638  tol: 0000000000000043
+iter:4    a:15.625000    b:18.750000    x:17.187500    err:1.562500    y:1650.650123   sc: 1   fc: 19ca99b9f5 -fc: ffffffe63566460b  tol: 0000000000000043
+iter:5    a:17.187500    b:18.750000    x:17.968750    err:0.781250    y:1846.838021   sc: 1   fc: 1cdb5a220e -fc: ffffffe324a5ddf2  tol: 0000000000000043
+iter:6    a:17.968750    b:18.750000    x:18.359375    err:0.390625    y:-2126.570568   sc: -1   fc: ffffffdec5b7bd1a -fc: 000000213a4842e6  tol: 0000000000000043
+iter:7    a:17.968750    b:18.359375    x:18.164062    err:0.195312    y:1906.055018   sc: 1   fc: 1dc83856b4 -fc: ffffffe237c7a94c  tol: 0000000000000043
+iter:8    a:18.164062    b:18.359375    x:18.261719    err:0.097656    y:1937.219754   sc: 1   fc: 1e44e10743 -fc: ffffffe1bb1ef8bd  tol: 0000000000000043
+iter:9    a:18.261719    b:18.359375    x:18.310547    err:0.048828    y:1953.193626   sc: 1   fc: 1e84c645f8 -fc: ffffffe17b39ba08  tol: 0000000000000043
+iter:10    a:18.310547    b:18.359375    x:18.334961    err:0.024414    y:-2134.721256   sc: -1   fc: ffffffdea51d6f09 -fc: 000000215ae290f7  tol: 0000000000000043
+iter:11    a:18.310547    b:18.334961    x:18.322754    err:0.012207    y:-2138.772006   sc: -1   fc: ffffffde94e9774f -fc: 000000216b1688b1  tol: 0000000000000043
+iter:12    a:18.310547    b:18.322754    x:18.316650    err:0.006104    y:-2140.791237   sc: -1   fc: ffffffde8cd5c605 -fc: 00000021732a39fb  tol: 0000000000000043
+iter:13    a:18.310547    b:18.316650    x:18.313599    err:0.003052    y:1954.200683   sc: 1   fc: 1e88cd7fdd -fc: ffffffe177328023  tol: 0000000000000043
+iter:14    a:18.313599    b:18.316650    x:18.315125    err:0.001526    y:1954.704595   sc: 1   fc: 1e8ad18163 -fc: ffffffe1752e7e9d  tol: 0000000000000043
+iter:15    a:18.315125    b:18.316650    x:18.315887    err:0.000763    y:-2141.043353   sc: -1   fc: ffffffde8bd39b52 -fc: 00000021742c64ae  tol: 0000000000000043
+iter:16    a:18.315125    b:18.315887    x:18.315506    err:0.000381    y:-2141.169387   sc: -1   fc: ffffffde8b528c3e -fc: 0000002174ad73c2  tol: 0000000000000043
+iter:17    a:18.315125    b:18.315506    x:18.315315    err:0.000191    y:1954.767602   sc: 1   fc: 1e8b120640 -fc: ffffffe174edf9c0  tol: 0000000000000043
+iter:18    a:18.315315    b:18.315506    x:18.315411    err:0.000095    y:1954.799107   sc: 1   fc: 1e8b32491f -fc: ffffffe174cdb6e1  tol: 0000000000000043
+iter:19    a:18.315411    b:18.315506    x:18.315458    err:0.000048    y:-2141.185140   sc: -1   fc: ffffffde8b426aa9 -fc: 0000002174bd9557  tol: 0000000000000043
+iter:20    a:18.315411    b:18.315458    x:18.315434    err:0.000024    y:-2141.193017   sc: -1   fc: ffffffde8b3a59da -fc: 0000002174c5a626  tol: 0000000000000043
+iter:21    a:18.315411    b:18.315434    x:18.315423    err:0.000012    y:1954.803045   sc: 1   fc: 1e8b365185 -fc: ffffffe174c9ae7b  tol: 0000000000000043
+iter:22    a:18.315423    b:18.315434    x:18.315428    err:0.000006    y:-2141.194986   sc: -1   fc: ffffffde8b3855af -fc: 0000002174c7aa51  tol: 0000000000000043
+iter:23    a:18.315423    b:18.315428    x:18.315426    err:0.000003    y:1954.804030   sc: 1   fc: 1e8b37539a -fc: ffffffe174c8ac66  tol: 0000000000000043
+iter:24    a:18.315426    b:18.315428    x:18.315427    err:0.000001    y:1954.804522   sc: 1   fc: 1e8b37d4a4 -fc: ffffffe174c82b5c  tol: 0000000000000043
+iter:25    a:18.315427    b:18.315428    x:18.315428    err:0.000001    y:1954.804768   sc: 1   fc: 1e8b381521 -fc: ffffffe174c7eadf  tol: 0000000000000043
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=26 (error = 0.000000, best=22, current = 18.315328)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:   8a71de -fc: ffffffffff758e22  tol: 0000000000000086
+iter:1    a:-25.000000    b:0.000000    x:-12.500000    err:12.500000    y:352.926976   sc: 1   fc: b076a7257 -fc: fffffff4f8958da9  tol: 0000000000000086
+iter:2    a:-25.000000    b:-12.500000    x:-18.750000    err:6.250000    y:-60.764429   sc: -1   fc: fffffffe19e272ee -fc: 00000001e61d8d12  tol: 0000000000000086
+iter:3    a:-18.750000    b:-12.500000    x:-15.625000    err:3.125000    y:603.845922   sc: 1   fc: 12dec4729b -fc: ffffffed213b8d65  tol: 0000000000000086
+iter:4    a:-18.750000    b:-15.625000    x:-17.187500    err:1.562500    y:397.426000   sc: 1   fc: c6b6872c3 -fc: fffffff394978d3d  tol: 0000000000000086
+iter:5    a:-18.750000    b:-17.187500    x:-17.968750    err:0.781250    y:201.232610   sc: 1   fc: 649dc62d8 -fc: fffffff9b6239d28  tol: 0000000000000086
+iter:6    a:-18.750000    b:-17.968750    x:-18.359375    err:0.390625    y:78.638361   sc: 1   fc: 2751b5ce3 -fc: fffffffd8ae4a31d  tol: 0000000000000086
+iter:7    a:-18.750000    b:-18.359375    x:-18.554688    err:0.195312    y:11.060385   sc: 1   fc: 587bab29 -fc: ffffffffa78454d7  tol: 0000000000000086
+iter:8    a:-18.750000    b:-18.554688    x:-18.652344    err:0.097656    y:-24.318373   sc: -1   fc: ffffffff3d73f8b3 -fc: 00000000c28c074d  tol: 0000000000000086
+iter:9    a:-18.652344    b:-18.554688    x:-18.603516    err:0.048828    y:-6.495931   sc: -1   fc: ffffffffcc08553d -fc: 0000000033f7aac3  tol: 0000000000000086
+iter:10    a:-18.603516    b:-18.554688    x:-18.579102    err:0.024414    y:2.315449   sc: 1   fc: 12860a22 -fc: ffffffffed79f5de  tol: 0000000000000086
+iter:11    a:-18.603516    b:-18.579102    x:-18.591309    err:0.012207    y:-2.081930   sc: -1   fc: ffffffffef583508 -fc: 0000000010a7caf8  tol: 0000000000000086
+iter:12    a:-18.591309    b:-18.579102    x:-18.585205    err:0.006104    y:0.118837   sc: 1   fc:   f36090 -fc: ffffffffff0c9f70  tol: 0000000000000086
+iter:13    a:-18.591309    b:-18.585205    x:-18.588257    err:0.003052    y:-0.981027   sc: -1   fc: fffffffff826db16 -fc: 0000000007d924ea  tol: 0000000000000086
+iter:14    a:-18.588257    b:-18.585205    x:-18.586731    err:0.001526    y:-0.430966   sc: -1   fc: fffffffffc8d61ee -fc: 0000000003729e12  tol: 0000000000000086
+iter:15    a:-18.586731    b:-18.585205    x:-18.585968    err:0.000763    y:-0.156032   sc: -1   fc: fffffffffec07240 -fc: 00000000013f8dc0  tol: 0000000000000086
+iter:16    a:-18.585968    b:-18.585205    x:-18.585587    err:0.000381    y:-0.018590   sc: -1   fc: ffffffffffd9edb2 -fc: 000000000026124e  tol: 0000000000000086
+iter:17    a:-18.585587    b:-18.585205    x:-18.585396    err:0.000191    y:0.050126   sc: 1   fc:   66a834 -fc: ffffffffff9957cc  tol: 0000000000000086
+iter:18    a:-18.585587    b:-18.585396    x:-18.585491    err:0.000095    y:0.015768   sc: 1   fc:   204b3c -fc: ffffffffffdfb4c4  tol: 0000000000000086
+iter:19    a:-18.585587    b:-18.585491    x:-18.585539    err:0.000048    y:-0.001410   sc: -1   fc: fffffffffffd1c82 -fc: 000000000002e37e  tol: 0000000000000086
+iter:20    a:-18.585539    b:-18.585491    x:-18.585515    err:0.000024    y:0.007179   sc: 1   fc:    eb3eb -fc: fffffffffff14c15  tol: 0000000000000086
+iter:21    a:-18.585539    b:-18.585515    x:-18.585527    err:0.000012    y:0.002884   sc: 1   fc:    5e837 -fc: fffffffffffa17c9  tol: 0000000000000086
+iter:22    a:-18.585539    b:-18.585527    x:-18.585533    err:0.000006    y:0.000737   sc: 1   fc:    1825d -fc: fffffffffffe7da3  tol: 0000000000000086
+iter:23    a:-18.585539    b:-18.585533    x:-18.585536    err:0.000003    y:-0.000337   sc: -1   fc: ffffffffffff4f79 -fc: 000000000000b087  tol: 0000000000000086
+iter:24    a:-18.585536    b:-18.585533    x:-18.585534    err:0.000001    y:0.000200   sc: 1   fc:     68eb -fc: ffffffffffff9715  tol: 0000000000000086
+iter:25    a:-18.585536    b:-18.585534    x:-18.585535    err:0.000001    y:-0.000068   sc: -1   fc: ffffffffffffdc32 -fc: 00000000000023ce  tol: 0000000000000086
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=27 (error = 0.000000, best=22, current = 18.585635)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:  114e3bc -fc: fffffffffeeb1c44  tol: 000000000000010c
+iter:1    a:-25.000000    b:0.000000    x:-12.500000    err:12.500000    y:-31.047425   sc: -1   fc: fffffffe0f3dbf12 -fc: 00000001f0c240ee  tol: 000000000000010c
+iter:2    a:-12.500000    b:0.000000    x:-6.250000    err:6.250000    y:-115.076931   sc: -1   fc: fffffff8cec4e3d2 -fc: 00000007313b1c2e  tol: 000000000000010c
+iter:3    a:-6.250000    b:0.000000    x:-3.125000    err:3.125000    y:34.049045   sc: 1   fc: 220c8e3c2 -fc: fffffffddf371c3e  tol: 000000000000010c
+iter:4    a:-6.250000    b:-3.125000    x:-4.687500    err:1.562500    y:-6.181423   sc: -1   fc: ffffffff9d18e3c8 -fc: 0000000062e71c38  tol: 000000000000010c
+iter:5    a:-4.687500    b:-3.125000    x:-3.906250    err:0.781250    y:21.086429   sc: 1   fc: 1516203c5 -fc: fffffffeae9dfc3b  tol: 000000000000010c
+iter:6    a:-4.687500    b:-3.906250    x:-4.296875    err:0.390625    y:9.419472   sc: 1   fc: 96b627c7 -fc: ffffffff6949d839  tol: 000000000000010c
+iter:7    a:-4.687500    b:-4.296875    x:-4.492188    err:0.195312    y:-125.866882   sc: -1   fc: fffffff822214048 -fc: 00000007dddebfb8  tol: 000000000000010c
+iter:8    a:-4.492188    b:-4.296875    x:-4.394531    err:0.097656    y:-186.097976   sc: -1   fc: fffffff45e6eb0f7 -fc: 0000000ba1914f09  tol: 000000000000010c
+iter:9    a:-4.394531    b:-4.296875    x:-4.345703    err:0.048828    y:39.691831   sc: 1   fc: 27b11bd65 -fc: fffffffd84ee429b  tol: 000000000000010c
+iter:10    a:-4.394531    b:-4.345703    x:-4.370117    err:0.024414    y:-201.195258   sc: -1   fc: fffffff36ce03936 -fc: 0000000c931fc6ca  tol: 000000000000010c
+iter:11    a:-4.370117    b:-4.345703    x:-4.357910    err:0.012207    y:-208.749765   sc: -1   fc: fffffff2f400f616 -fc: 0000000d0bff09ea  tol: 000000000000010c
+iter:12    a:-4.357910    b:-4.345703    x:-4.351807    err:0.006104    y:43.471519   sc: 1   fc: 2b78b57b9 -fc: fffffffd4874a847  tol: 000000000000010c
+iter:13    a:-4.357910    b:-4.351807    x:-4.354858    err:0.003052    y:45.360999   sc: 1   fc: 2d5c6a67d -fc: fffffffd2a395983  tol: 000000000000010c
+iter:14    a:-4.357910    b:-4.354858    x:-4.356384    err:0.001526    y:-209.694353   sc: -1   fc: fffffff2e4e3ee32 -fc: 0000000d1b1c11ce  tol: 000000000000010c
+iter:15    a:-4.356384    b:-4.354858    x:-4.355621    err:0.000763    y:-210.166670   sc: -1   fc: fffffff2dd555252 -fc: 0000000d22aaadae  tol: 000000000000010c
+iter:16    a:-4.355621    b:-4.354858    x:-4.355240    err:0.000381    y:-210.402834   sc: -1   fc: fffffff2d98dfe65 -fc: 0000000d2672019b  tol: 000000000000010c
+iter:17    a:-4.355240    b:-4.354858    x:-4.355049    err:0.000191    y:-210.520917   sc: -1   fc: fffffff2d7aa52f2 -fc: 0000000d2855ad0e  tol: 000000000000010c
+iter:18    a:-4.355049    b:-4.354858    x:-4.354954    err:0.000095    y:45.420041   sc: 1   fc: 2d6b87cd7 -fc: fffffffd29478329  tol: 000000000000010c
+iter:19    a:-4.355049    b:-4.354954    x:-4.355001    err:0.000048    y:45.449562   sc: 1   fc: 2d73167ee -fc: fffffffd28ce9812  tol: 000000000000010c
+iter:20    a:-4.355049    b:-4.355001    x:-4.355025    err:0.000024    y:45.464323   sc: 1   fc: 2d76ddd74 -fc: fffffffd2892228c  tol: 000000000000010c
+iter:21    a:-4.355049    b:-4.355025    x:-4.355037    err:0.000012    y:-210.528297   sc: -1   fc: fffffff2d78c1836 -fc: 0000000d2873e7ca  tol: 000000000000010c
+iter:22    a:-4.355037    b:-4.355025    x:-4.355031    err:0.000006    y:-210.531987   sc: -1   fc: fffffff2d77cfad4 -fc: 0000000d2883052c  tol: 000000000000010c
+iter:23    a:-4.355031    b:-4.355025    x:-4.355028    err:0.000003    y:45.466168   sc: 1   fc: 2d7756c24 -fc: fffffffd288a93dc  tol: 000000000000010c
+iter:24    a:-4.355031    b:-4.355028    x:-4.355030    err:0.000001    y:-210.532910   sc: -1   fc: fffffff2d779337d -fc: 0000000d2886cc83  tol: 000000000000010c
+iter:25    a:-4.355030    b:-4.355028    x:-4.355029    err:0.000001    y:45.466629   sc: 1   fc: 2d7774fd1 -fc: fffffffd2888b02f  tol: 000000000000010c
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=28 (error = 0.000000, best=22, current = 4.35513)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:  229c779 -fc: fffffffffdd63887  tol: 0000000000000218
+iter:1    a:-25.000000    b:0.000000    x:-12.500000    err:12.500000    y:32.939775   sc: 1   fc: 41e12a308 -fc: fffffffbe1ed5cf8  tol: 0000000000000218
+iter:2    a:-25.000000    b:-12.500000    x:-18.750000    err:6.250000    y:-12.732431   sc: -1   fc: fffffffe688fec5a -fc: 00000001977013a6  tol: 0000000000000218
+iter:3    a:-18.750000    b:-12.500000    x:-15.625000    err:3.125000    y:-4.128480   sc: -1   fc: ffffffff7be37e90 -fc: 00000000841c8170  tol: 0000000000000218
+iter:4    a:-15.625000    b:-12.500000    x:-14.062500    err:1.562500    y:-46.597282   sc: -1   fc: fffffffa2ce310cc -fc: 00000005d31cef34  tol: 0000000000000218
+iter:5    a:-14.062500    b:-12.500000    x:-13.281250    err:0.781250    y:33.493203   sc: 1   fc: 42fc850ca -fc: fffffffbd037af36  tol: 0000000000000218
+iter:6    a:-14.062500    b:-13.281250    x:-13.671875    err:0.390625    y:31.706463   sc: 1   fc: 3f69b58cb -fc: fffffffc0964a735  tol: 0000000000000218
+iter:7    a:-14.062500    b:-13.671875    x:-13.867188    err:0.195312    y:26.141568   sc: 1   fc: 34487b9cb -fc: fffffffcbb784635  tol: 0000000000000218
+iter:8    a:-14.062500    b:-13.867188    x:-13.964844    err:0.097656    y:-9.828319   sc: -1   fc: fffffffec57e69eb -fc: 000000013a819615  tol: 0000000000000218
+iter:9    a:-13.964844    b:-13.867188    x:-13.916016    err:0.048828    y:-23.743840   sc: -1   fc: fffffffd08327697 -fc: 00000002f7cd8969  tol: 0000000000000218
+iter:10    a:-13.916016    b:-13.867188    x:-13.891602    err:0.024414    y:-30.776296   sc: -1   fc: fffffffc272895d2 -fc: 00000003d8d76a2e  tol: 0000000000000218
+iter:11    a:-13.891602    b:-13.867188    x:-13.879395    err:0.012207    y:-34.311159   sc: -1   fc: fffffffbb60afbc5 -fc: 0000000449f5043b  tol: 0000000000000218
+iter:12    a:-13.879395    b:-13.867188    x:-13.873291    err:0.006104    y:-36.083245   sc: -1   fc: fffffffb7d560e57 -fc: 0000000482a9f1a9  tol: 0000000000000218
+iter:13    a:-13.873291    b:-13.867188    x:-13.870239    err:0.003052    y:-36.970451   sc: -1   fc: fffffffb60f210c7 -fc: 000000049f0def39  tol: 0000000000000218
+iter:14    a:-13.870239    b:-13.867188    x:-13.868713    err:0.001526    y:26.585655   sc: 1   fc: 352bdb071 -fc: fffffffcad424f8f  tol: 0000000000000218
+iter:15    a:-13.870239    b:-13.868713    x:-13.869476    err:0.000763    y:26.807626   sc: 1   fc: 359d8136e -fc: fffffffca627ec92  tol: 0000000000000218
+iter:16    a:-13.870239    b:-13.869476    x:-13.869858    err:0.000381    y:-37.081406   sc: -1   fc: fffffffb5d651ecc -fc: 00000004a29ae134  tol: 0000000000000218
+iter:17    a:-13.869858    b:-13.869476    x:-13.869667    err:0.000191    y:26.863112   sc: 1   fc: 35b9e9c50 -fc: fffffffca46163b0  tol: 0000000000000218
+iter:18    a:-13.869858    b:-13.869667    x:-13.869762    err:0.000095    y:26.890853   sc: 1   fc: 35c81de5a -fc: fffffffca37e21a6  tol: 0000000000000218
+iter:19    a:-13.869858    b:-13.869762    x:-13.869810    err:0.000048    y:26.904724   sc: 1   fc: 35cf37eca -fc: fffffffca30c8136  tol: 0000000000000218
+iter:20    a:-13.869858    b:-13.869810    x:-13.869834    err:0.000024    y:-37.088341   sc: -1   fc: fffffffb5d2c4ed3 -fc: 00000004a2d3b12d  tol: 0000000000000218
+iter:21    a:-13.869834    b:-13.869810    x:-13.869822    err:0.000012    y:26.908191   sc: 1   fc: 35d0fe6d0 -fc: fffffffca2f01930  tol: 0000000000000218
+iter:22    a:-13.869834    b:-13.869822    x:-13.869828    err:0.000006    y:-37.090075   sc: -1   fc: fffffffb5d1e1ad2 -fc: 00000004a2e1e52e  tol: 0000000000000218
+iter:23    a:-13.869828    b:-13.869822    x:-13.869825    err:0.000003    y:-37.090942   sc: -1   fc: fffffffb5d1700d8 -fc: 00000004a2e8ff28  tol: 0000000000000218
+iter:24    a:-13.869825    b:-13.869822    x:-13.869824    err:0.000001    y:-37.091375   sc: -1   fc: fffffffb5d1373db -fc: 00000004a2ec8c25  tol: 0000000000000218
+iter:25    a:-13.869824    b:-13.869822    x:-13.869823    err:0.000001    y:-37.091592   sc: -1   fc: fffffffb5d11ad4f -fc: 00000004a2ee52b1  tol: 0000000000000218
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=29 (error = 0.000000, best=22, current = 13.869923)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:  4538ef3 -fc: fffffffffbac710d  tol: 0000000000000431
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-0.807025   sc: -1   fc: ffffffffcc59b3d0 -fc: 0000000033a64c30  tol: 0000000000000431
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-4.792481   sc: -1   fc: fffffffecd47fcbb -fc: 0000000132b80345  tol: 0000000000000431
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-3.914198   sc: -1   fc: ffffffff057dc5d5 -fc: 00000000fa823a2b  tol: 0000000000000431
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:3.632053   sc: 1   fc: e8738ef4 -fc: ffffffff178c710c  tol: 0000000000000431
+iter:5    a:1.562500    b:3.125000    x:2.343750    err:0.781250    y:-3.433346   sc: -1   fc: ffffffff24440ef5 -fc: 00000000dbbbf10b  tol: 0000000000000431
+iter:6    a:1.562500    b:2.343750    x:1.953125    err:0.390625    y:15.205299   sc: 1   fc: 3cd239ef4 -fc: fffffffc32dc610c  tol: 0000000000000431
+iter:7    a:1.953125    b:2.343750    x:2.148438    err:0.195312    y:-2.359889   sc: -1   fc: ffffffff68f794f4 -fc: 0000000097086b0c  tol: 0000000000000431
+iter:8    a:1.953125    b:2.148438    x:2.050781    err:0.097656    y:-1.635967   sc: -1   fc: ffffffff974c5034 -fc: 0000000068b3afcc  tol: 0000000000000431
+iter:9    a:1.953125    b:2.050781    x:2.001953    err:0.048828    y:-1.229653   sc: -1   fc: ffffffffb14d5dfc -fc: 000000004eb2a204  tol: 0000000000000431
+iter:10    a:1.953125    b:2.001953    x:1.977539    err:0.024414    y:14.984287   sc: 1   fc: 3befe8f2d -fc: fffffffc410170d3  tol: 0000000000000431
+iter:11    a:1.977539    b:2.001953    x:1.989746    err:0.012207    y:6.876428   sc: 1   fc: 1b81763de -fc: fffffffe47e89c22  tol: 0000000000000431
+iter:12    a:1.989746    b:2.001953    x:1.995850    err:0.006104    y:2.823164   sc: 1   fc: b4aeb963 -fc: ffffffff4b51469d  tol: 0000000000000431
+iter:13    a:1.995850    b:2.001953    x:1.998901    err:0.003052    y:0.796700   sc: 1   fc: 32fd2171 -fc: ffffffffcd02de8f  tol: 0000000000000431
+iter:14    a:1.998901    b:2.001953    x:2.000427    err:0.001526    y:-0.216490   sc: -1   fc: fffffffff225051c -fc: 000000000ddafae4  tol: 0000000000000431
+iter:15    a:1.998901    b:2.000427    x:1.999664    err:0.000763    y:0.290101   sc: 1   fc: 129104a1 -fc: ffffffffed6efb5f  tol: 0000000000000431
+iter:16    a:1.999664    b:2.000427    x:2.000046    err:0.000381    y:0.036804   sc: 1   fc:  25b0135 -fc: fffffffffda4fecb  tol: 0000000000000431
+iter:17    a:2.000046    b:2.000427    x:2.000237    err:0.000191    y:-0.089843   sc: -1   fc: fffffffffa40023e -fc: 0000000005bffdc2  tol: 0000000000000431
+iter:18    a:2.000046    b:2.000237    x:2.000141    err:0.000095    y:-0.026519   sc: -1   fc: fffffffffe4d817e -fc: 0000000001b27e82  tol: 0000000000000431
+iter:19    a:2.000046    b:2.000141    x:2.000093    err:0.000048    y:0.005143   sc: 1   fc:   54414a -fc: ffffffffffabbeb6  tol: 0000000000000431
+iter:20    a:2.000093    b:2.000141    x:2.000117    err:0.000024    y:-0.010688   sc: -1   fc: ffffffffff50e160 -fc: 0000000000af1ea0  tol: 0000000000000431
+iter:21    a:2.000093    b:2.000117    x:2.000105    err:0.000012    y:-0.002773   sc: -1   fc: ffffffffffd29153 -fc: 00000000002d6ead  tol: 0000000000000431
+iter:22    a:2.000093    b:2.000105    x:2.000099    err:0.000006    y:0.001185   sc: 1   fc:   13694f -fc: ffffffffffec96b1  tol: 0000000000000431
+iter:23    a:2.000099    b:2.000105    x:2.000102    err:0.000003    y:-0.000794   sc: -1   fc: fffffffffff2fd53 -fc: 00000000000d02ad  tol: 0000000000000431
+iter:24    a:2.000099    b:2.000102    x:2.000101    err:0.000001    y:0.000195   sc: 1   fc:    3334f -fc: fffffffffffcccb1  tol: 0000000000000431
+iter:25    a:2.000101    b:2.000102    x:2.000102    err:0.000001    y:-0.000299   sc: -1   fc: fffffffffffb1852 -fc: 000000000004e7ae  tol: 0000000000000431
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=30 (error = 0.000000, best=22, current = 2.000001)
+
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600   sc: 1   fc:  8a71de6 -fc: fffffffff758e21a  tol: 0000000000000863
+iter:1    a:-25.000000    b:0.000000    x:-12.500000    err:12.500000    y:2.942575   sc: 1   fc: 178a64c2f -fc: fffffffe8759b3d1  tol: 0000000000000863
+iter:2    a:-25.000000    b:-12.500000    x:-18.750000    err:6.250000    y:-0.729231   sc: -1   fc: ffffffffa2a88ce7 -fc: 000000005d577319  tol: 0000000000000863
+iter:3    a:-18.750000    b:-12.500000    x:-15.625000    err:3.125000    y:0.370320   sc: 1   fc: 2f66a7f0 -fc: ffffffffd0995810  tol: 0000000000000863
+iter:4    a:-18.750000    b:-15.625000    x:-17.187500    err:1.562500    y:-3.044402   sc: -1   fc: fffffffe7a510cb2 -fc: 0000000185aef34e  tol: 0000000000000863
+iter:5    a:-17.187500    b:-15.625000    x:-16.406250    err:0.781250    y:-0.421439   sc: -1   fc: ffffffffca0e4c99 -fc: 0000000035f1b367  tol: 0000000000000863
+iter:6    a:-16.406250    b:-15.625000    x:-16.015625    err:0.390625    y:-1.381673   sc: -1   fc: ffffffff4f255a44 -fc: 00000000b0daa5bc  tol: 0000000000000863
+iter:7    a:-16.015625    b:-15.625000    x:-15.820312    err:0.195312    y:-2.226231   sc: -1   fc: fffffffee30adad2 -fc: 000000011cf5252e  tol: 0000000000000863
+iter:8    a:-15.820312    b:-15.625000    x:-15.722656    err:0.097656    y:1.131249   sc: 1   fc: 90ccc6e1 -fc: ffffffff6f33391f  tol: 0000000000000863
+iter:9    a:-15.820312    b:-15.722656    x:-15.771484    err:0.048828    y:1.924491   sc: 1   fc: f655b631 -fc: ffffffff09aa49cf  tol: 0000000000000863
+iter:10    a:-15.820312    b:-15.771484    x:-15.795898    err:0.024414    y:-1.763450   sc: -1   fc: ffffffff1e4745c4 -fc: 00000000e1b8ba3c  tol: 0000000000000863
+iter:11    a:-15.795898    b:-15.771484    x:-15.783691    err:0.012207    y:0.087576   sc: 1   fc:  b35b2f1 -fc: fffffffff4ca4d0f  tol: 0000000000000863
+iter:12    a:-15.795898    b:-15.783691    x:-15.789795    err:0.006104    y:1.163828   sc: 1   fc: 94f84f51 -fc: ffffffff6b07b0af  tol: 0000000000000863
+iter:13    a:-15.795898    b:-15.789795    x:-15.792847    err:0.003052    y:1.700630   sc: 1   fc: d9ae3ffe -fc: ffffffff2651c002  tol: 0000000000000863
+iter:14    a:-15.795898    b:-15.792847    x:-15.794373    err:0.001526    y:1.968700   sc: 1   fc: fbfe6055 -fc: ffffffff04019fab  tol: 0000000000000863
+iter:15    a:-15.795898    b:-15.794373    x:-15.795135    err:0.000763    y:2.102653   sc: 1   fc: 10d23ba6c -fc: fffffffef2dc4594  tol: 0000000000000863
+iter:16    a:-15.795898    b:-15.795135    x:-15.795517    err:0.000381    y:2.169608   sc: 1   fc: 115b5b9f7 -fc: fffffffeea4a4609  tol: 0000000000000863
+iter:17    a:-15.795898    b:-15.795517    x:-15.795708    err:0.000191    y:2.203081   sc: 1   fc: 119fe8e52 -fc: fffffffee60171ae  tol: 0000000000000863
+iter:18    a:-15.795898    b:-15.795708    x:-15.795803    err:0.000095    y:2.219816   sc: 1   fc: 11c22edb0 -fc: fffffffee3dd1250  tol: 0000000000000863
+iter:19    a:-15.795898    b:-15.795803    x:-15.795851    err:0.000048    y:2.228183   sc: 1   fc: 11d351aaa -fc: fffffffee2cae556  tol: 0000000000000863
+iter:20    a:-15.795898    b:-15.795851    x:-15.795875    err:0.000024    y:-1.767633   sc: -1   fc: ffffffff1dbe306d -fc: 00000000e241cf93  tol: 0000000000000863
+iter:21    a:-15.795875    b:-15.795851    x:-15.795863    err:0.000012    y:-1.769725   sc: -1   fc: ffffffff1d79a59d -fc: 00000000e2865a63  tol: 0000000000000863
+iter:22    a:-15.795863    b:-15.795851    x:-15.795857    err:0.000006    y:2.229229   sc: 1   fc: 11d576027 -fc: fffffffee2a89fd9  tol: 0000000000000863
+iter:23    a:-15.795863    b:-15.795857    x:-15.795860    err:0.000003    y:-1.770248   sc: -1   fc: ffffffff1d6882e2 -fc: 00000000e2977d1e  tol: 0000000000000863
+iter:24    a:-15.795860    b:-15.795857    x:-15.795858    err:0.000001    y:-1.770510   sc: -1   fc: ffffffff1d5ff17c -fc: 00000000e2a00e84  tol: 0000000000000863
+iter:25    a:-15.795858    b:-15.795857    x:-15.795857    err:0.000001    y:2.229360   sc: 1   fc: 11d5ba8d2 -fc: fffffffee2a4572e  tol: 0000000000000863
+iter:0    a:-25.000000    b:25.000000    x:0.000000    err:25.000000    y:0.067600
+iter:1    a:0.000000    b:25.000000    x:12.500000    err:12.500000    y:-6496.823025
+iter:2    a:0.000000    b:12.500000    x:6.250000    err:6.250000    y:-3980.795681
+iter:3    a:0.000000    b:6.250000    x:3.125000    err:3.125000    y:-2081.915798
+iter:4    a:0.000000    b:3.125000    x:1.562500    err:1.562500    y:-1052.367947
+iter:5    a:0.000000    b:1.562500    x:0.781250    err:0.781250    y:-527.580624
+iter:6    a:0.000000    b:0.781250    x:0.390625    err:0.390625    y:-263.935311
+iter:7    a:0.000000    b:0.390625    x:0.195312    err:0.195312    y:-131.956203
+iter:8    a:0.000000    b:0.195312    x:0.097656    err:0.097656    y:-65.947095
+iter:9    a:0.000000    b:0.097656    x:0.048828    err:0.048828    y:-32.940096
+iter:10    a:0.000000    b:0.048828    x:0.024414    err:0.024414    y:-16.436292
+iter:11    a:0.000000    b:0.024414    x:0.012207    err:0.012207    y:-8.184351
+iter:12    a:0.000000    b:0.012207    x:0.006104    err:0.006104    y:-4.058376
+iter:13    a:0.000000    b:0.006104    x:0.003052    err:0.003052    y:-1.995388
+iter:14    a:0.000000    b:0.003052    x:0.001526    err:0.001526    y:-0.963894
+iter:15    a:0.000000    b:0.001526    x:0.000763    err:0.000763    y:-0.448147
+iter:16    a:0.000000    b:0.000763    x:0.000381    err:0.000381    y:-0.190274
+iter:17    a:0.000000    b:0.000381    x:0.000191    err:0.000191    y:-0.061337
+iter:18    a:0.000000    b:0.000191    x:0.000095    err:0.000095    y:0.003132
+iter:19    a:0.000095    b:0.000191    x:0.000143    err:0.000048    y:-0.029103
+iter:20    a:0.000095    b:0.000143    x:0.000119    err:0.000024    y:-0.012985
+iter:21    a:0.000095    b:0.000119    x:0.000107    err:0.000012    y:-0.004927
+iter:22    a:0.000095    b:0.000107    x:0.000101    err:0.000006    y:-0.000898
+iter:23    a:0.000095    b:0.000101    x:0.000098    err:0.000003    y:0.001117
+iter:24    a:0.000098    b:0.000101    x:0.000100    err:0.000001    y:0.000110
+iter:25    a:0.000100    b:0.000101    x:0.000101    err:0.000001    y:-0.000394
+Qn=31 (error = 0.000000, best=22, current = 15.795958)
+
+Qn=32 (error = 0.000000, best=22, current = err)
+
+Qn=33 (error = 0.000000, best=22, current = err)
+
+Qn=34 (error = 0.000000, best=22, current = err)
+
+Qn=35 (error = 0.000000, best=22, current = err)
+
+Best guess is Qn=22 error=0.000000
+All valid Qn and their absolute errors
+Qn: 21  ERR=0.000001
+Qn: 22  ERR=0.000000
+Qn: 23  ERR=0.000000
+Qn: 24  ERR=0.000000
+Qn: 25  ERR=20.158637
+Qn: 26  ERR=18.315328
+Qn: 27  ERR=18.585635
+Qn: 28  ERR=4.355130
+Qn: 29  ERR=13.869923
+Qn: 30  ERR=2.000001
+Qn: 31  ERR=15.795958

@@ -1,0 +1,88 @@
+Homework 10
+Andrei Tumbar
+
+To implement the bisection algorithm using the fixed point
+notation, the equation can be computed by converting constant
+numbers to fixed point and using the MUL_FIX macro.
+
+The midpoint can be computed by taking the average of the two
+endpoints with (a + b) / 2. Because fixed point is simply an
+integer we can right shift by 1 to compute the a + b / 2.
+
+To find the best Qn, a Python script was written to search for
+good Qn values by iteratively building the targets with different
+Qn and extracting the errors. The full verbose output of all of the runs
+can be found in verbose_qn_finding.txt.
+
+Best guess is Qn=22 error=0.000000
+All valid Qn and their absolute errors
+Qn: 21  ERR=0.000001
+Qn: 22  ERR=0.000000
+Qn: 23  ERR=0.000000
+Qn: 24  ERR=0.000000
+Qn: 25  ERR=20.158637
+Qn: 26  ERR=18.315328
+Qn: 27  ERR=18.585635
+Qn: 28  ERR=4.355130
+Qn: 29  ERR=13.869923
+Qn: 30  ERR=2.000001
+Qn: 31  ERR=15.795958
+
+All of the above listed Qn values are the ones that converged on a
+root. The other Qn values did not converge on a root because the error
+was either too high to converge before the max loops were reached or
+the shift was so high that some integer bits were lost during multiplication.
+
+The lower Qn values (below 21), were not converging on a root because fixed
+point tolerance did not have enough digits to accurately represent the tolerance
+of 0.000001.
+
+The upper Qn values (above 31) did not converge on points because the shift was
+too  high causing the numbers during multiplication to be cut off. At least
+twice the number of bits is needed as an intermediary for multiplication so
+using a Qn of 32+ bits caused loss in precision and ultimately caused the
+bisection not to converge.
+
+The best Qn value to yield no measurable error is 22. 22 was chosen because
+it was the lowest Qn value no measurable error compared to the floating point
+implementation.
+
+Running the find_best.py script to test all of the optimization levels, we get
+the following output:
+Note: All times shown here are for the entire elapsed period. The number of
+      iterations is identical to the number in the sw-float-test binary
+      (2500000)
+-O0: Qn: 0.639670, FP: 0.768590
+-O1: Qn: 0.289310, FP: 0.409480
+-O2: Qn: 0.257960, FP: 0.298710
+-O3: Qn: 0.181630, FP: 0.295660 * best overall
+
+First, looking at the floating point optimization levels, we can see that past
+-O1, there is little improvement in the performance gain compared to the gain
+from -O0 to -O1. This is expected most of the extra overhead is optimized. The
+best optimization level for floating point is -O3 which is expected because
+purely/mostly computational algorithms will usually reap benefits from -O3
+
+Looking at the Qn build, we can see tht the potential for optimization is far
+higher with higher compiler optimization levels. This is expected because the
+Qn macros will provide extra overhead especially when initializing constant
+Qn values. The higher optimization levels will take advantage of replacing
+these expressions with immediate values.
+
+Comparing the two implementation, the Qn implementation is faster on all of the
+optimization levels which is expected because fixed point computation will use
+the integer instructions which tend to be faster than floating point on most
+CPUs.
+
+Finally, running the software implementation of floating point, we get the
+following output:
+
+Found the root 0.000101 using soft float bisection.
+Elapsed CPU Time (timer) = 10.7215 sec.
+Elapsed CPU Time per Iteration (timer, 2500000) =  4.29e-06 sec.
+
+The elapsed time to compute the root 2500000 times is more than
+36 times slower than the hardware implementation. This is fully
+expected because the instruction overhead to implement floating
+point math in software is very high compared to a single floating
+point instruction that the CPU can execute.

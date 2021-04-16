@@ -33,9 +33,7 @@ else
 	VERBOSE_OPTION:=
 endif
 
-# Optimization runs
-# Full optimization (not used)
-TIMING_FLAGS:=-DEN_TIME -DMOVE_IO_CLOSE -DIO_REPEAT=100 -DCALC_REPEAT=20000
+TIMING_FLAGS:=-DEN_TIME -DIO_REPEAT=250000
 
 # Compile all c files into executables
 # Create different object files for each optimization level
