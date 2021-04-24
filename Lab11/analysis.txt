@@ -1,0 +1,69 @@
+Homework 11
+Andrei Tumbar
+
+The homework focused on modeling and fitting points to a N-order
+polynomial. To do this we can solve for a polynomial using its
+normal equations. The normal solution can be performed using QR
+factorization which will yield a coefficient vector for the N-order
+polynomial.
+
+The data fed to the fitting algorithm in hw11.c is the difference
+between the points in output from the real device (./realDevice) and
+the ideal sensor output (linear function). The difference or error
+can then be fitted to a polynomial.
+
+Once the error/correction polynomial is found, we can place the
+correction function into another binary correction.c which will
+adjust input points by the amount specified by the solved correction
+polynomial. This will yield us a curve that fits more closely to the
+ideal.
+
+Because the equation solved for in hw11.c is an error correction
+polynomial, correction.c will subtract the evaluated error at every
+point from the real value so that we can receive a corrected value:
+
+    let C(x) = corrected function (real data accounting for error)
+    let R(x) = real data
+    let P(x) = correction polynomial calculated in hw11.c by fitting
+                the error points
+    C(x) = R(x) - P(x)
+
+The correction polynomial is by default a third order polynomial
+because we can receive reasonably good fitting R^2 = 0.9998 which
+is extremely good.
+
+The calculated 3rd order correction polynomial:
+    P(x) = 77.8123 + 0.0760506x + 0.000211552x^2 + -6.05255e-08x^3
+
+The polynomial was hard-coded into correction.c in Horner's form to
+reduce floating point error as much as possible.
+
+Looking at the generated correction errors:
+    Max: 58.02%
+    Min: 0.00%
+    Ave: 0.52%
+    Mid: 0.14%
+
+Comparing this to the original data's error:
+    Max: 54.12%
+    Min: 0.00%
+    Ave: -28.61%
+    Mid: 28.39%
+
+The maximum errors can be seen at the edges of the curve
+(see correction.png). This is to be expected for a 3rd order
+polynomial because the edges tend to taper off. The important
+error here however is the average error which is very low at
+only 0.52%.
+
+Interestingly, both maximum errors (for corrected and raw) are
+very similar. Looking at the generated function plots, we can
+attribute this error to the value delta on the far left of the
+scale. Here, even though the values are fairly close together
+on the diagram, the values are small enough to yield a high
+scaled error.
+
+Looking at the graphed functions in correction.png, the corrected
+sensor output seems to fit the ideal curve very well.
+
+Memory leaks were checked for using valgrind. (none found).

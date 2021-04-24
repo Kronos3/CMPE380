@@ -1,0 +1,14 @@
+==178382== Memcheck, a memory error detector
+==178382== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==178382== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==178382== Command: ./../cmake-build-debug/Lab12/lab12_f
+==178382== 
+==178382== 
+==178382== HEAP SUMMARY:
+==178382==     in use at exit: 0 bytes in 0 blocks
+==178382==   total heap usage: 4 allocs, 4 frees, 8,920 bytes allocated
+==178382== 
+==178382== All heap blocks were freed -- no leaks are possible
+==178382== 
+==178382== For lists of detected and suppressed errors, rerun with: -s
+==178382== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

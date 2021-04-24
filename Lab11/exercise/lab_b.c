@@ -100,9 +100,9 @@ void readPoints(FILE *file, DArray *DArrayPtr)
     /* Grab the data and put it in a Dynamic Array */
     while (fgets(String, 256, file))
     {
-        pch = strtok(String, "    ");
+        pch = strtok(String, " ");
         tempData.x = strtod(pch, NULL);
-        pch = strtok(NULL, "  ");
+        pch = strtok(NULL, " ");
         tempData.y = strtod(pch, NULL);
         PushToDArray(DArrayPtr, &tempData);
     }

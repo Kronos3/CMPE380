@@ -6,19 +6,23 @@
  * ***************************************************************/
 
 #include <stdio.h>
-#include <stdlib.h>
 
 /* Runs the data through the fitting line */
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int res, real, ideal;
-    
-    while(scanf("%d %d", &ideal, &real) != EOF)
+
+    while (scanf("%d %d", &ideal, &real) != EOF)
     {
-     /* Insert your polynomial here, be sure to round properly */
- 
- 
+        /* Insert your polynomial here, be sure to round properly */
+        // f(x) = 77.8123 + 0.0760506x + 0.000211552x^2 + -6.05255e-08x^3
+        double temp =
+                77.8123 + real *
+                          (0.0760506 +
+                           real * (0.000211552 - 6.05255e-08 * real));
+        temp = real - temp;
+        res = (int) (temp >= 0 ? temp + 0.5 : temp - 0.5);
         printf("%d %d\n", ideal, res);
     }
     return 0;

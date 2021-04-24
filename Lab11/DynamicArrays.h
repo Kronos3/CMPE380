@@ -17,8 +17,8 @@
 #define _DYNAMIC_ARRAYS_H_
 
 /* Growth Policy : Constant Size */
-#define GROWTH_AMOUNT (100) 
-#define MAX_STR_LEN   (256) 
+#define GROWTH_AMOUNT (100)
+#define MAX_STR_LEN   (256)
 
 /**************************  modify as needed *************************/
 /** Data typemark to store payload: Modify according to application  ***/
@@ -34,11 +34,11 @@ typedef struct {
    double point;
   } Data;
 #else
-    
+
 typedef struct {
    char String[MAX_STR_LEN];  /* string MUST BE < MAX_STR_LEN*/
   } Data;
-#endif 
+#endif
 /************ Nothing else in the module needs to be modified **********/
 
 
@@ -59,7 +59,7 @@ typedef struct {
  function prototypes to create, add and destroy data arrays
  **************************************************************************/
 void CreateDArray( DArray *DArrayPtr, unsigned int InitialSize );
-unsigned int PushToDArray( DArray *DArrayPtr, Data *PayloadPtr );
+unsigned int PushToDArray( DArray *DArrayPtr, const Data *PayloadPtr );
 void DestroyDArray(DArray *DArrayPtr);
 Data *SearchDArray(DArray *DArrayHead, char *String); /* Use when directed */
 

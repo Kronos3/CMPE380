@@ -82,7 +82,7 @@ Where:
     errors:                 - This routine will print an error message to 
                               stderror and exit with an error code 
  **************************************************************************/
-unsigned int PushToDArray(DArray* DArrayHead, Data* PayloadPtr) {
+unsigned int PushToDArray(DArray* DArrayHead, const Data* PayloadPtr) {
     /************************************************************************
      Pseudo code:
      Check if the array needs to be made larger
@@ -94,10 +94,9 @@ unsigned int PushToDArray(DArray* DArrayHead, Data* PayloadPtr) {
      Return the array index of last element inserted
     ************************************************************************/
 
-    if (DArrayHead->EntriesUsed + 1 > DArrayHead->Capacity)
+    if (DArrayHead->EntriesUsed + 1 >= DArrayHead->Capacity)
     {
-        DArrayHead->Capacity += GROWTH_AMOUNT;
-        // DArrayHead->Capacity *= 2;  // doubling growth is FAR more efficient
+        DArrayHead->Capacity *= 2;  // doubling growth is FAR more efficient
         DArrayHead->Payload = realloc(DArrayHead->Payload, sizeof(Data) * DArrayHead->Capacity);
         if (!DArrayHead->Payload)
         {
