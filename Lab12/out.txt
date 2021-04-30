@@ -1,0 +1,63 @@
+Running tests ge0.txt ... ge12.txt
+./hw12 -i ge0.txt
+Solution x:
+  3.0000
+  2.0000
+  5.0000
+
+./hw12 -i ge1.txt
+Solution x:
+ -1.7500
+ -1.0000
+  5.5000
+
+./hw12 -i ge2.txt
+Solution x:
+ -1.7500
+ -1.0000
+  5.5000
+
+./hw12 -i ge3.txt
+Solution x:
+-75359.4047
+3932950.6316
+-56715807.6563
+358886421.3870
+-1159200695.6482
+2000559376.8749
+-1877105898.5460
+1396785824.0865
+-2046085297.6273
+2664101248.3334
+-1677500821.6739
+392383551.2971
+
+./hw12 -i ge4.txt
+GSL Error [1]: lu.c:147: matrix is singular
+
+./hw12 -i ge5.txt
+Too many columns 5, expected 3
+
+./hw12 -i ge6.txt
+Too many rows 6, expected 5
+
+./hw12 -i ge7.txt
+Solution x:
+ -1.7500
+ -1.0000
+  5.5000
+
+./hw12 -i ge8.txt
+Too many columns 5, expected 3
+
+./hw12 -i ge9.txt
+Failed to read row x column line, expected 2 tokens, got 1
+./hw12 -i ge10.txt
+Not enough columns expected 4, got 3
+
+./hw12 -i ge11.txt
+Invalid matrix dimensions: 1 x 2
+
+./hw12 -i ge12.txt
+Not enough rows expected 3, got 2
+
