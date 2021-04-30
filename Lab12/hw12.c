@@ -290,7 +290,7 @@ gsl_matrix* initMatrix(FILE* file)
         if ((tok = sscanf(line, "%d %d", &m, &n)) != 2)
         {
             fprintf(stderr, "Failed to read row x column line, "
-                            "expected 2 tokens, got %d",
+                            "expected 2 tokens, got %d\n",
                             tok);
             error = 1;
         }

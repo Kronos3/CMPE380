@@ -25,24 +25,20 @@ rand.txt: genRand
 mem: rand.txt
 	$(VALGRIND) ./hw12 -i rand.txt > mem.txt 2>&1
 
-TEST_FILES := "ge0.txt" "ge1.txt" "ge2.txt" "ge3.txt" \
-              "ge4.txt" "ge5.txt" "ge6.txt" "ge7.txt" \
-              "ge8.txt" "ge9.txt" "ge10.txt" "ge11.txt" \
-              "ge12.txt"
-
 tests: all
 	echo "Running tests ge0.txt ... ge12.txt" > out.txt
-	for test_file in $(TEST_FILES) ; do \
-		echo "./hw12 -i $${test_file}" >> out.txt; \
-		./"hw12" -i $${test_file} >> out.txt 2>&1 || true; \
+	TNUM=0; while [[ $$TNUM -le 12 ]] ; do \
+		echo "./hw12 -i ge$${TNUM}.txt" >> out.txt; \
+		./"hw12" -i ge$${TNUM}.txt >> out.txt 2>&1 || true; \
 		echo "" >> out.txt; \
+		((TNUM = TNUM + 1)) ; \
 	done
 
 clean:
 	-rm -f rand.txt
-	-rm -f hw11
+	-rm -f hw12
 	-rm -f *.o
-	-rm out.txt
+	-rm out.txt mem.txt
 
 help:
 	echo "Valid targets:"

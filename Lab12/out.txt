@@ -52,6 +52,7 @@ Too many columns 5, expected 3
 
 ./hw12 -i ge9.txt
 Failed to read row x column line, expected 2 tokens, got 1
+
 ./hw12 -i ge10.txt
 Not enough columns expected 4, got 3
 
