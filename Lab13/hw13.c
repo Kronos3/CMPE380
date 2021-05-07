@@ -212,10 +212,10 @@ int main(int argc, char* argv[])
             fflush(stdout);
             sleep(2);
         }
-    }
 
-    printf("Processed: %ld lines 100%% complete\n", data_size);
-    fflush(stdout);
+        printf("Processed: %ld lines 100%% complete\n", data_size);
+        fflush(stdout);
+    }
 
     /* Wait for all processes to end */
     for (int i = 0; i < thread_n; i++)
@@ -309,7 +309,7 @@ void* do_process(struct ThreadData_s* self)
             // Only print verbose when updating progress.
             if (self->verbose)
             {
-                fprintf(stdout, "%d", self->threadID);
+                fprintf(stdout, "%d ", self->threadID);
                 fflush(stdout);
             } // End verbose
         }  // End if

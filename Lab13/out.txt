@@ -2,45 +2,46 @@
 
 Starting 1 threads generating 1067458560 numbers
 
-Thread:0  ID:140670044923648 started
+Thread:0  ID:139689985959680 started
 Processed: 0 lines 0% complete
-Thread:0  track status:1  seg size:4169760KB  data ptr:0x7ff04c0ef010
-0Processed: 106745856 lines 10% complete
+Thread:0  track status:1  seg size:4169760KB  data ptr:0x7f0c1bfdf010
+0 Processed: 106745856 lines 10% complete
 Processed: 106745856 lines 10% complete
 Processed: 106745856 lines 10% complete
-0Processed: 213491712 lines 20% complete
+0 Processed: 213491712 lines 20% complete
 Processed: 213491712 lines 20% complete
 Processed: 213491712 lines 20% complete
-0Processed: 320237568 lines 30% complete
+Processed: 213491712 lines 20% complete
+0 Processed: 320237568 lines 30% complete
 Processed: 320237568 lines 30% complete
 Processed: 320237568 lines 30% complete
 Processed: 320237568 lines 30% complete
-0Processed: 426983424 lines 40% complete
+0 Processed: 426983424 lines 40% complete
 Processed: 426983424 lines 40% complete
 Processed: 426983424 lines 40% complete
-Processed: 426983424 lines 40% complete
-0Processed: 533729280 lines 50% complete
+0 Processed: 533729280 lines 50% complete
 Processed: 533729280 lines 50% complete
 Processed: 533729280 lines 50% complete
-0Processed: 640475136 lines 60% complete
+Processed: 533729280 lines 50% complete
+0 Processed: 640475136 lines 60% complete
 Processed: 640475136 lines 60% complete
 Processed: 640475136 lines 60% complete
 Processed: 640475136 lines 60% complete
-0Processed: 747220992 lines 70% complete
+0 Processed: 747220992 lines 70% complete
 Processed: 747220992 lines 70% complete
 Processed: 747220992 lines 70% complete
-0Processed: 853966848 lines 80% complete
+0 Processed: 853966848 lines 80% complete
 Processed: 853966848 lines 80% complete
 Processed: 853966848 lines 80% complete
 Processed: 853966848 lines 80% complete
-0Processed: 960712704 lines 90% complete
+0 Processed: 960712704 lines 90% complete
 Processed: 960712704 lines 90% complete
 Processed: 960712704 lines 90% complete
 Processed: 960712704 lines 90% complete
-0Processed: 1067458560 lines 100% complete
+0 Processed: 1067458560 lines 100% complete
 Task 0 join 0, task rc 0
-Total wall time = 71 sec
-Elapsed CPU Time (timer) = 71.36000
+Total wall time = 74 sec
+Elapsed CPU Time (timer) = 73.75000
 Verifying results...  success
 
 ./hw13 -t 5 -s
@@ -50,39 +51,38 @@ Starting 5 threads generating 1067458560 numbers
 Processed: 21349171 lines 2% complete
 Processed: 64047513 lines 6% complete
 Processed: 192142539 lines 18% complete
-Processed: 277539223 lines 26% complete
-Processed: 362935907 lines 34% complete
-Processed: 491030933 lines 46% complete
-Processed: 597776788 lines 56% complete
+Processed: 298888394 lines 28% complete
+Processed: 405634249 lines 38% complete
+Processed: 512380104 lines 48% complete
+Processed: 576427617 lines 54% complete
 Processed: 704522643 lines 66% complete
 Processed: 811268498 lines 76% complete
 Processed: 939363524 lines 88% complete
 Processed: 1067458560 lines 100% complete
-Elapsed CPU Time (timer) = 76.26000
 Total wall time = 22 sec
-erifying results...  success
+Elapsed CPU Time (timer) = 75.95000
+Verifying results...  success
 
 ./hw13 -t 8 -v
 
 Starting 8 threads generating 1067458560 numbers
 
-Thread:0  ID:139723550353152 started
-Thread:1  ID:139723541960448 started
-Thread:1  track status:0  seg size:521220KB  data ptr:0x7f140c660010
-Thread:2  track status:0  seg size:521220KB  data ptr:0x7f142c361010
-Thread:2  ID:139723533567744 started
-Thread:0  track status:0  seg size:521220KB  data ptr:0x7f13ec95f010
-Thread:3  ID:139723525175040 started
-Thread:3  track status:0  seg size:521220KB  data ptr:0x7f144c062010
-Thread:4  ID:139723516782336 started
-Thread:4  track status:0  seg size:521220KB  data ptr:0x7f146bd63010
-Thread:5  ID:139723508389632 started
-Thread:5  track status:0  seg size:521220KB  data ptr:0x7f148ba64010
-Thread:6  ID:139723499996928 started
-Thread:7  ID:139723491604224 started
-Processed: 1067458560 lines 100% complete
-Thread:6  track status:0  seg size:521220KB  data ptr:0x7f14ab765010
-Thread:7  track status:0  seg size:521220KB  data ptr:0x7f14cb466010
+Thread:0  ID:140201854822144 started
+Thread:1  ID:140201846429440 started
+Thread:2  ID:140201838036736 started
+Thread:1  track status:0  seg size:521220KB  data ptr:0x7f8369910010
+Thread:0  track status:0  seg size:521220KB  data ptr:0x7f8349c0f010
+Thread:2  track status:0  seg size:521220KB  data ptr:0x7f8389611010
+Thread:3  ID:140201829644032 started
+Thread:3  track status:0  seg size:521220KB  data ptr:0x7f83a9312010
+Thread:4  ID:140201821251328 started
+Thread:4  track status:0  seg size:521220KB  data ptr:0x7f83c9013010
+Thread:5  ID:140201812858624 started
+Thread:5  track status:0  seg size:521220KB  data ptr:0x7f83e8d14010
+Thread:6  ID:140201804465920 started
+Thread:6  track status:0  seg size:521220KB  data ptr:0x7f8408a15010
+Thread:7  ID:140201796073216 started
+Thread:7  track status:0  seg size:521220KB  data ptr:0x7f8428716010
 Task 0 join 0, task rc 0
 Task 1 join 0, task rc 0
 Task 2 join 0, task rc 0
@@ -91,8 +91,8 @@ Task 4 join 0, task rc 0
 Task 5 join 0, task rc 0
 Task 6 join 0, task rc 0
 Task 7 join 0, task rc 0
-Elapsed CPU Time (timer) = 74.09000
 Total wall time = 20 sec
+Elapsed CPU Time (timer) = 72.83000
 Verifying results...  success
 
 ./hw13 -t 0
@@ -105,7 +105,6 @@ Options:
   -f -fast             short run for Valgrind (optional)
   -h -help             display this message
 eg: ./hw13 -t 3 -status
-
 ./hw13 -t 9
 This program demonstrates threading performance.
 usage: ./hw13 -t[hreads] num [-s[tatus]] [-f[ast]] [-v[erbose]]
