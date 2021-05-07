@@ -1,0 +1,9 @@
+lab_c will run an infinite loop and take
+one of 4 commands. The `clear` command is used
+to wipe the terminal screen on every loop
+
+
+lab_d will count the number of lines in a directory
+using the wordcount or `wc` command with the `-l` (line)
+option.
+

@@ -1,0 +1,258 @@
+Main: Starting thread...
+Main: All threads started...
+Main will sleep 1 second.
+     Thread 1, will sleep 1 second.
+Main will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+Exiting main thread
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+
+Memory leaks occurred because the thread was not join()ed.
+
+==122040== Memcheck, a memory error detector
+==122040== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==122040== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==122040== Command: ././lab_a
+==122040== 
+==122040== Thread 2:
+==122040== Conditional jump or move depends on uninitialised value(s)
+==122040==    at 0x48DFA55: __vfprintf_internal (in /lib64/libc-2.32.so)
+==122040==    by 0x48CB452: printf (in /lib64/libc-2.32.so)
+==122040==    by 0x109282: mySimpleThread (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040==    by 0x485FE4D: start_thread (in /lib64/libpthread-2.32.so)
+==122040==    by 0x496FBEE: clone (in /lib64/libc-2.32.so)
+==122040==  Uninitialised value was created by a stack allocation
+==122040==    at 0x489BEE4: (below main) (in /lib64/libc-2.32.so)
+==122040== 
+==122040== Use of uninitialised value of size 8
+==122040==    at 0x48C57AA: _itoa_word (in /lib64/libc-2.32.so)
+==122040==    by 0x48DE922: __vfprintf_internal (in /lib64/libc-2.32.so)
+==122040==    by 0x48CB452: printf (in /lib64/libc-2.32.so)
+==122040==    by 0x109282: mySimpleThread (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040==    by 0x485FE4D: start_thread (in /lib64/libpthread-2.32.so)
+==122040==    by 0x496FBEE: clone (in /lib64/libc-2.32.so)
+==122040==  Uninitialised value was created by a stack allocation
+==122040==    at 0x489BEE4: (below main) (in /lib64/libc-2.32.so)
+==122040== 
+==122040== Conditional jump or move depends on uninitialised value(s)
+==122040==    at 0x48C57BC: _itoa_word (in /lib64/libc-2.32.so)
+==122040==    by 0x48DE922: __vfprintf_internal (in /lib64/libc-2.32.so)
+==122040==    by 0x48CB452: printf (in /lib64/libc-2.32.so)
+==122040==    by 0x109282: mySimpleThread (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040==    by 0x485FE4D: start_thread (in /lib64/libpthread-2.32.so)
+==122040==    by 0x496FBEE: clone (in /lib64/libc-2.32.so)
+==122040==  Uninitialised value was created by a stack allocation
+==122040==    at 0x489BEE4: (below main) (in /lib64/libc-2.32.so)
+==122040== 
+==122040== Conditional jump or move depends on uninitialised value(s)
+==122040==    at 0x48DF653: __vfprintf_internal (in /lib64/libc-2.32.so)
+==122040==    by 0x48CB452: printf (in /lib64/libc-2.32.so)
+==122040==    by 0x109282: mySimpleThread (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040==    by 0x485FE4D: start_thread (in /lib64/libpthread-2.32.so)
+==122040==    by 0x496FBEE: clone (in /lib64/libc-2.32.so)
+==122040==  Uninitialised value was created by a stack allocation
+==122040==    at 0x489BEE4: (below main) (in /lib64/libc-2.32.so)
+==122040== 
+==122040== Conditional jump or move depends on uninitialised value(s)
+==122040==    at 0x48DEA47: __vfprintf_internal (in /lib64/libc-2.32.so)
+==122040==    by 0x48CB452: printf (in /lib64/libc-2.32.so)
+==122040==    by 0x109282: mySimpleThread (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040==    by 0x485FE4D: start_thread (in /lib64/libpthread-2.32.so)
+==122040==    by 0x496FBEE: clone (in /lib64/libc-2.32.so)
+==122040==  Uninitialised value was created by a stack allocation
+==122040==    at 0x489BEE4: (below main) (in /lib64/libc-2.32.so)
+==122040== 
+Main: Starting thread...
+     Thread 1, will sleep 1 second. 
+Main: All threads started...
+Main will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+Main will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+Exiting main thread
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+==122040== 
+==122040== HEAP SUMMARY:
+==122040==     in use at exit: 272 bytes in 1 blocks
+==122040==   total heap usage: 7 allocs, 6 frees, 6,114 bytes allocated
+==122040== 
+==122040== Thread 1:
+==122040== 272 bytes in 1 blocks are possibly lost in loss record 1 of 1
+==122040==    at 0x483AB86: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122040==    by 0x4012957: _dl_allocate_tls (in /lib64/ld-2.32.so)
+==122040==    by 0x4860B71: pthread_create@@GLIBC_2.2.5 (in /lib64/libpthread-2.32.so)
+==122040==    by 0x1091D4: main (in /home/atuser/git/CMPE380/Lab13/exercise/lab_a)
+==122040== 
+==122040== LEAK SUMMARY:
+==122040==    definitely lost: 0 bytes in 0 blocks
+==122040==    indirectly lost: 0 bytes in 0 blocks
+==122040==      possibly lost: 272 bytes in 1 blocks
+==122040==    still reachable: 0 bytes in 0 blocks
+==122040==         suppressed: 0 bytes in 0 blocks
+==122040== 
+==122040== For lists of detected and suppressed errors, rerun with: -s
+==122040== ERROR SUMMARY: 16 errors from 6 contexts (suppressed: 0 from 0)
+
+
+Main: Starting thread...
+Main: All threads started...
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+Thread finished with 0x5578dc2e4060
+Main will sleep 1 second.
+Main will sleep 1 second.
+Exiting main thread
+
+The main thread will wait for the child thread to execute
+before running the other code.
+
+
+==122459== Memcheck, a memory error detector
+==122459== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==122459== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==122459== Command: ././lab_b
+==122459== 
+Main: Starting thread...
+     Thread 1, will sleep 1 second. 
+Main: All threads started...
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+     Thread 1, will sleep 1 second. 
+Thread finished with 0x10c060
+Main will sleep 1 second. 
+Main will sleep 1 second. 
+Exiting main thread
+==122459== 
+==122459== HEAP SUMMARY:
+==122459==     in use at exit: 0 bytes in 0 blocks
+==122459==   total heap usage: 7 allocs, 7 frees, 6,114 bytes allocated
+==122459== 
+==122459== All heap blocks were freed -- no leaks are possible
+==122459== 
+==122459== For lists of detected and suppressed errors, rerun with: -s
+==122459== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+No memory leaks.
+
+
+Main: Starting thread...
+Main: Starting thread...
+Main: Starting thread...
+Main: All threads started...
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+Thread finished with 0x55f1a3c50060
+Thread finished with 0x55f1a3c50060
+Thread finished with 0x55f1a3c50060
+Main will sleep 1 second.
+Main will sleep 1 second.
+Exiting main thread
+
+
+==123334== Memcheck, a memory error detector
+==123334== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==123334== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==123334== Command: ././lab_c
+==123334==
+Main: Starting thread...
+     Thread 1, will sleep 1 second.
+Main: Starting thread...
+     Thread 2, will sleep 1 second.
+Main: Starting thread...
+     Thread 3, will sleep 1 second.
+Main: All threads started...
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+Thread finished with 0x10c058
+Thread finished with 0x10c058
+Thread finished with 0x10c058
+Main will sleep 1 second.
+Main will sleep 1 second.
+Exiting main thread
+==123334==
+==123334== HEAP SUMMARY:
+==123334==     in use at exit: 0 bytes in 0 blocks
+==123334==   total heap usage: 9 allocs, 9 frees, 3,586 bytes allocated
+==123334==
+==123334== All heap blocks were freed -- no leaks are possible
+==123334==
+==123334== For lists of detected and suppressed errors, rerun with: -s
+==123334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+No memory leaks
+
+Main: Starting thread...
+Main: Starting thread...
+     Thread 1, will sleep 1 second.
+Main: Starting thread...
+Main: All threads started...
+Processed: 0.
+     Thread 3, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+Processed: 2.
+     Thread 2, will sleep 1 second.
+Processed: 3.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+Processed: 6.
+     Thread 1, will sleep 1 second.
+     Thread 3, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+Processed: 9.
+     Thread 3, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+     Thread 1, will sleep 1 second.
+Processed: 13.
+     Thread 3, will sleep 1 second.
+     Thread 2, will sleep 1 second.
+Processed: 16.
+Thread finished with 0x55d772f85088
+Thread finished with 0x55d772f85088
+Thread finished with 0x55d772f85088
+Exiting main thread
+Wall time: 7

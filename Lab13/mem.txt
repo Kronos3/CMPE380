@@ -1,0 +1,1 @@
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./hw13 -f -s -t 8

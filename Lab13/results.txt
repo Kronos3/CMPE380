@@ -1,0 +1,105 @@
+hw13 -t 1 -s -v
+
+Starting 1 threads generating 1067458560 numbers
+
+Thread:0  ID:140443550746368 started
+Thread:0  track status:1  seg size:1042440KB  data ptr:0x7fbb8ff50010
+Processed:         0 lines   0% complete
+Processed:         0 lines   0% complete
+Processed:         0 lines   0% complete
+0 Processed: 106745851 lines  10% complete
+Processed: 106745851 lines  10% complete
+Processed: 106745851 lines  10% complete
+Processed: 106745851 lines  10% complete
+0 Processed: 213491702 lines  20% complete
+Processed: 213491702 lines  20% complete
+Processed: 213491702 lines  20% complete
+0 Processed: 320237553 lines  30% complete
+Processed: 320237553 lines  30% complete
+Processed: 320237553 lines  30% complete
+Processed: 320237553 lines  30% complete
+0 Processed: 426983404 lines  40% complete
+Processed: 426983404 lines  40% complete
+Processed: 426983404 lines  40% complete
+0 Processed: 533729255 lines  50% complete
+Processed: 533729255 lines  50% complete
+Processed: 533729255 lines  50% complete
+Processed: 533729255 lines  50% complete
+0 Processed: 640475106 lines  60% complete
+Processed: 640475106 lines  60% complete
+Processed: 640475106 lines  60% complete
+0 Processed: 747220957 lines  70% complete
+Processed: 747220957 lines  70% complete
+Processed: 747220957 lines  70% complete
+Processed: 747220957 lines  70% complete
+0 Processed: 853966808 lines  80% complete
+Processed: 853966808 lines  80% complete
+Processed: 853966808 lines  80% complete
+0 Processed: 960712659 lines  90% complete
+Processed: 960712659 lines  90% complete
+Processed: 960712659 lines  90% complete
+Processed: 960712659 lines  90% complete
+0 Processed:1067458560 lines 100% complete
+Task 0 join 0, task rc 10
+Verifying results...  success
+
+
+
+hw13 -t 5 -s
+
+
+Starting 5 threads generating 1067458560 numbers
+
+Processed: 106745855 lines  10% complete
+Processed: 213491710 lines  20% complete
+Processed: 320237565 lines  30% complete
+Processed: 426983420 lines  40% complete
+Processed: 533729275 lines  50% complete
+Processed: 747220985 lines  70% complete
+Processed: 853966840 lines  80% complete
+Processed: 960712695 lines  90% complete
+Processed:1067458560 lines 100% complete
+Verifying results...  success
+
+
+hw13 -t 8 -v
+
+
+Starting 8 threads generating 1067458560 numbers
+
+Thread:0  ID:139654647187200 started
+Thread:0  track status:1  seg size:130305KB  data ptr:0x7f03e1a40010
+Thread:1  ID:139654638733056 started
+Thread:1  track status:1  seg size:130305KB  data ptr:0x7f0401741010
+Thread:2  ID:139654630278912 started
+Thread:2  track status:1  seg size:130305KB  data ptr:0x7f0421442010
+Thread:3  ID:139654621824768 started
+Thread:3  track status:1  seg size:130305KB  data ptr:0x7f0441143010
+Thread:4  ID:139654613370624 started
+Thread:4  track status:1  seg size:130305KB  data ptr:0x7f0460e44010
+Thread:5  ID:139654604916480 started
+Thread:5  track status:1  seg size:130305KB  data ptr:0x7f0480b45010
+Thread:6  ID:139654596462336 started
+Thread:6  track status:1  seg size:130305KB  data ptr:0x7f04a0846010
+Thread:7  ID:139654588008192 started
+Thread:7  track status:1  seg size:130305KB  data ptr:0x7f04c0547010
+4 1 5 0 2 6 3 7 Processed: 106745848 lines  10% complete
+4 1 6 5 3 2 7 0 4 1 6 3 2 5 0 7 Processed: 320237544 lines  30% complete
+1 4 6 5 2 3 0 7 1 6 5 4 2 0 3 7 Processed: 533729240 lines  50% complete
+1 5 6 4 2 0 3 7 Processed: 640475088 lines  60% complete
+1 5 4 2 6 0 3 7 1 5 4 2 0 6 3 7 Processed: 853966784 lines  80% complete
+5 1 4 0 2 3 7 6 5 1 4 0 2 Processed:1027428837 lines  96% complete
+7 3 6 Processed:1067458560 lines 100% complete
+Task 0 join 0, task rc 10
+Task 1 join 0, task rc 11
+Task 2 join 0, task rc 12
+Task 3 join 0, task rc 13
+Task 4 join 0, task rc 14
+Task 5 join 0, task rc 15
+Task 6 join 0, task rc 16
+Task 7 join 0, task rc 17
+Verifying results...  success
+
+
+hw13 -t 0
+hw13 -t 9
