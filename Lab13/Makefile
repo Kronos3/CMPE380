@@ -20,18 +20,19 @@ hw13: hw13.c Timers.h
 all: hw13
 test: all
 	echo "./hw13 -t 1 -s -v" > out.txt
-	./hw13 -t 1 -s -v >> out.txt
+	./hw13 -t 1 -s -v >> out.txt 2>&1
 	echo "./hw13 -t 5 -s" >> out.txt
-	./hw13 -t 5 -s >> out.txt
+	./hw13 -t 5 -s >> out.txt 2>&1
 	echo "./hw13 -t 8 -v" >> out.txt
-	./hw13 -t 8 -v >> out.txt
+	./hw13 -t 8 -v >> out.txt 2>&1
+	echo "./hw13 -t 0" >> out.txt
+	-./hw13 -t 0 >> out.txt 2>&1
 	echo "./hw13 -t 9" >> out.txt
-	./hw13 -t 9 >> out.txt
+	-./hw13 -t 9 >> out.txt 2>&1
 
 mem: hw13
 	echo "$(VALGRIND) ./hw13 -f -s -t 8" > mem.txt
-	# $(VALGRIND) ./hw13 -f -s -t 8 >> mem.txt 2>&1
-	$(VALGRIND) ./hw13 -f -s -t 8
+	$(VALGRIND) ./hw13 -f -s -t 8 >> mem.txt 2>&1
 
 clean:
 	-rm -f hw13

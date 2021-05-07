@@ -215,6 +215,7 @@ int main(int argc, char* argv[])
     }
 
     printf("Processed: %ld lines 100%% complete\n", data_size);
+    fflush(stdout);
 
     /* Wait for all processes to end */
     for (int i = 0; i < thread_n; i++)
@@ -233,6 +234,7 @@ int main(int argc, char* argv[])
 
     wallTime = time(NULL) - wallTime;
     fprintf(stderr, "Total wall time = %d sec\n", (int) wallTime);
+    fflush(stderr);
 
     printf("Verifying results...  ");
     for (long i = 0; i < data_size; i++)

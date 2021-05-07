@@ -1,1 +1,26 @@
 valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./hw13 -f -s -t 8
+==21443== Memcheck, a memory error detector
+==21443== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21443== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==21443== Command: ./hw13 -f -s -t 8
+==21443== 
+
+Starting 8 threads generating 25804800 numbers
+
+Processed: 10967040 lines 42% complete
+Processed: 14515200 lines 56% complete
+Processed: 18063360 lines 70% complete
+Total wall time = 26 sec
+Processed: 25804800 lines 100% complete
+Elapsed CPU Time (timer) = 25.64000
+Verifying results...  success
+
+==21443== 
+==21443== HEAP SUMMARY:
+==21443==     in use at exit: 0 bytes in 0 blocks
+==21443==   total heap usage: 11 allocs, 11 frees, 103,223,936 bytes allocated
+==21443== 
+==21443== All heap blocks were freed -- no leaks are possible
+==21443== 
+==21443== For lists of detected and suppressed errors, rerun with: -s
+==21443== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
