@@ -1,0 +1,43 @@
+CMPE-380
+Lab 14
+Andrei Tumbar
+
+For the un-damped spring, the analytical solution to
+the differential equation is proportional to cos(x)
+
+Because our simulation methods will compound the error
+overtime, we can see that the velocity of the euler
+and RK2 simulations will begin to oscillate to higher
+amplitudes. This of course, will cause the position to
+raise in amplitude overtime. The relative error between
+the simulated position and the true analytic position
+can be modeled by the following formula.
+
+             A(t) cos(8t - P(t))
+    E(x) =   ------------------
+                  cos(8t)
+    Let: A(t) Amplitude error
+    Let: P(t) Phase error
+
+As the phase error, P(t) begins to accumulate a larger
+value, the overall error function E(x) will begin to look
+like the tangent function. The amplitude error, A(t) will
+cause this tangent function to increase in amplitude. Looking
+at the generated spring.png image, we can see that the two
+simulations with high error Euler and RK2 will begin to look
+like the tangent function further in the simulation.
+
+Because the errors in Euler and RK2 are proportional to h and h^2
+respectively we see that the Euler simulation tends to have higher
+error in most places when comparing it to the RK2 simulation.
+
+The Euler and RK2 functions will both have high maximum absolute errors
+where the errors spike at the function peaks with values of 683.273
+and 25.963 respectively. The average error is relatively good for the
+RK2 function at 0.005 however the average error for the Euler simulation
+is at -6.922!
+
+In regards to RK3 and RK4, errors are quite low with maximum absolute
+errors at 0.034 and 0.008 respectively. The average errors are far lower
+at 0.001 and -0.000. This is mostly expected because these simulations
+have a proportional error of h^3 and h^4 respectively.

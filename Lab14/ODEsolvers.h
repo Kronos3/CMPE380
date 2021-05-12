@@ -19,7 +19,7 @@ typedef struct {
     int neq;      /* Number of simulation equations               */
     double h;     /* time step                                    */
     double damp;  /* dampening value, if used                     */
-} simParm; 
+} simParm;
 
 /*  ===========================================================================
     These are function pointer prototypes.  The function pointed to will contain:
@@ -28,14 +28,15 @@ typedef struct {
     in state-space form.  This function must be of the form
     
  =========================================================================== */
-typedef void (*funArgs) (simParm *sim, double t, double *x, double *dx);
+typedef void (*FunArgs) (const simParm *sim, double t, double *x, double *dx);
+typedef void (*Solver) (const simParm *sim,  double t0, double *x0, FunArgs f);
 
 /* Other function prototypes */
-void eu(simParm *sim,  double t0, double *x0, funArgs f);
-void rk2(simParm *sim, double t0, double *x0, funArgs f);
-void rk3(simParm *sim, double t0, double *x0, funArgs f);
-void rk4(simParm *sim, double t0, double *x0, funArgs f);
-void tank(simParm *sim, double t, double *x, double *dx);
-void springMass(simParm *sim, double t, double *x, double *dx);
+void eu(const simParm *sim,  double t0, double *x0, FunArgs f);
+void rk2(const simParm *sim, double t0, double *x0, FunArgs f);
+void rk3(const simParm *sim, double t0, double *x0, FunArgs f);
+void rk4(const simParm *sim, double t0, double *x0, FunArgs f);
+void tank(const simParm *sim, double t, double *x, double *dx);
+void springMass(const simParm *sim, double t, double *x, double *dx);
 
 #endif /* _ODESOLVERS_H_ */

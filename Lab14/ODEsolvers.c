@@ -6,7 +6,7 @@
       05/12/2016 - R. Repka     Better calculations
       07/21/2017 - R. Repka     Added ClassErrors.h
       06/24/2020 - R. Repka     created HW 14
-   ======================================================================= */   
+   ======================================================================= */
 #include <stdio.h>
 #include "ClassErrors.h"
 #include "ODEsolvers.h"
@@ -25,36 +25,39 @@
          double *x0 - value of state variables at current time, AND
                       the approximate solution time t0+h is returned
                       (x0 is overwritten)
-         funArgs  f - function which defines the differential equations
+         FunArgs  f - function which defines the differential equations
                      (see ode_solvers.h for details)
   Returns: nothing
   Errors:  prints an error and exits with return code 99
 ---------------------------------------------------------------------------*/
-void eu(simParm *sim, double t0, double *x0, funArgs f )
+void eu(const simParm* sim, double t0, double* x0, FunArgs f)
 {
-     int i;         /* loop counter     */
-     double *xp;    /* temporary vector */
+    int i;         /* loop counter     */
+    double* xp;    /* temporary vector */
 
-     xp = malloc(sim->neq * sizeof(double));
-     if (NULL == xp){
-         printf("Error: Could not allocate memory in '%s' at line %d\n", __FILE__, __LINE__);
-         exit(MALLOC_ERROR);
-     }
+    xp = malloc(sim->neq * sizeof(double));
+    if (NULL == xp)
+    {
+        printf("Error: Could not allocate memory in '%s' at line %d\n",
+               __FILE__, __LINE__);
+        exit(MALLOC_ERROR);
+    }
 
-     /* Compute Euler update - return in x0 */
+    /* Compute Euler update - return in x0 */
 
-     /* Evaluate the Differential equations at the current time   */
-     /*  k1 = f(tk, xk)  */
-     f(sim, t0, x0, xp);       
+    /* Evaluate the Differential equations at the current time   */
+    /*  k1 = f(tk, xk)  */
+    f(sim, t0, x0, xp);
 
-     /* Add the values to the current integration solution */
-     /* xk+1 = xk+hk1    */
-     for ( i = 0; i < sim->neq; i++ ){
-         x0[i] += sim->h * xp[i];
-     }
-     
+    /* Add the values to the current integration solution */
+    /* xk+1 = xk+hk1    */
+    for (i = 0; i < sim->neq; i++)
+    {
+        x0[i] += sim->h * xp[i];
+    }
+
     /* clean up temporary variables */
-     free(xp);
+    free(xp);
 } /* End eu */
 
 
@@ -74,54 +77,58 @@ void eu(simParm *sim, double t0, double *x0, funArgs f )
          double *x0 - value of state variables at current time, AND
                       the approximate solution time t0+h is returned
                       (x0 is overwritten)
-         funArgs f - function which defines the right-hand side
+         FunArgs f - function which defines the right-hand side
                      of the differential equation of the form:
                      void f ( double t, double *x, double *xp )
                     (see ode_solvers.h for details)
   Returns: nothing
   Errors:  prints an error and exits with return code 99
 ---------------------------------------------------------------------------*/
-void rk2( simParm *sim, double t0, double *x0, funArgs f )
+void rk2(const simParm* sim, double t0, double* x0, FunArgs f)
 {
-     int i;                            /* Loop counter */
-     double *xtilde, *k1, *k2;         /* temporary vectors */
+    int i;                              /* Loop counter */
+    double* xtilde, * k1, * k2;         /* temporary vectors */
 
-     xtilde = malloc(sim->neq*sizeof(double));
-     k1 = malloc(sim->neq*sizeof(double));
-     k2 = malloc(sim->neq*sizeof(double));
+    xtilde = malloc(sim->neq * sizeof(double));
+    k1 = malloc(sim->neq * sizeof(double));
+    k2 = malloc(sim->neq * sizeof(double));
 
-     if ((NULL == xtilde) ||(NULL == k1) ||(NULL == k2)){
-         printf("Error: Could not allocate memory in '%s' at line %d\n", __FILE__, __LINE__);
-         exit(MALLOC_ERROR);
-     }
-     
-     /* evaluate rhs of equations - returns dx in xp */
+    if ((NULL == xtilde) || (NULL == k1) || (NULL == k2))
+    {
+        printf("Error: Could not allocate memory in '%s' at line %d\n",
+               __FILE__, __LINE__);
+        exit(MALLOC_ERROR);
+    }
 
-     /* Evaluate the Differential equations at the current time   */     
-     /* k1 = f(tk, xk)  */
-     f(sim, t0, x0, k1); /* updates k1 */   
+    /* evaluate rhs of equations - returns dx in xp */
 
-     
-     /* Compute RK corrections     */  
-     for ( i = 0; i < sim->neq; i++ ) {
-         /* Build k2 function parameters   xk+hk1*/
-         xtilde[i] = x0[i] + sim->h*k1[i]; 
-     }
-    /* Evaluate the Differential equations at the current time   */         
+    /* Evaluate the Differential equations at the current time   */
+    /* k1 = f(tk, xk)  */
+    f(sim, t0, x0, k1); /* updates k1 */
+
+
+    /* Compute RK corrections     */
+    for (i = 0; i < sim->neq; i++)
+    {
+        /* Build k2 function parameters   xk+hk1*/
+        xtilde[i] = x0[i] + sim->h * k1[i];
+    }
+    /* Evaluate the Differential equations at the current time   */
     /* k2 = f(tk+ h, xk+hk1) */
-     f(sim, t0+sim->h, xtilde, k2);
+    f(sim, t0 + sim->h, xtilde, k2);
 
-     // Higher order RK solutions would have additional stages here 
-     
-     /* update dx xk+1 = xk+h(½k1+½k2)  */
-     for ( i = 0; i < sim->neq; i++ ) {
-         x0[i] += sim->h*(k1[i] + k2[i])/2.0;
-     }
+    // Higher order RK solutions would have additional stages here
+
+    /* update dx xk+1 = xk+h(½k1+½k2)  */
+    for (i = 0; i < sim->neq; i++)
+    {
+        x0[i] += sim->h * (k1[i] + k2[i]) / 2.0;
+    }
 
     /* clear temporary variables */
-     free(xtilde);
-     free(k1);
-     free(k2);
+    free(xtilde);
+    free(k1);
+    free(k2);
 
 } /* End rk2 */
 
@@ -141,16 +148,64 @@ void rk2( simParm *sim, double t0, double *x0, funArgs f )
          double *x0 - value of state variables at current time, AND
                       the approximate solution time t0+h is returned
                       (x0 is overwritten)
-         funArgs f - function which defines the right-hand side
+         FunArgs f - function which defines the right-hand side
                      of the differential equation of the form:
                      void f ( double t, double *x, double *xp )
                     (see ode_solvers.h for details)
   Returns: nothing
   Errors:  prints an error and exits with return code 99          
 ---------------------------------------------------------------------------*/
-void rk3(simParm *sim, double t0, double *x0, funArgs f )
+void rk3(const simParm* sim, double t0, double* x0, FunArgs f)
 {
- 
+    double* k1, *k2, *k3, *xtilde;
+
+    /* Allocate the temporary values on the stack */
+    const int temp_var_n = 4;
+    const unsigned int temp_var_s = sizeof(double) * sim->neq;
+    char* ptr = malloc(temp_var_n * temp_var_s);
+
+    if (!ptr)
+    {
+        printf("Error: Could not allocate memory in '%s' at line %d\n",
+               __FILE__, __LINE__);
+        perror("alloca()");
+        exit(MALLOC_ERROR);
+    }
+
+    k1 = (double*) ptr;
+    k2 = (double*) (ptr + temp_var_s);
+    k3 = (double*) (ptr + temp_var_s * 2);
+    xtilde = (double*) (ptr + temp_var_s * 3);
+
+    /* Evaluate the function at the current x value */
+    f(sim, t0, x0, k1);
+
+    /* Calculate the corrected x values
+     * x~ = xk+2⁄3hk1 */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        xtilde[i] = x0[i] + (2.0/3.0)*sim->h*k1[i];
+    }
+
+    /* k2 = f(tk+ 2⁄3h, xk+2⁄3hk1) */
+    f(sim, t0 + (2.0/3.0)*sim->h, xtilde, k2);
+
+    /* x~ xk+2⁄3hk2 */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        xtilde[i] = x0[i] + (2.0/3.0)*sim->h*k2[i];
+    }
+
+    /* k3 = f(tk+ 2⁄3h, xk+2⁄3hk2) */
+    f(sim, t0 + (2.0/3.0)*sim->h, xtilde, k3);
+
+    /* update dx xk+1 = xk+h(1⁄4k1+3⁄8k2+3⁄8k3)  */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        x0[i] += sim->h * (0.25*k1[i] + 0.375*k2[i] + 0.375*k3[i]);
+    }
+
+    free(ptr);
 } /* End rk3 */
 
 
@@ -160,7 +215,7 @@ void rk3(simParm *sim, double t0, double *x0, funArgs f )
   method to approximate the solution of a system of ODE's
       rk4    - Runge-Kuta 4th order method  (classical)
     
-       k1 = f(tk, xk)
+    k1 = f(tk, xk)
     k2 = f(tk+ ½h, xk+½hk1)
     k3 = f(tk+ ½h, xk+½hk2)
     k4 = f(tk+ h, xk+hk3)
@@ -172,14 +227,77 @@ void rk3(simParm *sim, double t0, double *x0, funArgs f )
          double *x0 - value of state variables at current time, AND
                       the approximate solution time t0+h is returned
                       (x0 is overwritten)
-         funArgs f - function which defines the right-hand side
+         FunArgs f - function which defines the right-hand side
                       of the differential equation of the form:
                       void f ( double t, double *x, double *xp )
                      (see ode_solvers.h for details)
   Returns: nothing
   Errors:  prints an error and exits with return code 99                    
 ---------------------------------------------------------------------------*/
-void rk4(simParm *sim, double t0, double *x0, funArgs f )
+void rk4(const simParm* sim, double t0, double* x0, FunArgs f)
 {
+    double* k1, *k2, *k3, *k4, *xtilde;
 
+    /* Allocate the temporary memory */
+    const int temp_var_n = 5;
+    const unsigned int temp_var_s = sizeof(double) * sim->neq;
+    char* ptr = malloc(temp_var_n * temp_var_s);
+
+    if (!ptr)
+    {
+        printf("Error: Could not allocate memory in '%s' at line %d\n",
+               __FILE__, __LINE__);
+        perror("alloca()");
+        exit(MALLOC_ERROR);
+    }
+
+    k1 = (double*) ptr;
+    k2 = (double*) (ptr + temp_var_s);
+    k3 = (double*) (ptr + temp_var_s * 2);
+    k4 = (double*) (ptr + temp_var_s * 3);
+    xtilde = (double*) (ptr + temp_var_s * 4);
+
+    /* Evaluate the function at the current x value
+     * k1 = f(tk, xk) */
+    f(sim, t0, x0, k1);
+
+    /* Calculate the corrected x values
+     * x~ = xk+½hk1 */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        xtilde[i] = x0[i] + 0.5*sim->h*k1[i];
+    }
+
+    /* k2 = f(tk+ ½h, xk+½hk1) */
+    f(sim, t0 + 0.5*sim->h, xtilde, k2);
+
+    /* x~ = xk+½hk2 */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        xtilde[i] = x0[i] + 0.5*sim->h*k2[i];
+    }
+
+    /* k3 = f(tk+ ½h, xk+½hk2) */
+    f(sim, t0 + 0.5*sim->h, xtilde, k3);
+
+    /* x~ = xk+hk3 */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        xtilde[i] = x0[i] + sim->h*k3[i];
+    }
+
+    /* k4 = f(tk+ h, xk+hk3) */
+    f(sim, t0 + sim->h, xtilde, k4);
+
+    /* update dx xk+1 = xk+h(1⁄6k1+1⁄3k2+1⁄3k3+1⁄6k4)  */
+    for (int i = 0; i < sim->neq; i++)
+    {
+        x0[i] += sim->h *
+               ((1.0/6.0)*k1[i] +
+                (1.0/3.0)*k2[i] +
+                (1.0/3.0)*k3[i] +
+                (1.0/6.0)*k4[i]);
+    }
+
+    free(ptr);
 } /* End rk4 */

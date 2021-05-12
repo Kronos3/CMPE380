@@ -51,7 +51,4 @@
    #define FREE_DEBUG(P)   free(P)
 #endif
 
-
-
-
 #endif /* _CLASS_ERRORS_H_ */

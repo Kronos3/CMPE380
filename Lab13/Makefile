@@ -3,7 +3,7 @@ CC:=gcc
 CXX:=g++
 
 LIBS:=-lpthread
-
+PROG=hw13
 VALGRIND:=valgrind --tool=memcheck --leak-check=yes --track-origins=yes
 
 CFLAGS:=$(CFLAGS) -Wall -std=c99 -pedantic -g -O0
@@ -14,28 +14,29 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-hw13: hw13.c Timers.h
+$(PROG): $(PROG).c Timers.h
 	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^
 
-all: hw13
-test: all
-	echo "./hw13 -t 1 -s -v" > out.txt
-	./hw13 -t 1 -s -v >> out.txt 2>&1
-	echo "./hw13 -t 5 -s" >> out.txt
-	./hw13 -t 5 -s >> out.txt 2>&1
-	echo "./hw13 -t 8 -v" >> out.txt
-	./hw13 -t 8 -v >> out.txt 2>&1
-	echo "./hw13 -t 0" >> out.txt
-	-./hw13 -t 0 >> out.txt 2>&1
-	echo "./hw13 -t 9" >> out.txt
-	-./hw13 -t 9 >> out.txt 2>&1
+all: $(PROG)
 
-mem: hw13
-	echo "$(VALGRIND) ./hw13 -f -s -t 8" > mem.txt
-	$(VALGRIND) ./hw13 -f -s -t 8 >> mem.txt 2>&1
+test: all
+	echo "./$(PROG) -t 1 -s -v" > out.txt
+	./$(PROG) -t 1 -s -v >> out.txt 2>&1
+	echo "./$(PROG) -t 5 -s" >> out.txt
+	./$(PROG) -t 5 -s >> out.txt 2>&1
+	echo "./$(PROG) -t 8 -v" >> out.txt
+	./$(PROG) -t 8 -v >> out.txt 2>&1
+	echo "./$(PROG) -t 0" >> out.txt
+	-./$(PROG) -t 0 >> out.txt 2>&1
+	echo "./$(PROG) -t 9" >> out.txt
+	-./$(PROG) -t 9 >> out.txt 2>&1
+
+mem: all
+	echo "$(VALGRIND) ./$(PROG) -f -s -t 8" > mem.txt
+	$(VALGRIND) ./$(PROG) -f -s -t 8 >> mem.txt 2>&1
 
 clean:
-	-rm -f hw13
+	-rm -f $(PROG)
 	-rm -f out.txt
 	-rm -f mem.txt
 

@@ -231,6 +231,7 @@ int main(int argc, char* argv[])
 
     STOP_TIMER(timer);
     PRINT_TIMER(timer);
+    fflush(stdout);
 
     wallTime = time(NULL) - wallTime;
     fprintf(stderr, "Total wall time = %d sec\n", (int) wallTime);
